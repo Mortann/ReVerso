@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "com.meta.xr.sdk.all": "83.0.3",
     "com.unity.feature.development": "1.0.2",
+    "com.unity.feature.vr": "1.0.1",
     "com.unity.ide.rider": "3.0.38",
     "com.unity.inputsystem": "1.17.0",
     "com.unity.learn.iet-framework": "5.0.2",

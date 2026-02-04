@@ -412,22 +412,11 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
                 if (m_MeshController == null)
                 {
                     m_MeshController = m_HandRoot.AddComponent<XRHandMeshController>();
-                    
-                    // DEBUG: Chercher le SkinnedMeshRenderer
-                    Debug.Log($"[HandVisualizer] Recherche du SkinnedMeshRenderer dans {m_HandRoot.name}");
                     for (var childIndex = 0; childIndex < m_HandRoot.transform.childCount; ++childIndex)
                     {
                         var childTransform = m_HandRoot.transform.GetChild(childIndex);
                         if (childTransform.TryGetComponent<SkinnedMeshRenderer>(out var renderer))
-                        {
-                            Debug.Log($"[HandVisualizer] SkinnedMeshRenderer trouvé sur: {childTransform.name}");
                             m_MeshController.handMeshRenderer = renderer;
-                        }
-                    }
-                    
-                    if (m_MeshController.handMeshRenderer == null)
-                    {
-                        Debug.LogError($"[HandVisualizer] ERREUR: Aucun SkinnedMeshRenderer trouvé dans {m_HandRoot.name}!");
                     }
 
                     m_MeshController.handTrackingEvents = handEvents;
@@ -444,35 +433,15 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
                     skeletonDriver = m_HandRoot.AddComponent<XRHandSkeletonDriver>();
                     skeletonDriver.jointTransformReferences = new List<JointToTransformReference>();
                     Transform root = null;
-                    
-                    // DEBUG: Log tous les enfants pour voir leur structure
-                    Debug.Log($"[HandVisualizer] Recherche de bones dans {m_HandRoot.name} pour {handedness}");
                     for (var childIndex = 0; childIndex < m_HandRoot.transform.childCount; ++childIndex)
                     {
                         var child = m_HandRoot.transform.GetChild(childIndex);
-                        Debug.Log($"[HandVisualizer] Enfant trouvé: {child.gameObject.name}");
                         if (child.gameObject.name.EndsWith(XRHandJointID.Wrist.ToString()))
-                        {
                             root = child;
-                            Debug.Log($"[HandVisualizer] ROOT TROUVÉ: {child.gameObject.name}");
-                        }
-                    }
-                    
-                    if (root == null)
-                    {
-                        Debug.LogError($"[HandVisualizer] ERREUR: Aucun bone 'Wrist' trouvé dans {m_HandRoot.name}! Les mains ne bougeront pas.");
                     }
 
                     skeletonDriver.rootTransform = root;
                     XRHandSkeletonDriverUtility.FindJointsFromRoot(skeletonDriver);
-                    
-                    // DEBUG: Log le nombre de joints trouvés
-                    Debug.Log($"[HandVisualizer] Nombre de joints trouvés: {skeletonDriver.jointTransformReferences.Count}");
-                    if (skeletonDriver.jointTransformReferences.Count == 0)
-                    {
-                        Debug.LogError($"[HandVisualizer] ERREUR: Aucun joint trouvé! Vérifiez que vos bones ont les bons noms.");
-                    }
-                    
                     skeletonDriver.InitializeFromSerializedReferences();
                     skeletonDriver.handTrackingEvents = handEvents;
                 }

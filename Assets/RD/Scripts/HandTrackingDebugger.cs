@@ -1,21 +1,14 @@
 using System.Text;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Hands;
 
 /// <summary>
 /// Script de débogage pour visualiser les données de tracking des mains.
-/// Peut fonctionner de deux manières :
-/// 1. Avec des références directes à XRHandTrackingEvents (si disponibles)
-/// 2. En accédant directement au XRHandSubsystem (mode automatique)
+/// S'abonne aux événements de XRHandTrackingEvents et affiche les données dans la console et en UI.
 /// </summary>
 public class HandTrackingDebugger : MonoBehaviour
 {
-    [Header("Mode de fonctionnement")]
-    [Tooltip("Si activé, cherche automatiquement le XRHandSubsystem au lieu d'utiliser les références")]
-    [SerializeField] private bool useAutoDetection = true;
-
-    [Header("Références manuelles (si useAutoDetection = false)")]
+    [Header("Références")]
     [Tooltip("Référence au composant XRHandTrackingEvents pour la main gauche")]
     [SerializeField] private XRHandTrackingEvents leftHandTrackingEvents;
     
@@ -28,9 +21,6 @@ public class HandTrackingDebugger : MonoBehaviour
     
     [Tooltip("Fréquence des logs (1 = chaque frame, 30 = toutes les 30 frames)")]
     [SerializeField] private int logFrequency = 30;
-    
-    [Tooltip("Afficher uniquement les joints principaux (poignet + bouts des doigts)")]
-    [SerializeField] private bool showOnlyKeyJoints = true;
     
     [Tooltip("Afficher tous les 26 joints dans la console (verbose)")]
     [SerializeField] private bool logAllJoints = false;
@@ -49,12 +39,6 @@ public class HandTrackingDebugger : MonoBehaviour
     private HandData leftHandData = new HandData("Main Gauche");
     private HandData rightHandData = new HandData("Main Droite");
     
-    // Pour le mode auto-détection
-    private XRHandSubsystem handSubsystem;
-    private static readonly List<XRHandSubsystem> subsystemsReuse = new List<XRHandSubsystem>();
-    private bool wasLeftTracked = false;
-    private bool wasRightTracked = false;
-    
     private int frameCounter = 0;
     private GUIStyle guiStyle;
     private StringBuilder stringBuilder = new StringBuilder();
@@ -71,7 +55,7 @@ public class HandTrackingDebugger : MonoBehaviour
         public Quaternion wristRotation;
         public Vector3 wristEulerAngles;
         
-        // Positions des bouts des doigts (les plus utiles pour débuguer)
+        // Positions des bouts des doigts
         public Vector3 thumbTipPosition;
         public Vector3 indexTipPosition;
         public Vector3 middleTipPosition;
@@ -102,184 +86,17 @@ public class HandTrackingDebugger : MonoBehaviour
 
     private void OnEnable()
     {
-        if (useAutoDetection)
-        {
-            Debug.Log("<color=green>[HandTrackingDebugger]</color> Mode auto-détection activé. Recherche du XRHandSubsystem...");
-            // Le subsystem sera trouvé dans Update()
-        }
-        else
-        {
-            SubscribeToTrackingEvents();
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (useAutoDetection)
-        {
-            UnsubscribeFromSubsystem();
-        }
-        else
-        {
-            UnsubscribeFromTrackingEvents();
-        }
-    }
-
-    private void Update()
-    {
-        frameCounter++;
-
-        if (useAutoDetection)
-        {
-            // Chercher le subsystem s'il n'est pas encore trouvé ou s'il ne fonctionne plus
-            if (handSubsystem == null || !handSubsystem.running)
-            {
-                TryFindHandSubsystem();
-            }
-
-            // Mettre à jour les données des mains directement depuis le subsystem
-            if (handSubsystem != null && handSubsystem.running)
-            {
-                UpdateHandDataFromSubsystem(handSubsystem.leftHand, leftHandData, ref wasLeftTracked, "GAUCHE");
-                UpdateHandDataFromSubsystem(handSubsystem.rightHand, rightHandData, ref wasRightTracked, "DROITE");
-
-                // Logger périodiquement
-                if (logToConsole && frameCounter % logFrequency == 0)
-                {
-                    if (leftHandData.isTracked) LogHandData(leftHandData);
-                    if (rightHandData.isTracked) LogHandData(rightHandData);
-                }
-            }
-        }
-    }
-
-    #region Auto-Detection Mode
-
-    private void TryFindHandSubsystem()
-    {
-        SubsystemManager.GetSubsystems(subsystemsReuse);
-        
-        for (int i = 0; i < subsystemsReuse.Count; i++)
-        {
-            if (subsystemsReuse[i].running)
-            {
-                handSubsystem = subsystemsReuse[i];
-                SubscribeToSubsystem();
-                Debug.Log("<color=green>[HandTrackingDebugger]</color> ✓ XRHandSubsystem trouvé et actif !");
-                return;
-            }
-        }
-    }
-
-    private void SubscribeToSubsystem()
-    {
-        if (handSubsystem != null)
-        {
-            handSubsystem.updatedHands += OnSubsystemUpdatedHands;
-            handSubsystem.trackingAcquired += OnSubsystemTrackingAcquired;
-            handSubsystem.trackingLost += OnSubsystemTrackingLost;
-        }
-    }
-
-    private void UnsubscribeFromSubsystem()
-    {
-        if (handSubsystem != null)
-        {
-            handSubsystem.updatedHands -= OnSubsystemUpdatedHands;
-            handSubsystem.trackingAcquired -= OnSubsystemTrackingAcquired;
-            handSubsystem.trackingLost -= OnSubsystemTrackingLost;
-            handSubsystem = null;
-        }
-    }
-
-    private void OnSubsystemTrackingAcquired(XRHand hand)
-    {
-        string handName = hand.handedness == Handedness.Left ? "GAUCHE" : "DROITE";
-        Debug.Log($"<color=cyan>[HandTrackingDebugger]</color> 👋 Main {handName} détectée !");
-    }
-
-    private void OnSubsystemTrackingLost(XRHand hand)
-    {
-        string handName = hand.handedness == Handedness.Left ? "GAUCHE" : "DROITE";
-        Debug.Log($"<color=orange>[HandTrackingDebugger]</color> ✋ Main {handName} perdue !");
-        
-        if (hand.handedness == Handedness.Left)
-            leftHandData.isTracked = false;
-        else
-            rightHandData.isTracked = false;
-    }
-
-    private void OnSubsystemUpdatedHands(XRHandSubsystem subsystem, XRHandSubsystem.UpdateSuccessFlags flags, XRHandSubsystem.UpdateType updateType)
-    {
-        // On utilise déjà Update() pour lire les données, donc on n'a rien à faire ici
-        // Mais cet événement confirme que le système fonctionne
-    }
-
-    private void UpdateHandDataFromSubsystem(XRHand hand, HandData handData, ref bool wasTracked, string handName)
-    {
-        handData.isTracked = hand.isTracked;
-
-        // Détecter les changements de tracking
-        if (hand.isTracked != wasTracked)
-        {
-            if (hand.isTracked)
-                Debug.Log($"<color=cyan>[HandTrackingDebugger]</color> 👋 Main {handName} détectée !");
-            else
-                Debug.Log($"<color=orange>[HandTrackingDebugger]</color> ✋ Main {handName} perdue !");
-            wasTracked = hand.isTracked;
-        }
-
-        if (!hand.isTracked) return;
-
-        // Récupérer la pose du poignet (root)
-        handData.wristPosition = hand.rootPose.position;
-        handData.wristRotation = hand.rootPose.rotation;
-        handData.wristEulerAngles = hand.rootPose.rotation.eulerAngles;
-
-        // Récupérer les positions des bouts des doigts
-        TryGetJointPosition(hand, XRHandJointID.ThumbTip, out handData.thumbTipPosition);
-        TryGetJointPosition(hand, XRHandJointID.IndexTip, out handData.indexTipPosition);
-        TryGetJointPosition(hand, XRHandJointID.MiddleTip, out handData.middleTipPosition);
-        TryGetJointPosition(hand, XRHandJointID.RingTip, out handData.ringTipPosition);
-        TryGetJointPosition(hand, XRHandJointID.LittleTip, out handData.littleTipPosition);
-
-        // Récupérer toutes les poses des joints pour un debug complet
-        if (logAllJoints)
-        {
-            for (int i = 0; i < XRHandJointID.EndMarker.ToIndex(); i++)
-            {
-                XRHandJointID jointId = XRHandJointIDUtility.FromIndex(i);
-                XRHandJoint joint = hand.GetJoint(jointId);
-                
-                handData.allJoints[i].jointName = jointId.ToString();
-                handData.allJoints[i].isValid = joint.TryGetPose(out Pose pose);
-                
-                if (handData.allJoints[i].isValid)
-                {
-                    handData.allJoints[i].position = pose.position;
-                    handData.allJoints[i].rotation = pose.rotation;
-                }
-            }
-        }
-    }
-
-    #endregion
-
-    #region Manual Mode - XRHandTrackingEvents
-
-    private void SubscribeToTrackingEvents()
-    {
         // S'abonner aux événements de la main gauche
         if (leftHandTrackingEvents != null)
         {
             leftHandTrackingEvents.jointsUpdated.AddListener(OnLeftHandJointsUpdated);
             leftHandTrackingEvents.trackingAcquired.AddListener(OnLeftHandTrackingAcquired);
             leftHandTrackingEvents.trackingLost.AddListener(OnLeftHandTrackingLost);
-            Debug.Log("<color=green>[HandTrackingDebugger]</color> Abonné aux événements de la main gauche");
+            Debug.Log("<color=green>[HandTrackingDebugger]</color> ✓ Abonné aux événements de la main gauche");
         }
         else
         {
-            Debug.LogWarning("<color=yellow>[HandTrackingDebugger]</color> Pas de XRHandTrackingEvents assigné pour la main gauche !");
+            Debug.LogWarning("<color=yellow>[HandTrackingDebugger]</color> ⚠ Pas de XRHandTrackingEvents assigné pour la main gauche !");
         }
 
         // S'abonner aux événements de la main droite
@@ -288,17 +105,17 @@ public class HandTrackingDebugger : MonoBehaviour
             rightHandTrackingEvents.jointsUpdated.AddListener(OnRightHandJointsUpdated);
             rightHandTrackingEvents.trackingAcquired.AddListener(OnRightHandTrackingAcquired);
             rightHandTrackingEvents.trackingLost.AddListener(OnRightHandTrackingLost);
-            Debug.Log("<color=green>[HandTrackingDebugger]</color> Abonné aux événements de la main droite");
+            Debug.Log("<color=green>[HandTrackingDebugger]</color> ✓ Abonné aux événements de la main droite");
         }
         else
         {
-            Debug.LogWarning("<color=yellow>[HandTrackingDebugger]</color> Pas de XRHandTrackingEvents assigné pour la main droite !");
+            Debug.LogWarning("<color=yellow>[HandTrackingDebugger]</color> ⚠ Pas de XRHandTrackingEvents assigné pour la main droite !");
         }
     }
 
-    private void UnsubscribeFromTrackingEvents()
+    private void OnDisable()
     {
-        // Se désabonner des événements
+        // Se désabonner des événements de la main gauche
         if (leftHandTrackingEvents != null)
         {
             leftHandTrackingEvents.jointsUpdated.RemoveListener(OnLeftHandJointsUpdated);
@@ -306,6 +123,7 @@ public class HandTrackingDebugger : MonoBehaviour
             leftHandTrackingEvents.trackingLost.RemoveListener(OnLeftHandTrackingLost);
         }
 
+        // Se désabonner des événements de la main droite
         if (rightHandTrackingEvents != null)
         {
             rightHandTrackingEvents.jointsUpdated.RemoveListener(OnRightHandJointsUpdated);
@@ -314,7 +132,10 @@ public class HandTrackingDebugger : MonoBehaviour
         }
     }
 
-    #endregion
+    private void Update()
+    {
+        frameCounter++;
+    }
 
     #region Event Handlers - Main Gauche
     
@@ -332,7 +153,7 @@ public class HandTrackingDebugger : MonoBehaviour
 
     private void OnLeftHandJointsUpdated(XRHandJointsUpdatedEventArgs args)
     {
-        UpdateHandData(args, leftHandData);
+        UpdateHandData(args.hand, leftHandData);
         
         if (logToConsole && frameCounter % logFrequency == 0)
         {
@@ -358,7 +179,7 @@ public class HandTrackingDebugger : MonoBehaviour
 
     private void OnRightHandJointsUpdated(XRHandJointsUpdatedEventArgs args)
     {
-        UpdateHandData(args, rightHandData);
+        UpdateHandData(args.hand, rightHandData);
         
         if (logToConsole && frameCounter % logFrequency == 0)
         {
@@ -369,12 +190,13 @@ public class HandTrackingDebugger : MonoBehaviour
     #endregion
 
     /// <summary>
-    /// Met à jour les données d'une main à partir des événements de tracking (mode manuel)
+    /// Met à jour les données d'une main à partir des données XRHand
     /// </summary>
-    private void UpdateHandData(XRHandJointsUpdatedEventArgs args, HandData handData)
+    private void UpdateHandData(XRHand hand, HandData handData)
     {
-        XRHand hand = args.hand;
         handData.isTracked = hand.isTracked;
+
+        if (!hand.isTracked) return;
 
         // Récupérer la pose du poignet (root)
         handData.wristPosition = hand.rootPose.position;
@@ -388,8 +210,8 @@ public class HandTrackingDebugger : MonoBehaviour
         TryGetJointPosition(hand, XRHandJointID.RingTip, out handData.ringTipPosition);
         TryGetJointPosition(hand, XRHandJointID.LittleTip, out handData.littleTipPosition);
 
-        // Récupérer toutes les poses des joints pour un debug complet
-        if (!showOnlyKeyJoints)
+        // Récupérer toutes les poses des joints si demandé
+        if (logAllJoints)
         {
             for (int i = 0; i < XRHandJointID.EndMarker.ToIndex(); i++)
             {
@@ -428,26 +250,37 @@ public class HandTrackingDebugger : MonoBehaviour
     /// </summary>
     private void LogHandData(HandData handData)
     {
+        if (!handData.isTracked) return;
+
         stringBuilder.Clear();
         stringBuilder.AppendLine($"<color=yellow>══════════ {handData.handName} ══════════</color>");
-        stringBuilder.AppendLine($"  Trackée: {(handData.isTracked ? "<color=green>OUI</color>" : "<color=red>NON</color>")}");
+        stringBuilder.AppendLine($"  <color=white>Poignet:</color>");
+        stringBuilder.AppendLine($"    Position: {FormatVector3(handData.wristPosition)}");
+        stringBuilder.AppendLine($"    Rotation: {FormatVector3(handData.wristEulerAngles)}°");
         
-        if (handData.isTracked)
-        {
-            stringBuilder.AppendLine($"  <color=white>Poignet:</color>");
-            stringBuilder.AppendLine($"    Position: {FormatVector3(handData.wristPosition)}");
-            stringBuilder.AppendLine($"    Rotation: {FormatVector3(handData.wristEulerAngles)}°");
-            
-            stringBuilder.AppendLine($"  <color=white>Bouts des doigts:</color>");
-            stringBuilder.AppendLine($"    Pouce:      {FormatVector3(handData.thumbTipPosition)}");
-            stringBuilder.AppendLine($"    Index:      {FormatVector3(handData.indexTipPosition)}");
-            stringBuilder.AppendLine($"    Majeur:     {FormatVector3(handData.middleTipPosition)}");
-            stringBuilder.AppendLine($"    Annulaire:  {FormatVector3(handData.ringTipPosition)}");
-            stringBuilder.AppendLine($"    Auriculaire:{FormatVector3(handData.littleTipPosition)}");
+        stringBuilder.AppendLine($"  <color=white>Bouts des doigts:</color>");
+        stringBuilder.AppendLine($"    Pouce:       {FormatVector3(handData.thumbTipPosition)}");
+        stringBuilder.AppendLine($"    Index:       {FormatVector3(handData.indexTipPosition)}");
+        stringBuilder.AppendLine($"    Majeur:      {FormatVector3(handData.middleTipPosition)}");
+        stringBuilder.AppendLine($"    Annulaire:   {FormatVector3(handData.ringTipPosition)}");
+        stringBuilder.AppendLine($"    Auriculaire: {FormatVector3(handData.littleTipPosition)}");
 
-            // Calculer la distance pouce-index (utile pour détecter un pinch)
-            float pinchDistance = Vector3.Distance(handData.thumbTipPosition, handData.indexTipPosition);
-            stringBuilder.AppendLine($"  <color=magenta>Distance Pinch (pouce-index): {pinchDistance:F3}m</color>");
+        // Distance pouce-index (pinch)
+        float pinchDistance = Vector3.Distance(handData.thumbTipPosition, handData.indexTipPosition);
+        stringBuilder.AppendLine($"  <color=magenta>Distance Pinch: {pinchDistance * 100:F1}cm</color>");
+
+        // Afficher tous les joints si demandé
+        if (logAllJoints)
+        {
+            stringBuilder.AppendLine($"  <color=white>Tous les joints:</color>");
+            for (int i = 0; i < handData.allJoints.Length; i++)
+            {
+                var joint = handData.allJoints[i];
+                if (joint.isValid)
+                {
+                    stringBuilder.AppendLine($"    {joint.jointName}: {FormatVector3(joint.position)}");
+                }
+            }
         }
 
         Debug.Log(stringBuilder.ToString());
@@ -490,7 +323,7 @@ public class HandTrackingDebugger : MonoBehaviour
         GUI.Box(rightRect, BuildUIText(rightHandData), guiStyle);
 
         // Panel d'instructions
-        Rect infoRect = new Rect(uiPosition.x, uiPosition.y + panelHeight + spacing, panelWidth * 2 + spacing, 60);
+        Rect infoRect = new Rect(uiPosition.x, uiPosition.y + panelHeight + spacing, panelWidth * 2 + spacing, 80);
         GUI.Box(infoRect, BuildInstructionsText(), guiStyle);
     }
 
@@ -530,8 +363,13 @@ public class HandTrackingDebugger : MonoBehaviour
 
     private string BuildInstructionsText()
     {
-        return "<b>HandTrackingDebugger</b> - Debug en temps réel\n" +
-               $"Frame: {frameCounter} | Log Console: {(logToConsole ? "ON" : "OFF")} (toutes les {logFrequency} frames)";
+        bool leftAssigned = leftHandTrackingEvents != null;
+        bool rightAssigned = rightHandTrackingEvents != null;
+        
+        return "<b>HandTrackingDebugger</b>\n" +
+               $"Frame: {frameCounter} | Console: {(logToConsole ? "ON" : "OFF")} (/{logFrequency})\n" +
+               $"Réf. gauche: {(leftAssigned ? "<color=lime>OK</color>" : "<color=red>MANQUANTE</color>")} | " +
+               $"Réf. droite: {(rightAssigned ? "<color=lime>OK</color>" : "<color=red>MANQUANTE</color>")}";
     }
 
     #endregion

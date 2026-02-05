@@ -3,8 +3,9 @@ using UnityEngine;
 using UnityEngine.XR.Hands;
 
 /// <summary>
-/// Script de débogage pour visualiser les données de tracking des mains.
-/// S'abonne aux événements de XRHandTrackingEvents et affiche les données dans la console et en UI.
+/// Script de débogage pour capturer les données de tracking des mains.
+/// S'abonne aux événements de XRHandTrackingEvents et expose les données.
+/// Utiliser HandTrackingDebuggerUI pour afficher les données dans une UI personnalisée.
 /// </summary>
 public class HandTrackingDebugger : MonoBehaviour
 {
@@ -15,9 +16,9 @@ public class HandTrackingDebugger : MonoBehaviour
     [Tooltip("Référence au composant XRHandTrackingEvents pour la main droite")]
     [SerializeField] private XRHandTrackingEvents rightHandTrackingEvents;
 
-    [Header("Options de débogage")]
+    [Header("Options de débogage Console")]
     [Tooltip("Afficher les logs dans la console Unity")]
-    [SerializeField] private bool logToConsole = true;
+    [SerializeField] private bool logToConsole = false;
     
     [Tooltip("Fréquence des logs (1 = chaque frame, 30 = toutes les 30 frames)")]
     [SerializeField] private int logFrequency = 30;
@@ -25,22 +26,21 @@ public class HandTrackingDebugger : MonoBehaviour
     [Tooltip("Afficher tous les 26 joints dans la console (verbose)")]
     [SerializeField] private bool logAllJoints = false;
 
-    [Header("UI Debug")]
-    [Tooltip("Afficher l'UI de débogage à l'écran")]
-    [SerializeField] private bool showDebugUI = true;
-    
-    [Tooltip("Position de l'UI de débogage")]
-    [SerializeField] private Vector2 uiPosition = new Vector2(10, 10);
-    
-    [Tooltip("Taille de la police")]
-    [SerializeField] private int fontSize = 14;
-
-    // Données actuelles des mains
+    // Données actuelles des mains (exposées publiquement)
     private HandData leftHandData = new HandData("Main Gauche");
     private HandData rightHandData = new HandData("Main Droite");
     
+    /// <summary>
+    /// Données de la main gauche (lecture seule)
+    /// </summary>
+    public HandData LeftHandData => leftHandData;
+    
+    /// <summary>
+    /// Données de la main droite (lecture seule)
+    /// </summary>
+    public HandData RightHandData => rightHandData;
+    
     private int frameCounter = 0;
-    private GUIStyle guiStyle;
     private StringBuilder stringBuilder = new StringBuilder();
 
     /// <summary>
@@ -245,6 +245,10 @@ public class HandTrackingDebugger : MonoBehaviour
         return false;
     }
 
+    #region Affichage des infos en console
+        
+    #endregion
+
     /// <summary>
     /// Affiche les données d'une main dans la console de manière formatée
     /// </summary>
@@ -293,84 +297,4 @@ public class HandTrackingDebugger : MonoBehaviour
     {
         return $"({v.x:F3}, {v.y:F3}, {v.z:F3})";
     }
-
-    #region Debug UI (OnGUI)
-
-    private void OnGUI()
-    {
-        if (!showDebugUI) return;
-
-        // Initialiser le style si nécessaire
-        if (guiStyle == null)
-        {
-            guiStyle = new GUIStyle(GUI.skin.box);
-            guiStyle.fontSize = fontSize;
-            guiStyle.alignment = TextAnchor.UpperLeft;
-            guiStyle.normal.textColor = Color.white;
-            guiStyle.richText = true;
-        }
-
-        float panelWidth = 350;
-        float panelHeight = 300;
-        float spacing = 10;
-
-        // Panel Main Gauche
-        Rect leftRect = new Rect(uiPosition.x, uiPosition.y, panelWidth, panelHeight);
-        GUI.Box(leftRect, BuildUIText(leftHandData), guiStyle);
-
-        // Panel Main Droite
-        Rect rightRect = new Rect(uiPosition.x + panelWidth + spacing, uiPosition.y, panelWidth, panelHeight);
-        GUI.Box(rightRect, BuildUIText(rightHandData), guiStyle);
-
-        // Panel d'instructions
-        Rect infoRect = new Rect(uiPosition.x, uiPosition.y + panelHeight + spacing, panelWidth * 2 + spacing, 80);
-        GUI.Box(infoRect, BuildInstructionsText(), guiStyle);
-    }
-
-    private string BuildUIText(HandData handData)
-    {
-        stringBuilder.Clear();
-        stringBuilder.AppendLine($"<b><size={fontSize + 4}>{handData.handName}</size></b>");
-        stringBuilder.AppendLine($"Status: {(handData.isTracked ? "<color=lime>TRACKING</color>" : "<color=red>PERDUE</color>")}");
-        stringBuilder.AppendLine();
-
-        if (handData.isTracked)
-        {
-            stringBuilder.AppendLine("<b>Poignet (Root):</b>");
-            stringBuilder.AppendLine($"  Pos: {FormatVector3(handData.wristPosition)}");
-            stringBuilder.AppendLine($"  Rot: {FormatVector3(handData.wristEulerAngles)}°");
-            stringBuilder.AppendLine();
-            stringBuilder.AppendLine("<b>Bouts des doigts:</b>");
-            stringBuilder.AppendLine($"  Pouce: {FormatVector3(handData.thumbTipPosition)}");
-            stringBuilder.AppendLine($"  Index: {FormatVector3(handData.indexTipPosition)}");
-            stringBuilder.AppendLine($"  Majeur: {FormatVector3(handData.middleTipPosition)}");
-            stringBuilder.AppendLine($"  Annulaire: {FormatVector3(handData.ringTipPosition)}");
-            stringBuilder.AppendLine($"  Auriculaire: {FormatVector3(handData.littleTipPosition)}");
-            stringBuilder.AppendLine();
-            
-            float pinchDist = Vector3.Distance(handData.thumbTipPosition, handData.indexTipPosition);
-            string pinchColor = pinchDist < 0.02f ? "lime" : (pinchDist < 0.05f ? "yellow" : "white");
-            stringBuilder.AppendLine($"<color={pinchColor}>Pinch: {pinchDist * 100:F1}cm</color>");
-        }
-        else
-        {
-            stringBuilder.AppendLine("<color=grey>Placez votre main devant");
-            stringBuilder.AppendLine("le casque pour la détecter</color>");
-        }
-
-        return stringBuilder.ToString();
-    }
-
-    private string BuildInstructionsText()
-    {
-        bool leftAssigned = leftHandTrackingEvents != null;
-        bool rightAssigned = rightHandTrackingEvents != null;
-        
-        return "<b>HandTrackingDebugger</b>\n" +
-               $"Frame: {frameCounter} | Console: {(logToConsole ? "ON" : "OFF")} (/{logFrequency})\n" +
-               $"Réf. gauche: {(leftAssigned ? "<color=lime>OK</color>" : "<color=red>MANQUANTE</color>")} | " +
-               $"Réf. droite: {(rightAssigned ? "<color=lime>OK</color>" : "<color=red>MANQUANTE</color>")}";
-    }
-
-    #endregion
 }

@@ -11,19 +11,30 @@ public static class NetworkConfig
     public const int TCP_PORT = 7777;
     
     /// <summary>
-    /// Port UDP pour la découverte automatique
+    /// Port UDP sur lequel le PC écoute les beacons des casques.
     /// </summary>
     public const int DISCOVERY_PORT = 7778;
+
+    /// <summary>
+    /// Port UDP alternatif utilisé si le port principal est occupé.
+    /// </summary>
+    public const int DISCOVERY_PORT_ALT = 7779;
     
     /// <summary>
-    /// Message de découverte envoyé par le PC
+    /// Préfixe du beacon UDP émis par le casque pour se signaler.
+    /// Format complet : REVERSO_HEADSET|<ip>|<port>
     /// </summary>
-    public const string DISCOVERY_MESSAGE = "REVERSO_DISCOVER";
-    
+    public const string BEACON_HEADSET = "REVERSO_HEADSET";
+
     /// <summary>
-    /// Réponse de découverte du casque
+    /// Intervalle d'émission du beacon UDP (ms).
     /// </summary>
-    public const string DISCOVERY_RESPONSE = "REVERSO_QUEST_HERE";
+    public const int BEACON_INTERVAL_MS = 2000;
+
+    /// <summary>
+    /// Durée sans beacon avant de considérer un casque comme disparu (s).
+    /// </summary>
+    public const float HEADSET_TIMEOUT_S = 6f;
 }
 
 /// <summary>

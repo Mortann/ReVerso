@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 1373928469}
   - component: {fileID: 1373928468}
   m_Layer: 0
-  m_Name: NetworkManager
+  m_Name: HeadsetServeur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -907,15 +907,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1373928467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb74c7f648b898d4aa095251a43c58d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 06813c6379e23d3419ed1b8ef8d74f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkClient
-  autoDiscoverServer: 1
-  manualServerIP: 
-  reconnectDelay: 3
-  isConnected: 0
-  serverIP: 
-  connectionStatus: "D\xE9connect\xE9"
+  autoStartOnAwake: 1
+  maxPortRetries: 5
+  isRunning: 0
+  connectedClientIP: 
+  connectedClientsCount: 0
+  serverStatus: "Non d\xE9marr\xE9"
+  activePort: 0
 --- !u!4 &1373928469
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,7 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ef7553c6fee9f46b2c1c27e180762d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestNetworkController
-  networkClient: {fileID: 1373928468}
+  headsetServer: {fileID: 1373928468}
   passthroughController: {fileID: 843869002}
   showDebugUI: 1
 --- !u!4 &2082137651

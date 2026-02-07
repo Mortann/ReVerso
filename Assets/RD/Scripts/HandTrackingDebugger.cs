@@ -55,6 +55,9 @@ public class HandTrackingDebugger : MonoBehaviour
         public Quaternion wristRotation;
         public Vector3 wristEulerAngles;
         
+        // Position de la paume (centre de la main)
+        public Vector3 palmPosition;
+        
         // Positions des bouts des doigts
         public Vector3 thumbTipPosition;
         public Vector3 indexTipPosition;
@@ -203,6 +206,9 @@ public class HandTrackingDebugger : MonoBehaviour
         handData.wristRotation = hand.rootPose.rotation;
         handData.wristEulerAngles = hand.rootPose.rotation.eulerAngles;
 
+        // Récupérer la position de la paume
+        TryGetJointPosition(hand, XRHandJointID.Palm, out handData.palmPosition);
+
         // Récupérer les positions des bouts des doigts
         TryGetJointPosition(hand, XRHandJointID.ThumbTip, out handData.thumbTipPosition);
         TryGetJointPosition(hand, XRHandJointID.IndexTip, out handData.indexTipPosition);
@@ -259,7 +265,10 @@ public class HandTrackingDebugger : MonoBehaviour
         stringBuilder.Clear();
         stringBuilder.AppendLine($"<color=yellow>══════════ {handData.handName} ══════════</color>");
         stringBuilder.AppendLine($"  <color=white>Poignet:</color>");
-        stringBuilder.AppendLine($"    Position: {FormatVector3(handData.wristPosition)}");
+        stringBuilder.AppendLine($"    Position: {Paume:</color>");
+        stringBuilder.AppendLine($"    Position: {FormatVector3(handData.palmPosition)}");
+        
+        stringBuilder.AppendLine($"  <color=white>FormatVector3(handData.wristPosition)}");
         stringBuilder.AppendLine($"    Rotation: {FormatVector3(handData.wristEulerAngles)}°");
         
         stringBuilder.AppendLine($"  <color=white>Bouts des doigts:</color>");

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// Gère la navigation entre les différents panneaux et les actions globales.
 /// 
 /// MODE DE FONCTIONNEMENT:
-/// - Si NetworkServer est présent: envoie les commandes via réseau au Quest
+/// - Si SoignantClient est présent: envoie les commandes via réseau au Quest
 /// - Sinon (Quest Link): contrôle directement le PassthroughController local
 /// </summary>
 public class SoignantUIManager : MonoBehaviour
@@ -18,12 +18,21 @@ public class SoignantUIManager : MonoBehaviour
     [Tooltip("Le panneau Statut Casque (infos de debug)")]
     [SerializeField] private GameObject statutCasquePanel;
 
+    [Tooltip("Le panneau Connexion Casque")]
+    [SerializeField] private GameObject connexionCasquePanel;
+
     [Header("Boutons Navigation")]
     [Tooltip("Bouton pour afficher le statut du casque")]
     [SerializeField] private Button btnStatutCasque;
+
+    [Tooltip("Texte du bouton Statut Casque / Connexion Casque")]
+    [SerializeField] private TMPro.TextMeshProUGUI btnStatutCasqueText;
     
-    [Tooltip("Bouton pour retourner au menu principal")]
-    [SerializeField] private Button btnRetourMenu;
+    [Tooltip("Bouton retour (menu Statut Casque)")]
+    [SerializeField] private Button btnRetourMenuStatut;
+
+    [Tooltip("Bouton retour (menu Connexion Casque)")]
+    [SerializeField] private Button btnRetourMenuConnexion;
 
     [Header("Boutons Actions")]
     [Tooltip("Bouton pour activer/désactiver le passthrough (pause VR)")]
@@ -32,74 +41,53 @@ public class SoignantUIManager : MonoBehaviour
     [Tooltip("Texte du bouton pause VR (pour changer le libellé)")]
     [SerializeField] private TMPro.TextMeshProUGUI btnPauseVRText;
 
-    [Header("UI - Statut Connexion")]
-    [Tooltip("Texte affichant le statut de connexion avec le casque")]
-    [SerializeField] private TMPro.TextMeshProUGUI txtConnectionStatus;
-    
-    [Tooltip("Image indicateur de connexion (optionnel)")]
-    [SerializeField] private UnityEngine.UI.Image imgConnectionIndicator;
-
     [Header("Références - Mode Local (Quest Link)")]
     [Tooltip("Référence au contrôleur de Passthrough (uniquement si même scène/Quest Link)")]
     [SerializeField] private PassthroughController passthroughController;
 
     [Header("Références - Mode Réseau (Build séparé)")]
-    [Tooltip("Référence au serveur réseau (si builds PC/Quest séparés)")]
-    [SerializeField] private NetworkServer networkServer;
+    [Tooltip("Référence au client réseau (si builds PC/Quest séparés)")]
+    [SerializeField] private SoignantClient soignantClient;
 
     private bool isPassthroughActive = false;
     private bool useNetworkMode = false;
 
     private void Start()
     {
-        // Détecter le mode de fonctionnement
         DetectMode();
         
-        // S'abonner aux events du serveur
-        if (networkServer != null)
+        if (soignantClient != null)
         {
-            networkServer.OnStatusChanged += OnNetworkStatusChanged;
-            networkServer.OnClientConnected += OnClientConnected;
-            networkServer.OnClientDisconnected += OnClientDisconnected;
-            
-            // Afficher le statut initial
-            UpdateConnectionUI(networkServer.ServerStatus);
+            soignantClient.OnConnected += OnHeadsetConnected;
+            soignantClient.OnDisconnected += OnHeadsetDisconnected;
         }
         
-        // Configurer les listeners des boutons
         if (btnStatutCasque != null)
             btnStatutCasque.onClick.AddListener(ShowStatutCasque);
         
-        if (btnRetourMenu != null)
-            btnRetourMenu.onClick.AddListener(ShowMainMenu);
+        if (btnRetourMenuStatut != null)
+            btnRetourMenuStatut.onClick.AddListener(ShowMainMenu);
+
+        if (btnRetourMenuConnexion != null)
+            btnRetourMenuConnexion.onClick.AddListener(ShowMainMenu);
         
         if (btnPauseVR != null)
             btnPauseVR.onClick.AddListener(TogglePauseVR);
 
-        // Afficher le menu principal au démarrage
         ShowMainMenu();
         UpdatePauseVRButtonText();
+        UpdateStatutCasqueButtonText();
     }
 
-    /// <summary>
-    /// Détecte automatiquement si on utilise le mode réseau ou local
-    /// </summary>
     private void DetectMode()
     {
-        // Chercher le NetworkServer si non assigné
-        if (networkServer == null)
-        {
-            networkServer = FindFirstObjectByType<NetworkServer>();
-        }
+        if (soignantClient == null)
+            soignantClient = FindFirstObjectByType<SoignantClient>();
         
-        // Chercher le PassthroughController local si non assigné
         if (passthroughController == null)
-        {
             passthroughController = FindFirstObjectByType<PassthroughController>();
-        }
         
-        // Déterminer le mode
-        if (networkServer != null)
+        if (soignantClient != null)
         {
             useNetworkMode = true;
             Debug.Log("[SoignantUIManager] Mode RÉSEAU activé (PC → Quest via TCP)");
@@ -111,104 +99,66 @@ public class SoignantUIManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[SoignantUIManager] Aucun mode détecté ! Assignez NetworkServer (réseau) ou PassthroughController (local)");
+            Debug.LogWarning("[SoignantUIManager] Aucun mode détecté ! Assignez SoignantClient (réseau) ou PassthroughController (local)");
         }
     }
 
     private void OnDestroy()
     {
-        // Nettoyer les listeners
         if (btnStatutCasque != null)
             btnStatutCasque.onClick.RemoveListener(ShowStatutCasque);
         
-        if (btnRetourMenu != null)
-            btnRetourMenu.onClick.RemoveListener(ShowMainMenu);
+        if (btnRetourMenuStatut != null)
+            btnRetourMenuStatut.onClick.RemoveListener(ShowMainMenu);
+
+        if (btnRetourMenuConnexion != null)
+            btnRetourMenuConnexion.onClick.RemoveListener(ShowMainMenu);
         
         if (btnPauseVR != null)
             btnPauseVR.onClick.RemoveListener(TogglePauseVR);
         
-        // Se désabonner des events réseau
-        if (networkServer != null)
+        if (soignantClient != null)
         {
-            networkServer.OnStatusChanged -= OnNetworkStatusChanged;
-            networkServer.OnClientConnected -= OnClientConnected;
-            networkServer.OnClientDisconnected -= OnClientDisconnected;
+            soignantClient.OnConnected -= OnHeadsetConnected;
+            soignantClient.OnDisconnected -= OnHeadsetDisconnected;
         }
     }
 
     #region Network Events
-    
-    private void OnNetworkStatusChanged(string status)
+
+    private void OnHeadsetConnected()
     {
-        UpdateConnectionUI(status);
-    }
-    
-    private void OnClientConnected(string ip)
-    {
-        UpdateConnectionUI($"✅ Casque connecté: {ip}");
-        
-        // Activer le bouton Pause VR quand connecté
         if (btnPauseVR != null)
             btnPauseVR.interactable = true;
+
+        UpdateStatutCasqueButtonText();
     }
-    
-    private void OnClientDisconnected(string ip)
+
+    private void OnHeadsetDisconnected()
     {
-        UpdateConnectionUI("🔍 En attente du casque...");
-        
-        // Désactiver le bouton Pause VR quand déconnecté
         if (btnPauseVR != null)
             btnPauseVR.interactable = false;
+
+        UpdateStatutCasqueButtonText();
     }
-    
-    private void UpdateConnectionUI(string status)
-    {
-        if (txtConnectionStatus != null)
-        {
-            txtConnectionStatus.text = status;
-        }
-        
-        // Mettre à jour l'indicateur visuel
-        if (imgConnectionIndicator != null)
-        {
-            if (status.Contains("✅"))
-            {
-                imgConnectionIndicator.color = Color.green;
-            }
-            else if (status.Contains("🔍"))
-            {
-                imgConnectionIndicator.color = Color.yellow;
-            }
-            else if (status.Contains("❌"))
-            {
-                imgConnectionIndicator.color = Color.red;
-            }
-        }
-    }
-    
+
     #endregion
 
     #region Navigation
 
-    /// <summary>
-    /// Affiche le menu principal et cache les autres panneaux
-    /// </summary>
     public void ShowMainMenu()
     {
         SetActivePanel(mainMenuPanel);
     }
 
-    /// <summary>
-    /// Affiche le panneau Statut Casque
-    /// </summary>
     public void ShowStatutCasque()
     {
-        SetActivePanel(statutCasquePanel);
+        if (IsHeadsetConnected())
+            SetActivePanel(statutCasquePanel);
+        else
+            SetActivePanel(connexionCasquePanel);
     }
 
-    /// <summary>
-    /// Active un panneau et désactive les autres
-    /// </summary>
     private void SetActivePanel(GameObject panelToShow)
     {
         if (mainMenuPanel != null)
@@ -216,63 +166,65 @@ public class SoignantUIManager : MonoBehaviour
         
         if (statutCasquePanel != null)
             statutCasquePanel.SetActive(panelToShow == statutCasquePanel);
+
+        if (connexionCasquePanel != null)
+            connexionCasquePanel.SetActive(panelToShow == connexionCasquePanel);
     }
 
     #endregion
 
     #region Actions
 
-    /// <summary>
-    /// Active/Désactive le passthrough (pause VR = voir l'environnement IRL)
-    /// </summary>
     public void TogglePauseVR()
     {
         isPassthroughActive = !isPassthroughActive;
         
         if (useNetworkMode)
         {
-            // Mode réseau: envoyer la commande au Quest via TCP
-            if (networkServer != null && networkServer.HasConnectedClient)
+            if (soignantClient != null && soignantClient.IsConnected)
             {
-                if (isPassthroughActive)
-                {
-                    networkServer.SendCommand(NetworkMessageType.EnablePassthrough);
-                }
-                else
-                {
-                    networkServer.SendCommand(NetworkMessageType.DisablePassthrough);
-                }
+                soignantClient.SendCommand(isPassthroughActive
+                    ? NetworkMessageType.EnablePassthrough
+                    : NetworkMessageType.DisablePassthrough);
             }
             else
             {
                 Debug.LogWarning("[SoignantUIManager] Aucun casque connecté !");
-                isPassthroughActive = !isPassthroughActive; // Annuler le changement
+                isPassthroughActive = !isPassthroughActive;
             }
         }
         else
         {
-            // Mode local: contrôler directement le PassthroughController
             if (passthroughController != null)
-            {
                 passthroughController.SetPassthroughActive(isPassthroughActive);
-            }
             else
-            {
                 Debug.LogWarning("[SoignantUIManager] PassthroughController non assigné !");
-            }
         }
 
         UpdatePauseVRButtonText();
-        
         Debug.Log($"[SoignantUIManager] Passthrough {(isPassthroughActive ? "ACTIVÉ" : "DÉSACTIVÉ")} (Mode: {(useNetworkMode ? "Réseau" : "Local")})");
     }
 
     private void UpdatePauseVRButtonText()
     {
         if (btnPauseVRText != null)
-        {
             btnPauseVRText.text = isPassthroughActive ? "Reprendre la VR" : "Mettre en pause la VR";
-        }
+    }
+
+    private bool IsHeadsetConnected()
+    {
+        if (useNetworkMode)
+            return soignantClient != null && soignantClient.IsConnected;
+
+        return passthroughController != null;
+    }
+
+    private void UpdateStatutCasqueButtonText()
+    {
+        if (btnStatutCasqueText == null)
+            return;
+
+        btnStatutCasqueText.text = IsHeadsetConnected() ? "Statut Casque" : "Connecter un casque";
     }
 
     #endregion

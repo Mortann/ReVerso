@@ -264,11 +264,11 @@ public class HandTrackingDebugger : MonoBehaviour
 
         stringBuilder.Clear();
         stringBuilder.AppendLine($"<color=yellow>══════════ {handData.handName} ══════════</color>");
-        stringBuilder.AppendLine($"  <color=white>Poignet:</color>");
-        stringBuilder.AppendLine($"    Position: {Paume:</color>");
+        stringBuilder.AppendLine($"  <color=white>Paume:</color>");
         stringBuilder.AppendLine($"    Position: {FormatVector3(handData.palmPosition)}");
-        
-        stringBuilder.AppendLine($"  <color=white>FormatVector3(handData.wristPosition)}");
+
+        stringBuilder.AppendLine($"  <color=white>Poignet:</color>");
+        stringBuilder.AppendLine($"    Position: {FormatVector3(handData.wristPosition)}");
         stringBuilder.AppendLine($"    Rotation: {FormatVector3(handData.wristEulerAngles)}°");
         
         stringBuilder.AppendLine($"  <color=white>Bouts des doigts:</color>");

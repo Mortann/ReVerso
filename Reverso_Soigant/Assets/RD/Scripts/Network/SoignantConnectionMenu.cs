@@ -43,6 +43,14 @@ public class SoignantConnectionMenu : MonoBehaviour
     [Tooltip("Bouton pour demander le statut du casque")]
     [SerializeField] private Button btnRequestStatus;
 
+    [Header("UI - Auto connexion")]
+    [Tooltip("Active la connexion automatique au premier casque détecté")]
+    [SerializeField] private Toggle toggleAutoConnect;
+    [SerializeField] private bool autoConnectOnDiscover = false;
+
+    private const string AutoConnectPrefKey = "Soignant.AutoConnectOnDiscover";
+    private bool autoConnectInProgress = false;
+
     private void Start()
     {
         if (soignantClient == null)
@@ -68,6 +76,15 @@ public class SoignantConnectionMenu : MonoBehaviour
         if (btnRequestStatus != null)
             btnRequestStatus.onClick.AddListener(OnRequestStatusClicked);
 
+        autoConnectOnDiscover = PlayerPrefs.GetInt(
+            AutoConnectPrefKey,
+            autoConnectOnDiscover ? 1 : 0) == 1;
+        if (toggleAutoConnect != null)
+        {
+            toggleAutoConnect.SetIsOnWithoutNotify(autoConnectOnDiscover);
+            toggleAutoConnect.onValueChanged.AddListener(OnAutoConnectChanged);
+        }
+
         RefreshAllUI();
     }
 
@@ -88,6 +105,9 @@ public class SoignantConnectionMenu : MonoBehaviour
             btnDisconnect.onClick.RemoveListener(OnDisconnectClicked);
         if (btnRequestStatus != null)
             btnRequestStatus.onClick.RemoveListener(OnRequestStatusClicked);
+
+        if (toggleAutoConnect != null)
+            toggleAutoConnect.onValueChanged.RemoveListener(OnAutoConnectChanged);
     }
 
     // ─────────────────────────── EVENTS ───────────────────────────
@@ -145,6 +165,15 @@ public class SoignantConnectionMenu : MonoBehaviour
             soignantClient.SendCommand(NetworkMessageType.RequestStatus);
     }
 
+    private void OnAutoConnectChanged(bool isOn)
+    {
+        autoConnectOnDiscover = isOn;
+        PlayerPrefs.SetInt(AutoConnectPrefKey, isOn ? 1 : 0);
+        PlayerPrefs.Save();
+
+        TryAutoConnect();
+    }
+
     /// <summary>
     /// Appelé quand le soignant clique sur un casque dans la liste.
     /// </summary>
@@ -167,7 +196,12 @@ public class SoignantConnectionMenu : MonoBehaviour
 
     private void RefreshHeadsetList()
     {
-        if (headsetListContainer == null) return;
+        if (soignantClient == null) return;
+        if (headsetListContainer == null)
+        {
+            Debug.LogWarning("[SoignantConnectionMenu] headsetListContainer non assigné.");
+            return;
+        }
 
         // Vider la liste actuelle
         foreach (Transform child in headsetListContainer)
@@ -179,36 +213,124 @@ public class SoignantConnectionMenu : MonoBehaviour
         if (txtNoHeadsetFound != null)
             txtNoHeadsetFound.gameObject.SetActive(headsets.Count == 0 && !soignantClient.IsConnected);
 
+        TryAutoConnect();
+
         if (soignantClient.IsConnected)
             return; // Pas besoin d'afficher la liste si déjà connecté
 
         // Créer une entrée par casque découvert
         foreach (var h in headsets)
         {
-            if (headsetEntryPrefab != null)
-            {
-                GameObject entry = Instantiate(headsetEntryPrefab, headsetListContainer);
+            GameObject entry = CreateHeadsetEntry();
+            if (entry == null) continue;
 
-                // Texte
-                var txt = entry.GetComponentInChildren<TextMeshProUGUI>();
-                if (txt != null)
-                    txt.text = $"Casque — {h.ip}:{h.port}";
+            // Texte
+            var txt = entry.GetComponentInChildren<TextMeshProUGUI>(true);
+            if (txt != null)
+                txt.text = $"Casque — {h.ip}:{h.port}";
 
-                // Bouton
-                var btn = entry.GetComponent<Button>();
-                if (btn == null) btn = entry.GetComponentInChildren<Button>();
-                if (btn != null)
-                {
-                    string ip = h.ip;
-                    int port = h.port;
-                    btn.onClick.AddListener(() => OnHeadsetEntryClicked(ip, port));
-                }
-            }
-            else
+            // Bouton
+            var btn = entry.GetComponent<Button>();
+            if (btn == null) btn = entry.GetComponentInChildren<Button>(true);
+            if (btn == null) btn = EnsureEntryButton(entry);
+
+            if (btn != null)
             {
-                Debug.LogWarning("[SoignantConnectionMenu] headsetEntryPrefab non assigné, impossible d'afficher la liste.");
+                string ip = h.ip;
+                int port = h.port;
+                btn.onClick.AddListener(() => OnHeadsetEntryClicked(ip, port));
             }
         }
+    }
+
+    private void TryAutoConnect()
+    {
+        if (!autoConnectOnDiscover || autoConnectInProgress)
+            return;
+        if (soignantClient == null || soignantClient.IsConnected)
+            return;
+        if (soignantClient.DiscoveredHeadsets == null || soignantClient.DiscoveredHeadsets.Count == 0)
+            return;
+
+        autoConnectInProgress = true;
+        try
+        {
+            var h = soignantClient.DiscoveredHeadsets[0];
+            soignantClient.ConnectToHeadset(h.ip, h.port);
+        }
+        finally
+        {
+            autoConnectInProgress = false;
+        }
+    }
+
+    private GameObject CreateHeadsetEntry()
+    {
+        if (headsetEntryPrefab != null)
+            return Instantiate(headsetEntryPrefab, headsetListContainer);
+
+        Debug.LogWarning("[SoignantConnectionMenu] headsetEntryPrefab non assigné, création d'un bouton minimal.");
+        return CreateFallbackEntry(headsetListContainer);
+    }
+
+    private Button EnsureEntryButton(GameObject entry)
+    {
+        if (entry == null) return null;
+
+        var btn = entry.GetComponent<Button>();
+        if (btn == null) btn = entry.AddComponent<Button>();
+
+        var graphic = entry.GetComponent<Graphic>();
+        if (graphic == null)
+        {
+            var image = entry.GetComponent<Image>();
+            if (image == null) image = entry.AddComponent<Image>();
+            image.color = new Color(1f, 1f, 1f, 0.12f);
+            graphic = image;
+        }
+
+        btn.targetGraphic = graphic;
+        return btn;
+    }
+
+    private GameObject CreateFallbackEntry(Transform parent)
+    {
+        GameObject entry = new GameObject(
+            "HeadsetEntry",
+            typeof(RectTransform),
+            typeof(Image),
+            typeof(Button),
+            typeof(LayoutElement));
+        entry.transform.SetParent(parent, false);
+
+        var layout = entry.GetComponent<LayoutElement>();
+        layout.preferredHeight = 56f;
+
+        var image = entry.GetComponent<Image>();
+        image.color = new Color(1f, 1f, 1f, 0.12f);
+
+        var btn = entry.GetComponent<Button>();
+        btn.targetGraphic = image;
+
+        GameObject labelObj = new GameObject(
+            "Label",
+            typeof(RectTransform),
+            typeof(TextMeshProUGUI));
+        labelObj.transform.SetParent(entry.transform, false);
+
+        var labelRect = labelObj.GetComponent<RectTransform>();
+        labelRect.anchorMin = Vector2.zero;
+        labelRect.anchorMax = Vector2.one;
+        labelRect.offsetMin = new Vector2(12f, 6f);
+        labelRect.offsetMax = new Vector2(-12f, -6f);
+
+        var label = labelObj.GetComponent<TextMeshProUGUI>();
+        label.fontSize = 24f;
+        label.enableAutoSizing = true;
+        label.color = Color.white;
+        label.alignment = TextAlignmentOptions.MidlineLeft;
+
+        return entry;
     }
 
     private void SetStatus(string text, Color indicatorColor)

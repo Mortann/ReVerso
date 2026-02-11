@@ -49,10 +49,12 @@ public class QuestNetworkController : MonoBehaviour
             headsetServer.OnStopExercise += OnStopExercise;
             headsetServer.OnLoadMovement += OnLoadMovement;
             headsetServer.OnPassthroughToggle += OnPassthroughToggle;
+            HeadsetServer.AddNetworkLog("QuestNetworkController actif");
         }
         else
         {
             Debug.LogWarning("[QuestNetworkController] HeadsetServer non trouvé !");
+            HeadsetServer.AddNetworkLog("⚠️ HeadsetServer non trouvé");
         }
 
         currentStatus = "En attente du PC...";
@@ -147,6 +149,7 @@ public class QuestNetworkController : MonoBehaviour
     {
         currentStatus = "PC connecté";
         Debug.Log("[QuestNetworkController] ✅ PC soignant connecté");
+        HeadsetServer.AddNetworkLog($"✅ PC connecté: {ip}");
         headsetServer.SendStatus("Casque prêt");
     }
 
@@ -154,6 +157,7 @@ public class QuestNetworkController : MonoBehaviour
     {
         currentStatus = "En attente du PC...";
         Debug.Log("[QuestNetworkController] 🔌 PC déconnecté");
+        HeadsetServer.AddNetworkLog($"🔌 PC déconnecté: {ip}");
     }
 
     private void OnStartExercise()
@@ -169,6 +173,7 @@ public class QuestNetworkController : MonoBehaviour
         }
 
         Debug.Log("[QuestNetworkController] ▶️ Démarrage exercice");
+        HeadsetServer.AddNetworkLog("▶️ Exercice démarré");
         headsetServer.SendStatus("Exercice démarré");
     }
 
@@ -189,6 +194,7 @@ public class QuestNetworkController : MonoBehaviour
         }
 
         Debug.Log("[QuestNetworkController] ⏹️ Arrêt exercice");
+        HeadsetServer.AddNetworkLog("⏹️ Exercice arrêté");
         headsetServer.SendStatus("Exercice arrêté");
     }
 
@@ -196,6 +202,7 @@ public class QuestNetworkController : MonoBehaviour
     {
         lastCommand = $"Charger mouvement: {movementData}";
         Debug.Log($"[QuestNetworkController] 📂 Chargement mouvement: {movementData}");
+        HeadsetServer.AddNetworkLog($"📂 Mouvement chargé: {movementData}");
         headsetServer.SendStatus($"Mouvement chargé: {movementData}");
     }
 
@@ -207,11 +214,13 @@ public class QuestNetworkController : MonoBehaviour
         {
             passthroughController.SetPassthroughActive(enable);
             currentStatus = enable ? "Passthrough ACTIF" : "Passthrough INACTIF";
+            HeadsetServer.AddNetworkLog(currentStatus);
             headsetServer.SendStatus(currentStatus);
         }
         else
         {
             Debug.LogWarning("[QuestNetworkController] PassthroughController non trouvé !");
+            HeadsetServer.AddNetworkLog("⚠️ PassthroughController non trouvé");
             headsetServer.SendMessage(new NetworkMessage(NetworkMessageType.Error, "PassthroughController non disponible"));
         }
     }
@@ -228,18 +237,47 @@ public class QuestNetworkController : MonoBehaviour
             fontSize = 20,
             normal = { textColor = Color.white }
         };
+        GUIStyle logStyle = new GUIStyle(GUI.skin.label)
+        {
+            fontSize = 16,
+            normal = { textColor = Color.cyan },
+            wordWrap = true
+        };
 
-        float width = 400;
-        float height = 150;
+        float width = 600;
         float x = 10;
-        float y = Screen.height - height - 10;
 
-        GUI.Box(new Rect(x, y, width, height), "ReVerso Network", boxStyle);
+        // Section statut
+        float statusHeight = 150;
+
+        // Section logs réseau (visible dans le casque)
+        var logs = HeadsetServer.DebugLog;
+        float lineHeight = 22;
+        float logHeight = (logs != null && logs.Count > 0)
+            ? 30 + logs.Count * lineHeight
+            : 0;
+
+        float totalHeight = statusHeight + (logHeight > 0 ? (10 + logHeight) : 0);
+        float y = Screen.height - totalHeight - 10;
+        if (y < 10) y = 10;
+
+        GUI.Box(new Rect(x, y, width, statusHeight), "ReVerso Network", boxStyle);
         GUI.Label(new Rect(x + 10, y + 30, width - 20, 30),
             $"Statut: {currentStatus}", labelStyle);
         GUI.Label(new Rect(x + 10, y + 60, width - 20, 30),
             $"Serveur: {(headsetServer != null ? headsetServer.ServerStatus : "N/A")}", labelStyle);
         GUI.Label(new Rect(x + 10, y + 90, width - 20, 30),
             $"Dernière commande: {lastCommand}", labelStyle);
+
+        if (logs != null && logs.Count > 0)
+        {
+            float logY = y + statusHeight + 10;
+            GUI.Box(new Rect(x, logY, width, logHeight), "Network Log", boxStyle);
+            for (int i = 0; i < logs.Count; i++)
+            {
+                GUI.Label(new Rect(x + 10, logY + 28 + i * lineHeight, width - 20, lineHeight),
+                    logs[i], logStyle);
+            }
+        }
     }
 }

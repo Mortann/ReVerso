@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -54,8 +55,43 @@ public class HeadsetServer : MonoBehaviour
 
     private Queue<Action> mainThreadActions = new Queue<Action>();
 
+    // Android MulticastLock — nécessaire pour envoyer/recevoir du UDP broadcast
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private AndroidJavaObject multicastLock;
+#endif
+
+    // Debug log circulaire visible dans l'overlay
+    private static readonly List<string> debugLog = new List<string>();
+    private const int MAX_LOG_LINES = 20;
+
+    /// <summary>
+    /// Derniers logs réseau (pour affichage debug dans le casque).
+    /// </summary>
+    public static IReadOnlyList<string> DebugLog => debugLog;
+
+    /// <summary>
+    /// Ajoute un log reseau partage (affiche dans l'overlay casque).
+    /// </summary>
+    public static void AddNetworkLog(string msg)
+    {
+        AddDebugLog(msg);
+    }
+
+    private static void AddDebugLog(string msg)
+    {
+        string line = $"[{DateTime.Now:HH:mm:ss}] {msg}";
+        Debug.Log($"[HeadsetServer] {msg}");
+        lock (debugLog)
+        {
+            debugLog.Add(line);
+            if (debugLog.Count > MAX_LOG_LINES)
+                debugLog.RemoveAt(0);
+        }
+    }
+
     private void Awake()
     {
+        AcquireMulticastLock();
         if (autoStartOnAwake)
             StartServer();
     }
@@ -75,6 +111,7 @@ public class HeadsetServer : MonoBehaviour
     private void OnDestroy()
     {
         StopServer();
+        ReleaseMulticastLock();
     }
 
     // ─────────────────────────── PUBLIC API ───────────────────────────
@@ -112,16 +149,17 @@ public class HeadsetServer : MonoBehaviour
                 SetStatus($"🔍 En attente du PC... (Port {activePort})");
 
                 string localIP = GetLocalIPAddress();
-                Debug.Log($"[HeadsetServer] ✅ Serveur démarré sur {localIP}:{activePort}");
+                AddDebugLog($"✅ Serveur démarré sur {localIP}:{activePort}");
+                AddDebugLog($"Platform: {Application.platform}");
             }
-            catch (SocketException)
+            catch (SocketException se)
             {
-                Debug.LogWarning($"[HeadsetServer] Port {portToTry} occupé, essai {portToTry + 1}...");
+                AddDebugLog($"⚠️ Port {portToTry} occupé ({se.SocketErrorCode}), essai {portToTry + 1}...");
                 portToTry++;
             }
             catch (Exception e)
             {
-                Debug.LogError($"[HeadsetServer] ❌ Erreur: {e.Message}");
+                AddDebugLog($"❌ Erreur démarrage: {e.GetType().Name}: {e.Message}");
                 SetStatus($"❌ Erreur: {e.Message}");
                 break;
             }
@@ -130,7 +168,7 @@ public class HeadsetServer : MonoBehaviour
         if (!started)
         {
             SetStatus("❌ Impossible de démarrer (ports occupés)");
-            Debug.LogError("[HeadsetServer] Tous les ports sont occupés.");
+            AddDebugLog("❌ Tous les ports sont occupés.");
         }
     }
 
@@ -152,7 +190,7 @@ public class HeadsetServer : MonoBehaviour
         try { udpBeacon?.Close(); } catch { }
 
         SetStatus("Serveur arrêté");
-        Debug.Log("[HeadsetServer] Serveur arrêté");
+        AddDebugLog("Serveur arrêté");
     }
 
     /// <summary>
@@ -221,6 +259,15 @@ public class HeadsetServer : MonoBehaviour
             string localIP = GetLocalIPAddress();
             string beaconPayload = $"{NetworkConfig.BEACON_HEADSET}|{localIP}|{activePort}";
 
+            RunOnMainThread(() => AddDebugLog($"📡 Beacon: {beaconPayload}"));
+
+            // Vérifier que l'IP est valide (pas loopback)
+            if (localIP == "127.0.0.1" || localIP == "0.0.0.0")
+            {
+                RunOnMainThread(() => AddDebugLog($"⚠️ ATTENTION: IP locale = {localIP} — le PC ne pourra pas se connecter !"));
+            }
+
+            int beaconCount = 0;
             while (!shouldStop)
             {
                 try
@@ -231,8 +278,32 @@ public class HeadsetServer : MonoBehaviour
                         new IPEndPoint(IPAddress.Broadcast, NetworkConfig.DISCOVERY_PORT));
                     udpBeacon.Send(data, data.Length,
                         new IPEndPoint(IPAddress.Broadcast, NetworkConfig.DISCOVERY_PORT_ALT));
+
+                    // Aussi essayer le broadcast dirigé du sous-réseau
+                    try
+                    {
+                        IPAddress subnetBroadcast = GetSubnetBroadcast(localIP);
+                        if (subnetBroadcast != null)
+                        {
+                            udpBeacon.Send(data, data.Length,
+                                new IPEndPoint(subnetBroadcast, NetworkConfig.DISCOVERY_PORT));
+                            udpBeacon.Send(data, data.Length,
+                                new IPEndPoint(subnetBroadcast, NetworkConfig.DISCOVERY_PORT_ALT));
+                        }
+                    }
+                    catch { }
+
+                    beaconCount++;
+                    if (beaconCount <= 3 || beaconCount % 30 == 0)
+                    {
+                        int count = beaconCount;
+                        RunOnMainThread(() => AddDebugLog($"📡 Beacon #{count} envoyé ({localIP})"));
+                    }
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    RunOnMainThread(() => AddDebugLog($"⚠️ Erreur envoi beacon: {ex.Message}"));
+                }
 
                 Thread.Sleep(NetworkConfig.BEACON_INTERVAL_MS);
             }
@@ -240,7 +311,7 @@ public class HeadsetServer : MonoBehaviour
         catch (Exception e)
         {
             if (!shouldStop)
-                Debug.LogError($"[HeadsetServer] Erreur beacon UDP: {e.Message}");
+                RunOnMainThread(() => AddDebugLog($"❌ Erreur beacon UDP: {e.GetType().Name}: {e.Message}"));
         }
     }
 
@@ -265,7 +336,7 @@ public class HeadsetServer : MonoBehaviour
                     {
                         connectedClientIP = clientIP;
                         OnClientConnected?.Invoke(clientIP);
-                        Debug.Log($"[HeadsetServer] 🔗 PC connecté: {clientIP}");
+                        AddDebugLog($"🔗 PC connecté: {clientIP}");
                     });
                 }
 
@@ -320,7 +391,7 @@ public class HeadsetServer : MonoBehaviour
             if (connectedClientIP == clientIP)
                 connectedClientIP = "";
             OnClientDisconnected?.Invoke(clientIP);
-            Debug.Log($"[HeadsetServer] 🔌 PC déconnecté: {clientIP}");
+            AddDebugLog($"🔌 PC déconnecté: {clientIP}");
         });
     }
 
@@ -387,10 +458,71 @@ public class HeadsetServer : MonoBehaviour
         SetStatus(newStatus);
     }
 
+    /// <summary>
+    /// Obtient l'adresse IP locale du réseau WiFi.
+    /// Sur Android, Dns.GetHostEntry ne fonctionne pas — on utilise NetworkInterface.
+    /// </summary>
     private string GetLocalIPAddress()
     {
+        string bestIP = "127.0.0.1";
+
         try
         {
+            // Méthode 1 : NetworkInterface (fonctionne sur Android et PC)
+            foreach (var iface in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (iface.OperationalStatus != OperationalStatus.Up)
+                    continue;
+
+                // Ignorer loopback
+                if (iface.NetworkInterfaceType == NetworkInterfaceType.Loopback)
+                    continue;
+
+                foreach (var addr in iface.GetIPProperties().UnicastAddresses)
+                {
+                    if (addr.Address.AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        string ip = addr.Address.ToString();
+                        // Préférer les adresses WiFi/réseau local, pas loopback
+                        if (ip.StartsWith("192.168.") || ip.StartsWith("10.") || ip.StartsWith("172."))
+                        {
+                            AddDebugLog($"IP trouvée (NetworkInterface): {ip} [{iface.Name}]");
+                            return ip;
+                        }
+                        if (bestIP == "127.0.0.1")
+                            bestIP = ip;
+                    }
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            AddDebugLog($"⚠️ NetworkInterface failed: {e.Message}");
+        }
+
+        try
+        {
+            // Méthode 2 : Socket connect trick (fallback robuste)
+            using (var socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp))
+            {
+                // On ne se connecte pas vraiment, juste pour déterminer l'IP locale
+                socket.Connect("8.8.8.8", 80);
+                string ip = ((IPEndPoint)socket.LocalEndPoint).Address.ToString();
+                if (ip != "0.0.0.0" && ip != "127.0.0.1")
+                {
+                    AddDebugLog($"IP trouvée (Socket): {ip}");
+                    return ip;
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            AddDebugLog($"⚠️ Socket method failed: {e.Message}");
+        }
+
+        try
+        {
+            // Méthode 3 : Dns (fonctionne en Editor mais pas sur Android)
             var host = Dns.GetHostEntry(Dns.GetHostName());
             foreach (var ip in host.AddressList)
             {
@@ -399,7 +531,84 @@ public class HeadsetServer : MonoBehaviour
             }
         }
         catch { }
-        return "127.0.0.1";
+
+        AddDebugLog($"⚠️ Aucune IP réseau trouvée, utilisation de {bestIP}");
+        return bestIP;
+    }
+
+    /// <summary>
+    /// Calcule l'adresse de broadcast du sous-réseau (ex: 192.168.1.255).
+    /// </summary>
+    private IPAddress GetSubnetBroadcast(string ipStr)
+    {
+        try
+        {
+            foreach (var iface in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (iface.OperationalStatus != OperationalStatus.Up) continue;
+                foreach (var addr in iface.GetIPProperties().UnicastAddresses)
+                {
+                    if (addr.Address.ToString() == ipStr && addr.Address.AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        byte[] ipBytes = addr.Address.GetAddressBytes();
+                        byte[] maskBytes = addr.IPv4Mask.GetAddressBytes();
+                        byte[] bcast = new byte[4];
+                        for (int i = 0; i < 4; i++)
+                            bcast[i] = (byte)(ipBytes[i] | ~maskBytes[i]);
+                        return new IPAddress(bcast);
+                    }
+                }
+            }
+        }
+        catch { }
+        return null;
+    }
+
+    // ─────────────────────────── ANDROID MULTICAST LOCK ───────────────────────────
+
+    /// <summary>
+    /// Acquiert le MulticastLock Android.
+    /// Sans cela, Android filtre les paquets UDP broadcast pour économiser la batterie.
+    /// </summary>
+    private void AcquireMulticastLock()
+    {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        try
+        {
+            using (var activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer")
+                .GetStatic<AndroidJavaObject>("currentActivity"))
+            {
+                var wifiManager = activity.Call<AndroidJavaObject>("getSystemService", "wifi");
+                multicastLock = wifiManager.Call<AndroidJavaObject>("createMulticastLock", "ReVersoBeacon");
+                multicastLock.Call("setReferenceCounted", true);
+                multicastLock.Call("acquire");
+                AddDebugLog("🔓 Android MulticastLock acquis");
+            }
+        }
+        catch (Exception e)
+        {
+            AddDebugLog($"⚠️ MulticastLock failed: {e.Message}");
+        }
+#endif
+    }
+
+    /// <summary>
+    /// Libère le MulticastLock Android.
+    /// </summary>
+    private void ReleaseMulticastLock()
+    {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        try
+        {
+            if (multicastLock != null)
+            {
+                multicastLock.Call("release");
+                multicastLock = null;
+                AddDebugLog("🔒 Android MulticastLock libéré");
+            }
+        }
+        catch { }
+#endif
     }
 
     private void RunOnMainThread(Action action)

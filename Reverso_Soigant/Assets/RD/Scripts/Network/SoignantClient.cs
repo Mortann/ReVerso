@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -61,10 +62,33 @@ public class SoignantClient : MonoBehaviour
 
     private Queue<Action> mainThreadActions = new Queue<Action>();
 
+    // Debug log circulaire
+    private static readonly List<string> debugLog = new List<string>();
+    private const int MAX_LOG_LINES = 20;
+
+    /// <summary>
+    /// Derniers logs réseau (pour affichage debug côté PC).
+    /// </summary>
+    public static IReadOnlyList<string> DebugLog => debugLog;
+
+    private static void AddDebugLog(string msg)
+    {
+        string line = $"[{DateTime.Now:HH:mm:ss}] {msg}";
+        Debug.Log($"[SoignantClient] {msg}");
+        lock (debugLog)
+        {
+            debugLog.Add(line);
+            if (debugLog.Count > MAX_LOG_LINES)
+                debugLog.RemoveAt(0);
+        }
+    }
+
     // ─────────────────────────── LIFECYCLE ───────────────────────────
 
     private void Start()
     {
+        LogFirewallWarning();
+
         if (autoDiscover)
             StartDiscovery();
     }
@@ -102,7 +126,24 @@ public class SoignantClient : MonoBehaviour
         discoveryListenerThread.Start();
 
         SetStatus("🔍 Recherche de casques...");
-        Debug.Log("[SoignantClient] 🔍 Écoute des beacons casques...");
+        AddDebugLog("🔍 Écoute des beacons casques...");
+        AddDebugLog($"Platform: {Application.platform}");
+
+        // Afficher les IPs locales pour debug
+        try
+        {
+            foreach (var iface in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (iface.OperationalStatus != OperationalStatus.Up) continue;
+                if (iface.NetworkInterfaceType == NetworkInterfaceType.Loopback) continue;
+                foreach (var addr in iface.GetIPProperties().UnicastAddresses)
+                {
+                    if (addr.Address.AddressFamily == AddressFamily.InterNetwork)
+                        AddDebugLog($"IP locale: {addr.Address} [{iface.Name}]");
+                }
+            }
+        }
+        catch { }
     }
 
     /// <summary>
@@ -139,11 +180,14 @@ public class SoignantClient : MonoBehaviour
                 udpListener.Client.ReceiveTimeout = 3000;
 
                 RunOnMainThread(() =>
-                    Debug.Log($"[SoignantClient] 📡 Écoute UDP sur port {port}"));
+                    AddDebugLog($"📡 Écoute UDP sur port {port}"));
                 break; // Succès
             }
-            catch
+            catch (Exception ex)
             {
+                int p = port;
+                RunOnMainThread(() =>
+                    AddDebugLog($"⚠️ Port {p} échoué: {ex.Message}"));
                 try { udpListener?.Close(); } catch { }
                 udpListener = null;
             }
@@ -153,11 +197,14 @@ public class SoignantClient : MonoBehaviour
         {
             RunOnMainThread(() =>
             {
-                Debug.LogError("[SoignantClient] ❌ Impossible d'ouvrir un port UDP pour la découverte.");
+                AddDebugLog("❌ Impossible d'ouvrir un port UDP pour la découverte.");
                 SetStatus("❌ Erreur écoute UDP");
             });
             return;
         }
+
+        RunOnMainThread(() => AddDebugLog("🔄 Boucle d'écoute beacon démarrée..."));
+        int receivedCount = 0;
 
         while (!shouldStop)
         {
@@ -166,6 +213,12 @@ public class SoignantClient : MonoBehaviour
                 IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
                 byte[] data = udpListener.Receive(ref remoteEP);
                 string message = Encoding.UTF8.GetString(data);
+
+                receivedCount++;
+                string fromIP = remoteEP.Address.ToString();
+                int count = receivedCount;
+                RunOnMainThread(() =>
+                    AddDebugLog($"📨 UDP reçu #{count} de {fromIP}: {message}"));
 
                 // Format attendu : REVERSO_HEADSET|<ip>|<port>
                 if (message.StartsWith(NetworkConfig.BEACON_HEADSET))
@@ -210,7 +263,7 @@ public class SoignantClient : MonoBehaviour
                 lastSeen = Time.realtimeSinceStartup
             });
             changed = true;
-            Debug.Log($"[SoignantClient] 📡 Casque découvert: {ip}:{port}");
+            AddDebugLog($"📡 Casque découvert: {ip}:{port}");
         }
 
         if (changed)
@@ -264,7 +317,7 @@ public class SoignantClient : MonoBehaviour
 
             SetStatus($"✅ Connecté au casque: {ip}");
             OnConnected?.Invoke();
-            Debug.Log($"[SoignantClient] ✅ Connecté au casque {ip}:{port}");
+            AddDebugLog($"✅ Connecté au casque {ip}:{port}");
 
             // Demander le statut initial
             SendCommand(NetworkMessageType.RequestStatus);
@@ -272,7 +325,7 @@ public class SoignantClient : MonoBehaviour
         catch (Exception e)
         {
             SetStatus($"❌ Échec connexion: {e.Message}");
-            Debug.LogError($"[SoignantClient] ❌ Erreur connexion: {e.Message}");
+            AddDebugLog($"❌ Erreur connexion: {e.GetType().Name}: {e.Message}");
             isConnected = false;
         }
     }
@@ -310,7 +363,7 @@ public class SoignantClient : MonoBehaviour
         {
             SetStatus("Déconnecté du casque");
             OnDisconnected?.Invoke();
-            Debug.Log("[SoignantClient] 🔌 Déconnecté du casque");
+            AddDebugLog("🔌 Déconnecté du casque");
         }
     }
 
@@ -425,5 +478,19 @@ public class SoignantClient : MonoBehaviour
         {
             mainThreadActions.Enqueue(action);
         }
+    }
+
+    /// <summary>
+    /// Affiche un avertissement firewall au démarrage (builds Windows).
+    /// Le pare-feu Windows bloque souvent les connexions UDP en build.
+    /// </summary>
+    private void LogFirewallWarning()
+    {
+#if UNITY_STANDALONE_WIN && !UNITY_EDITOR
+        AddDebugLog("⚠️ BUILD WINDOWS — Si le casque n'est pas détecté :");
+        AddDebugLog("   1. Vérifier le pare-feu Windows (autoriser l'app)");
+        AddDebugLog("   2. Vérifier que le PC et le Quest sont sur le même réseau WiFi");
+        AddDebugLog($"   3. Ports requis : UDP {NetworkConfig.DISCOVERY_PORT}/{NetworkConfig.DISCOVERY_PORT_ALT}, TCP {NetworkConfig.TCP_PORT}");
+#endif
     }
 }

@@ -49,11 +49,14 @@ public enum NetworkMessageType
     EnablePassthrough,
     DisablePassthrough,
     RequestStatus,
+    StartStreaming,
+    StopStreaming,
     
     // Quest → PC
     StatusUpdate,
     HandTrackingData,
     ExerciseCompleted,
+    VideoFrame,
     Error
 }
 

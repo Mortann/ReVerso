@@ -28,6 +28,10 @@ public class PassthroughController : MonoBehaviour
     [Tooltip("GameObjects à désactiver quand le passthrough est actif (environnement VR, skybox, etc.)")]
     [SerializeField] private GameObject[] objectsToHideDuringPassthrough;
 
+    [Header("Contrôle manette")]
+    [Tooltip("Permettre au patient de basculer le passthrough avec le bouton A de la manette droite")]
+    [SerializeField] private bool enableControllerToggle = true;
+
     [Header("État")]
     [SerializeField] private bool isPassthroughActive = false;
 
@@ -56,6 +60,16 @@ public class PassthroughController : MonoBehaviour
         if (IsPassthroughAvailable)
         {
             SetPassthroughActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        // Bouton A de la manette droite pour basculer passthrough / monde virtuel
+        if (enableControllerToggle 
+            && OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch))
+        {
+            TogglePassthrough();
         }
     }
 

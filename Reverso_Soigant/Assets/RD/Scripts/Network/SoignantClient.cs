@@ -402,7 +402,7 @@ public class SoignantClient : MonoBehaviour
 
     private void ReceiveMessages()
     {
-        byte[] buffer = new byte[4096];
+        byte[] buffer = new byte[65536]; // Increased for video frame data
         StringBuilder messageBuilder = new StringBuilder();
 
         while (!shouldStop && tcpClient != null && tcpClient.Connected)

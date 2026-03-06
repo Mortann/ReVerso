@@ -45,6 +45,7 @@ public class HeadsetServer : MonoBehaviour
     public event Action OnStopExercise;
     public event Action<string> OnLoadMovement;
     public event Action<bool> OnPassthroughToggle;
+    public event Action<bool> OnStreamingToggle;
 
     private TcpListener tcpListener;
     private UdpClient udpBeacon;
@@ -91,9 +92,16 @@ public class HeadsetServer : MonoBehaviour
 
     private void Awake()
     {
-        AcquireMulticastLock();
-        if (autoStartOnAwake)
-            StartServer();
+        try
+        {
+            AcquireMulticastLock();
+            if (autoStartOnAwake)
+                StartServer();
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[HeadsetServer] Erreur critique au démarrage: {e.Message}");
+        }
     }
 
     private void Update()
@@ -421,6 +429,12 @@ public class HeadsetServer : MonoBehaviour
                         break;
                     case NetworkMessageType.DisablePassthrough:
                         OnPassthroughToggle?.Invoke(false);
+                        break;
+                    case NetworkMessageType.StartStreaming:
+                        OnStreamingToggle?.Invoke(true);
+                        break;
+                    case NetworkMessageType.StopStreaming:
+                        OnStreamingToggle?.Invoke(false);
                         break;
                     case NetworkMessageType.RequestStatus:
                         SendStatus("Casque actif");

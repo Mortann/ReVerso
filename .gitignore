@@ -5,8 +5,8 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
-Build_Patiant/
-Build_Soigant/
+[Bb]uild_Patiant/
+[Bb]uild_Soigant/
 
 # Visual Studio / Rider
 .vs/

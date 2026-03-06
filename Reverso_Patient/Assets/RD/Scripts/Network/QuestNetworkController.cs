@@ -13,6 +13,7 @@ public class QuestNetworkController : MonoBehaviour
     [SerializeField] private PassthroughController passthroughController;
     [SerializeField] private HandTrackingDebugger handTrackingDebugger;
     [SerializeField] private SessionMetricsCollector sessionMetricsCollector;
+    [SerializeField] private ScreenStreamer screenStreamer;
 
     [Header("Envoi des données au PC")]
     [Tooltip("Envoyer les données de tracking au PC (en temps réel)")]
@@ -40,6 +41,8 @@ public class QuestNetworkController : MonoBehaviour
             handTrackingDebugger = FindFirstObjectByType<HandTrackingDebugger>();
         if (sessionMetricsCollector == null)
             sessionMetricsCollector = FindFirstObjectByType<SessionMetricsCollector>();
+        if (screenStreamer == null)
+            screenStreamer = FindFirstObjectByType<ScreenStreamer>();
 
         if (headsetServer != null)
         {
@@ -49,6 +52,7 @@ public class QuestNetworkController : MonoBehaviour
             headsetServer.OnStopExercise += OnStopExercise;
             headsetServer.OnLoadMovement += OnLoadMovement;
             headsetServer.OnPassthroughToggle += OnPassthroughToggle;
+            headsetServer.OnStreamingToggle += OnStreamingToggle;
             HeadsetServer.AddNetworkLog("QuestNetworkController actif");
         }
         else
@@ -82,6 +86,7 @@ public class QuestNetworkController : MonoBehaviour
             headsetServer.OnStopExercise -= OnStopExercise;
             headsetServer.OnLoadMovement -= OnLoadMovement;
             headsetServer.OnPassthroughToggle -= OnPassthroughToggle;
+            headsetServer.OnStreamingToggle -= OnStreamingToggle;
         }
     }
 
@@ -158,6 +163,10 @@ public class QuestNetworkController : MonoBehaviour
         currentStatus = "En attente du PC...";
         Debug.Log("[QuestNetworkController] 🔌 PC déconnecté");
         HeadsetServer.AddNetworkLog($"🔌 PC déconnecté: {ip}");
+
+        // Arrêter le streaming si actif
+        if (screenStreamer != null && screenStreamer.IsStreaming)
+            screenStreamer.StopStreaming();
     }
 
     private void OnStartExercise()
@@ -222,6 +231,24 @@ public class QuestNetworkController : MonoBehaviour
             Debug.LogWarning("[QuestNetworkController] PassthroughController non trouvé !");
             HeadsetServer.AddNetworkLog("⚠️ PassthroughController non trouvé");
             headsetServer.SendMessage(new NetworkMessage(NetworkMessageType.Error, "PassthroughController non disponible"));
+        }
+    }
+
+    private void OnStreamingToggle(bool enable)
+    {
+        lastCommand = enable ? "Démarrer streaming" : "Arrêter streaming";
+
+        if (screenStreamer != null)
+        {
+            if (enable)
+                screenStreamer.StartStreaming();
+            else
+                screenStreamer.StopStreaming();
+        }
+        else
+        {
+            Debug.LogWarning("[QuestNetworkController] ScreenStreamer non trouvé !");
+            HeadsetServer.AddNetworkLog("⚠️ ScreenStreamer non trouvé");
         }
     }
 

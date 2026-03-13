@@ -4,13 +4,6 @@ using UnityEngine;
 
 /// <summary>
 /// Capture le rendu de la caméra VR et l'envoie au PC soignant via le réseau.
-/// Les frames sont encodées en JPEG (basse qualité pour le réseau),
-/// converties en base64, puis envoyées comme NetworkMessage.
-///
-/// UTILISATION :
-/// - Placé côté Quest (Patient)
-/// - S'active/désactive via StartStreaming()/StopStreaming()
-/// - Le PC reçoit les frames de type VideoFrame et les affiche dans un RawImage
 /// </summary>
 public class ScreenStreamer : MonoBehaviour
 {
@@ -23,18 +16,18 @@ public class ScreenStreamer : MonoBehaviour
 
     [Header("Configuration")]
     [Tooltip("Largeur de la capture (pixels). Plus petit = moins de bande passante.")]
-    [SerializeField] private int captureWidth = 640;
+    [SerializeField] private int captureWidth = 480;
 
     [Tooltip("Hauteur de la capture (pixels)")]
-    [SerializeField] private int captureHeight = 480;
+    [SerializeField] private int captureHeight = 360;
 
     [Tooltip("Qualité JPEG (1-100). Plus bas = plus petit fichier, moins de qualité.")]
     [Range(1, 100)]
-    [SerializeField] private int jpegQuality = 30;
+    [SerializeField] private int jpegQuality = 25;
 
     [Tooltip("Images par seconde envoyées au PC (5-15 recommandé)")]
-    [Range(1, 30)]
-    [SerializeField] private int targetFPS = 8;
+    [Range(1, 20)]
+    [SerializeField] private int targetFPS = 6;
 
     [Header("État")]
     [SerializeField] private bool isStreaming = false;
@@ -61,12 +54,10 @@ public class ScreenStreamer : MonoBehaviour
         CleanupTextures();
     }
 
-    /// <summary>
-    /// Démarre le streaming vidéo vers le PC.
-    /// </summary>
     public void StartStreaming()
     {
-        if (isStreaming) return;
+        if (isStreaming)
+            return;
 
         if (targetCamera == null)
         {
@@ -89,14 +80,13 @@ public class ScreenStreamer : MonoBehaviour
         HeadsetServer.AddNetworkLog("📹 Streaming vidéo démarré");
     }
 
-    /// <summary>
-    /// Arrête le streaming vidéo.
-    /// </summary>
     public void StopStreaming()
     {
-        if (!isStreaming) return;
+        if (!isStreaming)
+            return;
 
         isStreaming = false;
+
         if (streamCoroutine != null)
         {
             StopCoroutine(streamCoroutine);
@@ -112,7 +102,7 @@ public class ScreenStreamer : MonoBehaviour
     private void InitTextures()
     {
         CleanupTextures();
-        renderTexture = new RenderTexture(captureWidth, captureHeight, 24);
+        renderTexture = new RenderTexture(captureWidth, captureHeight, 16, RenderTextureFormat.RGB565);
         readbackTexture = new Texture2D(captureWidth, captureHeight, TextureFormat.RGB24, false);
     }
 
@@ -132,10 +122,6 @@ public class ScreenStreamer : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Boucle de capture et envoi des frames.
-    /// Utilise WaitForEndOfFrame pour capturer après le rendu.
-    /// </summary>
     private IEnumerator StreamLoop()
     {
         var waitEndOfFrame = new WaitForEndOfFrame();
@@ -148,44 +134,38 @@ public class ScreenStreamer : MonoBehaviour
             if (Time.unscaledTime < nextSendTime)
                 continue;
 
-            nextSendTime = Time.unscaledTime + sendInterval;
-
             if (headsetServer == null || !headsetServer.HasConnectedClient)
                 continue;
 
+            nextSendTime = Time.unscaledTime + sendInterval;
             CaptureAndSendFrame();
         }
     }
 
-    /// <summary>
-    /// Capture un frame de la caméra, encode en JPEG, envoie au PC.
-    /// </summary>
     private void CaptureAndSendFrame()
     {
-        if (targetCamera == null || renderTexture == null) return;
+        if (targetCamera == null || renderTexture == null || readbackTexture == null)
+            return;
 
         try
         {
-            // Sauvegarder et remplacer le RenderTexture de la caméra
             RenderTexture previousRT = targetCamera.targetTexture;
             targetCamera.targetTexture = renderTexture;
             targetCamera.Render();
             targetCamera.targetTexture = previousRT;
 
-            // Lire les pixels du RenderTexture
             RenderTexture previousActive = RenderTexture.active;
             RenderTexture.active = renderTexture;
             readbackTexture.ReadPixels(new Rect(0, 0, captureWidth, captureHeight), 0, 0);
             readbackTexture.Apply();
             RenderTexture.active = previousActive;
 
-            // Encoder en JPEG
             byte[] jpegData = ImageConversion.EncodeToJPG(readbackTexture, jpegQuality);
+            if (jpegData == null || jpegData.Length == 0)
+                return;
 
-            // Convertir en base64 et envoyer
             string base64 = Convert.ToBase64String(jpegData);
-            headsetServer.SendToAllClients(
-                new NetworkMessage(NetworkMessageType.VideoFrame, base64));
+            headsetServer.SendToAllClients(new NetworkMessage(NetworkMessageType.VideoFrame, base64));
         }
         catch (Exception e)
         {

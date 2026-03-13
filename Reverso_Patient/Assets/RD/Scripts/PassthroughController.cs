@@ -158,13 +158,13 @@ public class PassthroughController : MonoBehaviour
             }
         }
 
-        // Cacher/Afficher les objets VR
+        // Cacher/Afficher les rendus des objets VR sans désactiver les GameObjects
+        // (SetActive(false) supprimerait les colliders, ce qui ferait tomber le sol)
         foreach (var obj in objectsToHideDuringPassthrough)
         {
-            if (obj != null)
-            {
-                obj.SetActive(!active);
-            }
+            if (obj == null) continue;
+            foreach (var rend in obj.GetComponentsInChildren<Renderer>(true))
+                rend.enabled = !active;
         }
 
         Debug.Log($"[PassthroughController] Passthrough {(active ? "ACTIVÉ - Vue IRL" : "DÉSACTIVÉ - Retour VR")}");

@@ -46,6 +46,9 @@ public class HeadsetServer : MonoBehaviour
     public event Action<string> OnLoadMovement;
     public event Action<bool> OnPassthroughToggle;
     public event Action<bool> OnStreamingToggle;
+    public event Action OnCalibrate;
+    public event Action<bool> OnSetAffectedSide;   // true = gauche, false = droit
+    public event Action<bool> OnMirrorTherapyToggle;
 
     private TcpListener tcpListener;
     private UdpClient udpBeacon;
@@ -435,6 +438,18 @@ public class HeadsetServer : MonoBehaviour
                         break;
                     case NetworkMessageType.StopStreaming:
                         OnStreamingToggle?.Invoke(false);
+                        break;
+                    case NetworkMessageType.Calibrate:
+                        OnCalibrate?.Invoke();
+                        break;
+                    case NetworkMessageType.SetAffectedSide:
+                        OnSetAffectedSide?.Invoke(message.data == "left");
+                        break;
+                    case NetworkMessageType.ActivateMirrorTherapy:
+                        OnMirrorTherapyToggle?.Invoke(true);
+                        break;
+                    case NetworkMessageType.DeactivateMirrorTherapy:
+                        OnMirrorTherapyToggle?.Invoke(false);
                         break;
                     case NetworkMessageType.RequestStatus:
                         SendStatus("Casque actif");

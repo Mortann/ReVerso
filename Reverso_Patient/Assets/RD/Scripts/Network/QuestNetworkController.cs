@@ -14,6 +14,7 @@ public class QuestNetworkController : MonoBehaviour
     [SerializeField] private HandTrackingDebugger handTrackingDebugger;
     [SerializeField] private SessionMetricsCollector sessionMetricsCollector;
     [SerializeField] private ScreenStreamer screenStreamer;
+    [SerializeField] private MirrorTherapyHandTracking mirrorTherapy;
 
     [Header("Envoi des données au PC")]
     [Tooltip("Envoyer les données de tracking au PC (en temps réel)")]
@@ -43,6 +44,8 @@ public class QuestNetworkController : MonoBehaviour
             sessionMetricsCollector = FindFirstObjectByType<SessionMetricsCollector>();
         if (screenStreamer == null)
             screenStreamer = FindFirstObjectByType<ScreenStreamer>();
+        if (mirrorTherapy == null)
+            mirrorTherapy = FindFirstObjectByType<MirrorTherapyHandTracking>();
 
         if (headsetServer != null)
         {
@@ -53,6 +56,9 @@ public class QuestNetworkController : MonoBehaviour
             headsetServer.OnLoadMovement += OnLoadMovement;
             headsetServer.OnPassthroughToggle += OnPassthroughToggle;
             headsetServer.OnStreamingToggle += OnStreamingToggle;
+            headsetServer.OnCalibrate += OnCalibrate;
+            headsetServer.OnSetAffectedSide += OnSetAffectedSide;
+            headsetServer.OnMirrorTherapyToggle += OnMirrorTherapyToggle;
             HeadsetServer.AddNetworkLog("QuestNetworkController actif");
         }
         else
@@ -87,6 +93,9 @@ public class QuestNetworkController : MonoBehaviour
             headsetServer.OnLoadMovement -= OnLoadMovement;
             headsetServer.OnPassthroughToggle -= OnPassthroughToggle;
             headsetServer.OnStreamingToggle -= OnStreamingToggle;
+            headsetServer.OnCalibrate -= OnCalibrate;
+            headsetServer.OnSetAffectedSide -= OnSetAffectedSide;
+            headsetServer.OnMirrorTherapyToggle -= OnMirrorTherapyToggle;
         }
     }
 
@@ -156,6 +165,11 @@ public class QuestNetworkController : MonoBehaviour
         Debug.Log("[QuestNetworkController] ✅ PC soignant connecté");
         HeadsetServer.AddNetworkLog($"✅ PC connecté: {ip}");
         headsetServer.SendStatus("Casque prêt");
+
+        // Activer le script de thérapie miroir pour qu'il reçoive le tracking
+        // Les rigs restent masqués tant que la calibration n'est pas faite
+        if (mirrorTherapy != null && !mirrorTherapy.enabled)
+            mirrorTherapy.enabled = true;
     }
 
     private void OnPCDisconnected(string ip)
@@ -249,6 +263,62 @@ public class QuestNetworkController : MonoBehaviour
         {
             Debug.LogWarning("[QuestNetworkController] ScreenStreamer non trouvé !");
             HeadsetServer.AddNetworkLog("⚠️ ScreenStreamer non trouvé");
+        }
+    }
+
+    private void OnCalibrate()
+    {
+        lastCommand = "Calibrage miroir";
+
+        if (mirrorTherapy == null)
+        {
+            headsetServer.SendToAllClients(new NetworkMessage(
+                NetworkMessageType.CalibrationResult, "failed"));
+            return;
+        }
+
+        // S'assurer que le script est actif pour recevoir le tracking
+        if (!mirrorTherapy.enabled)
+            mirrorTherapy.enabled = true;
+
+        bool ok = mirrorTherapy.Calibrer();
+        string result = ok ? "ok" : "failed";
+        headsetServer.SendToAllClients(new NetworkMessage(
+            NetworkMessageType.CalibrationResult, result));
+
+        HeadsetServer.AddNetworkLog($"📐 Calibrage: {result}");
+        headsetServer.SendStatus($"Calibrage {(ok ? "réussi" : "échoué")}");
+    }
+
+    private void OnSetAffectedSide(bool isLeft)
+    {
+        lastCommand = isLeft ? "Côté gauche" : "Côté droit";
+
+        if (mirrorTherapy != null)
+        {
+            mirrorTherapy.CoteEntraine = isLeft ? CoteAffecte.Gauche : CoteAffecte.Droit;
+            HeadsetServer.AddNetworkLog($"🖐️ Côté défini: {(isLeft ? "Gauche" : "Droit")}");
+            headsetServer.SendStatus($"Côté: {(isLeft ? "Gauche" : "Droit")}");
+        }
+    }
+
+    private void OnMirrorTherapyToggle(bool enable)
+    {
+        lastCommand = enable ? "Activer miroir" : "Désactiver miroir";
+
+        if (mirrorTherapy != null)
+        {
+            mirrorTherapy.MirrorActive = enable;
+            string status = enable ? "active" : "inactive";
+            headsetServer.SendToAllClients(new NetworkMessage(
+                NetworkMessageType.MirrorTherapyStatus, status));
+            HeadsetServer.AddNetworkLog($"🪞 Thérapie miroir: {status}");
+            headsetServer.SendStatus($"Miroir {(enable ? "activé" : "désactivé")}");
+        }
+        else
+        {
+            headsetServer.SendMessage(new NetworkMessage(
+                NetworkMessageType.Error, "MirrorTherapy non disponible"));
         }
     }
 

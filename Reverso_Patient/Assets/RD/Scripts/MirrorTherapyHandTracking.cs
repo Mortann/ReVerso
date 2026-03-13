@@ -123,6 +123,10 @@ public class MirrorTherapyHandTracking : MonoBehaviour
     [SerializeField] private ArmHandRig rightRig = new ArmHandRig();
 
     [Header("═══ Simulation des Bras — Dimensions ═══")]
+    [Tooltip("Activer la simulation IK des bras (upperArm + forearm).\n" +
+             "Désactiver pour ne driver que les os de la main.")]
+    [SerializeField] private bool enableArmIK = false;
+
     [Tooltip("Longueur du haut du bras (épaule → coude) en mètres")]
     [SerializeField] private float upperArmLength = 0.28f;
 
@@ -185,6 +189,9 @@ public class MirrorTherapyHandTracking : MonoBehaviour
     private bool leftHandTracked;
     private bool rightHandTracked;
 
+    // Contrôle de l'affichage miroir (indépendant de enabled)
+    private bool isMirrorActive;
+
     // Poses des joints en espace monde (mises à jour par les events)
     private Pose[] leftJointPoses = new Pose[JOINT_COUNT];
     private Pose[] rightJointPoses = new Pose[JOINT_COUNT];
@@ -221,6 +228,33 @@ public class MirrorTherapyHandTracking : MonoBehaviour
         set => coteEntraine = value;
     }
 
+    /// <summary>
+    /// Active/désactive le rendu miroir (rigs visibles + mains par défaut masquées).
+    /// Le script reste actif pour recevoir le tracking.
+    /// </summary>
+    public bool MirrorActive
+    {
+        get => isMirrorActive;
+        set
+        {
+            isMirrorActive = value;
+            if (value && calibration.isCalibrated)
+            {
+                leftRig?.SetVisible(true);
+                rightRig?.SetVisible(true);
+                if (hideDefaultHandVisuals)
+                    SetDefaultVisualsActive(false);
+            }
+            else if (!value)
+            {
+                leftRig?.SetVisible(false);
+                rightRig?.SetVisible(false);
+                if (hideDefaultHandVisuals)
+                    SetDefaultVisualsActive(true);
+            }
+        }
+    }
+
     #endregion
 
     // ════════════════════════════════════════════════════════════════════
@@ -231,27 +265,29 @@ public class MirrorTherapyHandTracking : MonoBehaviour
     {
         SubscribeEvents();
 
-        if (hideDefaultHandVisuals)
-            SetDefaultVisualsActive(false);
-
-        // Masquer les rigs tant que pas calibré
+        // Les rigs et les mains par défaut sont gérés par MirrorActive
+        // Au démarrage, on masque les rigs (l'activation se fait via MirrorActive)
         leftRig?.SetVisible(false);
         rightRig?.SetVisible(false);
 
-        Debug.Log("[MirrorTherapy] Script activé. En attente de calibration...");
+        Debug.Log("[MirrorTherapy] Script activé — tracking en écoute.");
     }
 
     private void OnDisable()
     {
         UnsubscribeEvents();
 
+        // Tout masquer et restaurer les mains par défaut
+        isMirrorActive = false;
+        leftRig?.SetVisible(false);
+        rightRig?.SetVisible(false);
         if (hideDefaultHandVisuals)
             SetDefaultVisualsActive(true);
     }
 
     private void LateUpdate()
     {
-        if (!calibration.isCalibrated) return;
+        if (!isMirrorActive || !calibration.isCalibrated) return;
 
         // Déterminer quel côté est valide vs affecté
         bool validIsRight = (coteEntraine == CoteAffecte.Gauche);
@@ -330,10 +366,6 @@ public class MirrorTherapyHandTracking : MonoBehaviour
         calibration.forwardDirection = Vector3.Cross(Vector3.up, calibration.mirrorNormal).normalized;
 
         calibration.isCalibrated = true;
-
-        // Activer les rigs
-        leftRig?.SetVisible(true);
-        rightRig?.SetVisible(true);
 
         Debug.Log($"[MirrorTherapy] ✓ Calibration réussie !\n" +
                   $"  Origine : {calibration.origin}\n" +
@@ -473,12 +505,15 @@ public class MirrorTherapyHandTracking : MonoBehaviour
     {
         if (rig == null) return;
 
-        // ── Bras simulé par IK ──
-        int wristIdx = XRHandJointID.Wrist.ToIndex();
-        if (validJoints[wristIdx])
+        // ── Bras simulé par IK (optionnel) ──
+        if (enableArmIK)
         {
-            Vector3 wristPos = poses[wristIdx].position;
-            ApplyArmIK(rig, isLeftSide, wristPos, dt);
+            int wristIdx = XRHandJointID.Wrist.ToIndex();
+            if (validJoints[wristIdx])
+            {
+                Vector3 wristPos = poses[wristIdx].position;
+                ApplyArmIK(rig, isLeftSide, wristPos, dt);
+            }
         }
 
         // ── Os de la main : poses directes depuis le tracking ──
@@ -501,12 +536,15 @@ public class MirrorTherapyHandTracking : MonoBehaviour
     {
         if (rig == null) return;
 
-        // ── Bras simulé par IK vers le poignet miroir ──
-        int wristIdx = XRHandJointID.Wrist.ToIndex();
-        if (validJoints[wristIdx])
+        // ── Bras simulé par IK vers le poignet miroir (optionnel) ──
+        if (enableArmIK)
         {
-            Vector3 mirroredWrist = MirrorPosition(validPoses[wristIdx].position);
-            ApplyArmIK(rig, isLeftSide, mirroredWrist, dt);
+            int wristIdx = XRHandJointID.Wrist.ToIndex();
+            if (validJoints[wristIdx])
+            {
+                Vector3 mirroredWrist = MirrorPosition(validPoses[wristIdx].position);
+                ApplyArmIK(rig, isLeftSide, mirroredWrist, dt);
+            }
         }
 
         // ── Os de la main : poses miroir ──

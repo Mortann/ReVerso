@@ -51,12 +51,18 @@ public enum NetworkMessageType
     RequestStatus,
     StartStreaming,
     StopStreaming,
+    Calibrate,               // Déclencher la calibration
+    SetAffectedSide,         // data = "left" ou "right"
+    ActivateMirrorTherapy,
+    DeactivateMirrorTherapy,
     
     // Quest → PC
     StatusUpdate,
     HandTrackingData,
     ExerciseCompleted,
     VideoFrame,
+    CalibrationResult,       // data = "ok" | "failed" | "already_calibrated"
+    MirrorTherapyStatus,     // data = "active" | "inactive"
     Error
 }
 

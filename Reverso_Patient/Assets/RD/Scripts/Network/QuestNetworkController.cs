@@ -13,6 +13,8 @@ public class QuestNetworkController : MonoBehaviour
     [SerializeField] private PassthroughController passthroughController;
     [SerializeField] private HandTrackingDebugger handTrackingDebugger;
     [SerializeField] private SessionMetricsCollector sessionMetricsCollector;
+    [SerializeField] private ScreenStreamer screenStreamer;
+    [SerializeField] private MirrorTherapyHandTracking mirrorTherapy;
 
     [Header("Envoi des données au PC")]
     [Tooltip("Envoyer les données de tracking au PC (en temps réel)")]
@@ -40,6 +42,10 @@ public class QuestNetworkController : MonoBehaviour
             handTrackingDebugger = FindFirstObjectByType<HandTrackingDebugger>();
         if (sessionMetricsCollector == null)
             sessionMetricsCollector = FindFirstObjectByType<SessionMetricsCollector>();
+        if (screenStreamer == null)
+            screenStreamer = FindFirstObjectByType<ScreenStreamer>();
+        if (mirrorTherapy == null)
+            mirrorTherapy = FindFirstObjectByType<MirrorTherapyHandTracking>();
 
         if (headsetServer != null)
         {
@@ -49,10 +55,16 @@ public class QuestNetworkController : MonoBehaviour
             headsetServer.OnStopExercise += OnStopExercise;
             headsetServer.OnLoadMovement += OnLoadMovement;
             headsetServer.OnPassthroughToggle += OnPassthroughToggle;
+            headsetServer.OnStreamingToggle += OnStreamingToggle;
+            headsetServer.OnCalibrate += OnCalibrate;
+            headsetServer.OnSetAffectedSide += OnSetAffectedSide;
+            headsetServer.OnMirrorTherapyToggle += OnMirrorTherapyToggle;
+            HeadsetServer.AddNetworkLog("QuestNetworkController actif");
         }
         else
         {
             Debug.LogWarning("[QuestNetworkController] HeadsetServer non trouvé !");
+            HeadsetServer.AddNetworkLog("⚠️ HeadsetServer non trouvé");
         }
 
         currentStatus = "En attente du PC...";
@@ -80,6 +92,10 @@ public class QuestNetworkController : MonoBehaviour
             headsetServer.OnStopExercise -= OnStopExercise;
             headsetServer.OnLoadMovement -= OnLoadMovement;
             headsetServer.OnPassthroughToggle -= OnPassthroughToggle;
+            headsetServer.OnStreamingToggle -= OnStreamingToggle;
+            headsetServer.OnCalibrate -= OnCalibrate;
+            headsetServer.OnSetAffectedSide -= OnSetAffectedSide;
+            headsetServer.OnMirrorTherapyToggle -= OnMirrorTherapyToggle;
         }
     }
 
@@ -147,13 +163,24 @@ public class QuestNetworkController : MonoBehaviour
     {
         currentStatus = "PC connecté";
         Debug.Log("[QuestNetworkController] ✅ PC soignant connecté");
+        HeadsetServer.AddNetworkLog($"✅ PC connecté: {ip}");
         headsetServer.SendStatus("Casque prêt");
+
+        // Activer le script de thérapie miroir pour qu'il reçoive le tracking
+        // Les rigs restent masqués tant que la calibration n'est pas faite
+        if (mirrorTherapy != null && !mirrorTherapy.enabled)
+            mirrorTherapy.enabled = true;
     }
 
     private void OnPCDisconnected(string ip)
     {
         currentStatus = "En attente du PC...";
         Debug.Log("[QuestNetworkController] 🔌 PC déconnecté");
+        HeadsetServer.AddNetworkLog($"🔌 PC déconnecté: {ip}");
+
+        // Arrêter le streaming si actif
+        if (screenStreamer != null && screenStreamer.IsStreaming)
+            screenStreamer.StopStreaming();
     }
 
     private void OnStartExercise()
@@ -169,6 +196,7 @@ public class QuestNetworkController : MonoBehaviour
         }
 
         Debug.Log("[QuestNetworkController] ▶️ Démarrage exercice");
+        HeadsetServer.AddNetworkLog("▶️ Exercice démarré");
         headsetServer.SendStatus("Exercice démarré");
     }
 
@@ -189,6 +217,7 @@ public class QuestNetworkController : MonoBehaviour
         }
 
         Debug.Log("[QuestNetworkController] ⏹️ Arrêt exercice");
+        HeadsetServer.AddNetworkLog("⏹️ Exercice arrêté");
         headsetServer.SendStatus("Exercice arrêté");
     }
 
@@ -196,6 +225,7 @@ public class QuestNetworkController : MonoBehaviour
     {
         lastCommand = $"Charger mouvement: {movementData}";
         Debug.Log($"[QuestNetworkController] 📂 Chargement mouvement: {movementData}");
+        HeadsetServer.AddNetworkLog($"📂 Mouvement chargé: {movementData}");
         headsetServer.SendStatus($"Mouvement chargé: {movementData}");
     }
 
@@ -207,12 +237,88 @@ public class QuestNetworkController : MonoBehaviour
         {
             passthroughController.SetPassthroughActive(enable);
             currentStatus = enable ? "Passthrough ACTIF" : "Passthrough INACTIF";
+            HeadsetServer.AddNetworkLog(currentStatus);
             headsetServer.SendStatus(currentStatus);
         }
         else
         {
             Debug.LogWarning("[QuestNetworkController] PassthroughController non trouvé !");
+            HeadsetServer.AddNetworkLog("⚠️ PassthroughController non trouvé");
             headsetServer.SendMessage(new NetworkMessage(NetworkMessageType.Error, "PassthroughController non disponible"));
+        }
+    }
+
+    private void OnStreamingToggle(bool enable)
+    {
+        lastCommand = enable ? "Démarrer streaming" : "Arrêter streaming";
+
+        if (screenStreamer != null)
+        {
+            if (enable)
+                screenStreamer.StartStreaming();
+            else
+                screenStreamer.StopStreaming();
+        }
+        else
+        {
+            Debug.LogWarning("[QuestNetworkController] ScreenStreamer non trouvé !");
+            HeadsetServer.AddNetworkLog("⚠️ ScreenStreamer non trouvé");
+        }
+    }
+
+    private void OnCalibrate()
+    {
+        lastCommand = "Calibrage miroir";
+
+        if (mirrorTherapy == null)
+        {
+            headsetServer.SendToAllClients(new NetworkMessage(
+                NetworkMessageType.CalibrationResult, "failed"));
+            return;
+        }
+
+        // S'assurer que le script est actif pour recevoir le tracking
+        if (!mirrorTherapy.enabled)
+            mirrorTherapy.enabled = true;
+
+        bool ok = mirrorTherapy.Calibrer();
+        string result = ok ? "ok" : "failed";
+        headsetServer.SendToAllClients(new NetworkMessage(
+            NetworkMessageType.CalibrationResult, result));
+
+        HeadsetServer.AddNetworkLog($"📐 Calibrage: {result}");
+        headsetServer.SendStatus($"Calibrage {(ok ? "réussi" : "échoué")}");
+    }
+
+    private void OnSetAffectedSide(bool isLeft)
+    {
+        lastCommand = isLeft ? "Côté gauche" : "Côté droit";
+
+        if (mirrorTherapy != null)
+        {
+            mirrorTherapy.CoteEntraine = isLeft ? CoteAffecte.Gauche : CoteAffecte.Droit;
+            HeadsetServer.AddNetworkLog($"🖐️ Côté défini: {(isLeft ? "Gauche" : "Droit")}");
+            headsetServer.SendStatus($"Côté: {(isLeft ? "Gauche" : "Droit")}");
+        }
+    }
+
+    private void OnMirrorTherapyToggle(bool enable)
+    {
+        lastCommand = enable ? "Activer miroir" : "Désactiver miroir";
+
+        if (mirrorTherapy != null)
+        {
+            mirrorTherapy.MirrorActive = enable;
+            string status = enable ? "active" : "inactive";
+            headsetServer.SendToAllClients(new NetworkMessage(
+                NetworkMessageType.MirrorTherapyStatus, status));
+            HeadsetServer.AddNetworkLog($"🪞 Thérapie miroir: {status}");
+            headsetServer.SendStatus($"Miroir {(enable ? "activé" : "désactivé")}");
+        }
+        else
+        {
+            headsetServer.SendMessage(new NetworkMessage(
+                NetworkMessageType.Error, "MirrorTherapy non disponible"));
         }
     }
 
@@ -228,18 +334,47 @@ public class QuestNetworkController : MonoBehaviour
             fontSize = 20,
             normal = { textColor = Color.white }
         };
+        GUIStyle logStyle = new GUIStyle(GUI.skin.label)
+        {
+            fontSize = 16,
+            normal = { textColor = Color.cyan },
+            wordWrap = true
+        };
 
-        float width = 400;
-        float height = 150;
+        float width = 600;
         float x = 10;
-        float y = Screen.height - height - 10;
 
-        GUI.Box(new Rect(x, y, width, height), "ReVerso Network", boxStyle);
+        // Section statut
+        float statusHeight = 150;
+
+        // Section logs réseau (visible dans le casque)
+        var logs = HeadsetServer.DebugLog;
+        float lineHeight = 22;
+        float logHeight = (logs != null && logs.Count > 0)
+            ? 30 + logs.Count * lineHeight
+            : 0;
+
+        float totalHeight = statusHeight + (logHeight > 0 ? (10 + logHeight) : 0);
+        float y = Screen.height - totalHeight - 10;
+        if (y < 10) y = 10;
+
+        GUI.Box(new Rect(x, y, width, statusHeight), "ReVerso Network", boxStyle);
         GUI.Label(new Rect(x + 10, y + 30, width - 20, 30),
             $"Statut: {currentStatus}", labelStyle);
         GUI.Label(new Rect(x + 10, y + 60, width - 20, 30),
             $"Serveur: {(headsetServer != null ? headsetServer.ServerStatus : "N/A")}", labelStyle);
         GUI.Label(new Rect(x + 10, y + 90, width - 20, 30),
             $"Dernière commande: {lastCommand}", labelStyle);
+
+        if (logs != null && logs.Count > 0)
+        {
+            float logY = y + statusHeight + 10;
+            GUI.Box(new Rect(x, logY, width, logHeight), "Network Log", boxStyle);
+            for (int i = 0; i < logs.Count; i++)
+            {
+                GUI.Label(new Rect(x + 10, logY + 28 + i * lineHeight, width - 20, lineHeight),
+                    logs[i], logStyle);
+            }
+        }
     }
 }

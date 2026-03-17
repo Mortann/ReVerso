@@ -2429,7 +2429,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95669
+// Method Definition Index: 95863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t4DE282494AF68A9B2271B3E6C3EC28AA002DB60F UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mAEA1E32FA56978A724BD1B50A7585292798ECDCA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2463,7 +2463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t4DE282494AF68A9B2271B3E6C3EC2
 		return L_6;
 	}
 }
-// Method Definition Index: 95670
+// Method Definition Index: 95864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m1FE298CE5B0FCAC3C1779C4D63B20CA0A918D772 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t2B953E9D20AEC597BF8AA081ECC00608B4FF59FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2549,7 +2549,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t4DE282494AF68A9B2271B3E6C3EC28AA002DB60F_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95671
+// Method Definition Index: 95865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane_Start_mB392CE4851EE4B43ECA891CDAC0E58811DBEB749 (ObjectResetPlane_t250386B64E13D2BF74C06B92F37342283E4C392B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2573,7 +2573,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane_Start_mB392CE4851EE4B43
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:32>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:32>
 		List_1_t991BBC5A1D51F59A450367DF944DAA207F22D06D* L_0 = __this->___m_ObjectsToReset;
 		NullCheck(L_0);
 		Enumerator_t519AE1DAA64E517296768BEA2E732ED47F76A91D L_1;
@@ -2598,11 +2598,11 @@ FINALLY_0089:
 
 IL_000e_1:
 			{
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:32>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:32>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 				L_2 = Enumerator_get_Current_mCBBD283BB42C56D73B7C4194020EC95292B36129_inline((&V_0), Enumerator_get_Current_mCBBD283BB42C56D73B7C4194020EC95292B36129_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:34>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:34>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = V_1;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_4;
@@ -2613,13 +2613,13 @@ IL_000e_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:36>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:36>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = V_1;
 				NullCheck(L_5);
 				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 				L_6 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_5, NULL);
 				V_2 = L_6;
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:38>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:38>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = __this->___m_ObjectRoot;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_8;
@@ -2630,7 +2630,7 @@ IL_000e_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:39>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:39>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9 = __this->___m_ObjectRoot;
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = V_1;
 				NullCheck(L_10);
@@ -2644,7 +2644,7 @@ IL_000e_1:
 
 IL_0046_1:
 			{
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:41>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:41>
 				List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2* L_13 = __this->___m_OriginalPositions;
 				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_2;
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15 = V_1;
@@ -2661,10 +2661,10 @@ IL_0046_1:
 
 IL_005f_1:
 			{
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:45>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:45>
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogWarning_m23033D7E2F0F298BE465B7F3A63CDF40A4EB70EB(_stringLiteral5F74F4552573907FBE09143A3589664BC9ED23CD, __this, NULL);
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:46>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:46>
 				List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2* L_18 = __this->___m_OriginalPositions;
 				il2cpp_codegen_initobj((&V_3), sizeof(Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971));
 				Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_19 = V_3;
@@ -2674,7 +2674,7 @@ IL_005f_1:
 
 IL_007e_1:
 			{
-				//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:32>
+				//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:32>
 				bool L_20;
 				L_20 = Enumerator_MoveNext_mBAA697FE341E389C86536D9444A3E4AC02109E87((&V_0), Enumerator_MoveNext_mBAA697FE341E389C86536D9444A3E4AC02109E87_RuntimeMethod_var);
 				if (L_20)
@@ -2694,11 +2694,11 @@ IL_007e_1:
 
 IL_0097:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:49>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:49>
 		return;
 	}
 }
-// Method Definition Index: 95672
+// Method Definition Index: 95866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane_Update_mFFD955BAF5684166CC09D48B84E7BE6C790EA971 (ObjectResetPlane_t250386B64E13D2BF74C06B92F37342283E4C392B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2718,12 +2718,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane_Update_mFFD955BAF568416
 	memset((&V_3), 0, sizeof(V_3));
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* V_4 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:56>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:56>
 		float L_0 = __this->___m_CheckTimer;
 		float L_1;
 		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___m_CheckTimer = ((float)il2cpp_codegen_subtract(L_0, L_1));
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:58>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:58>
 		float L_2 = __this->___m_CheckTimer;
 		if ((!(((float)L_2) > ((float)(0.0f)))))
 		{
@@ -2731,16 +2731,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane_Update_mFFD955BAF568416
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:59>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:59>
 		return;
 	}
 
 IL_0020:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:61>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:61>
 		float L_3 = __this->___m_CheckDuration;
 		__this->___m_CheckTimer = L_3;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:63>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:63>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_4);
@@ -2748,21 +2748,21 @@ IL_0020:
 		L_5 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_4, NULL);
 		float L_6 = L_5.___y;
 		V_0 = L_6;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:65>
 		V_1 = 0;
 		goto IL_00d2;
 	}
 
 IL_0044:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:67>
 		List_1_t991BBC5A1D51F59A450367DF944DAA207F22D06D* L_7 = __this->___m_ObjectsToReset;
 		int32_t L_8 = V_1;
 		NullCheck(L_7);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = List_1_get_Item_m8EAA91B4CE37CBB6C720FD238E4505097B29FFDA(L_7, L_8, List_1_get_Item_m8EAA91B4CE37CBB6C720FD238E4505097B29FFDA_RuntimeMethod_var);
 		V_2 = L_9;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:68>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:68>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -2773,7 +2773,7 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:71>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:71>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12 = V_2;
 		NullCheck(L_12);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
@@ -2786,7 +2786,7 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:73>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:73>
 		List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2* L_16 = __this->___m_OriginalPositions;
 		int32_t L_17 = V_1;
 		NullCheck(L_16);
@@ -2794,7 +2794,7 @@ IL_0044:
 		L_18 = List_1_get_Item_m30DAA93C38186B88FCB4FDE8CD17B27CC6517431(L_16, L_17, List_1_get_Item_m30DAA93C38186B88FCB4FDE8CD17B27CC6517431_RuntimeMethod_var);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = L_18.___position;
 		V_3 = L_19;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:74>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:74>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20 = __this->___m_ObjectRoot;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -2805,7 +2805,7 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:75>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:75>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22 = __this->___m_ObjectRoot;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_3;
 		NullCheck(L_22);
@@ -2816,7 +2816,7 @@ IL_0044:
 
 IL_0095:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:77>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:77>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26 = V_3;
 		List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2* L_27 = __this->___m_OriginalPositions;
@@ -2827,13 +2827,13 @@ IL_0095:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_30 = L_29.___rotation;
 		NullCheck(L_25);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_25, L_26, L_30, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:79>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:79>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31 = V_2;
 		NullCheck(L_31);
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_32;
 		L_32 = Component_GetComponentInChildren_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m8D7F962D37E4362174AE5FE843014811F239F155(L_31, Component_GetComponentInChildren_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m8D7F962D37E4362174AE5FE843014811F239F155_RuntimeMethod_var);
 		V_4 = L_32;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:80>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_33 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_34;
@@ -2844,7 +2844,7 @@ IL_0095:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:82>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:82>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_35 = V_4;
 		RuntimeObject* L_36;
 		L_36 = ObjectResetPlane_ResetRigidbodyRoutine_m1BBFD060733C8A37BDCF98EE92075DFC760F738F(__this, L_35, NULL);
@@ -2854,14 +2854,14 @@ IL_0095:
 
 IL_00ce:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:65>
 		int32_t L_38 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_38, 1));
 	}
 
 IL_00d2:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:65>
 		int32_t L_39 = V_1;
 		List_1_t991BBC5A1D51F59A450367DF944DAA207F22D06D* L_40 = __this->___m_ObjectsToReset;
 		NullCheck(L_40);
@@ -2873,11 +2873,11 @@ IL_00d2:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:86>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:86>
 		return;
 	}
 }
-// Method Definition Index: 95673
+// Method Definition Index: 95867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectResetPlane_ResetRigidbodyRoutine_m1BBFD060733C8A37BDCF98EE92075DFC760F738F (ObjectResetPlane_t250386B64E13D2BF74C06B92F37342283E4C392B* __this, Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___0_body, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2897,7 +2897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectResetPlane_ResetRigidbod
 		return L_1;
 	}
 }
-// Method Definition Index: 95674
+// Method Definition Index: 95868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane__ctor_mC9E2B69E8F9FD3B1F1011DC301332C45113439D2 (ObjectResetPlane_t250386B64E13D2BF74C06B92F37342283E4C392B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2910,14 +2910,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane__ctor_mC9E2B69E8F9FD3B1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:13>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:13>
 		List_1_t991BBC5A1D51F59A450367DF944DAA207F22D06D* L_0 = (List_1_t991BBC5A1D51F59A450367DF944DAA207F22D06D*)il2cpp_codegen_object_new(List_1_t991BBC5A1D51F59A450367DF944DAA207F22D06D_il2cpp_TypeInfo_var);
 		List_1__ctor_mDC3E95DC5C927A867B9B42EDE1945F909B894268(L_0, List_1__ctor_mDC3E95DC5C927A867B9B42EDE1945F909B894268_RuntimeMethod_var);
 		__this->___m_ObjectsToReset = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ObjectsToReset), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:17>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:17>
 		__this->___m_CheckDuration = (2.0f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:23>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:23>
 		List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2* L_1 = (List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2*)il2cpp_codegen_object_new(List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2_il2cpp_TypeInfo_var);
 		List_1__ctor_m6C9BC48FF099B7CF07ADD778D1DDD6B7D42ED791(L_1, List_1__ctor_m6C9BC48FF099B7CF07ADD778D1DDD6B7D42ED791_RuntimeMethod_var);
 		__this->___m_OriginalPositions = L_1;
@@ -2934,7 +2934,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectResetPlane__ctor_mC9E2B69E8F9FD3B1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95675
+// Method Definition Index: 95869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetRigidbodyRoutineU3Ed__7__ctor_mC3548147548CA1F0742DA9A9A63F382AF8B123AE (U3CResetRigidbodyRoutineU3Ed__7_tD23442B8D711C17B43ACB603D6C02757C5424B21* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -2944,14 +2944,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetRigidbodyRoutineU3Ed__7__ctor_mC
 		return;
 	}
 }
-// Method Definition Index: 95676
+// Method Definition Index: 95870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetRigidbodyRoutineU3Ed__7_System_IDisposable_Dispose_mC46300D3BD0B9BE1560A525064A54F1DDD9DD2CC (U3CResetRigidbodyRoutineU3Ed__7_tD23442B8D711C17B43ACB603D6C02757C5424B21* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 95677
+// Method Definition Index: 95871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CResetRigidbodyRoutineU3Ed__7_MoveNext_mE1B83DA17D70BB95E76469686A08764AC6EDC158 (U3CResetRigidbodyRoutineU3Ed__7_tD23442B8D711C17B43ACB603D6C02757C5424B21* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2984,11 +2984,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CResetRigidbodyRoutineU3Ed__7_MoveNext
 IL_0010:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:90>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:90>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_3 = __this->___body;
 		NullCheck(L_3);
 		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_3, (bool)1, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:91>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:91>
 		WaitForFixedUpdate_t86F5BC0B6A668AEF2903DE9ADB52062E457BD1B7* L_4 = (WaitForFixedUpdate_t86F5BC0B6A668AEF2903DE9ADB52062E457BD1B7*)il2cpp_codegen_object_new(WaitForFixedUpdate_t86F5BC0B6A668AEF2903DE9ADB52062E457BD1B7_il2cpp_TypeInfo_var);
 		WaitForFixedUpdate__ctor_m28D22FD61960FCD538753493FAC080DA5EC7A9E7(L_4, NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -3000,15 +3000,15 @@ IL_0010:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:92>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:92>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_5 = __this->___body;
 		NullCheck(L_5);
 		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_5, (bool)0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:94>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ObjectResetPlane.cs:94>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 95678
+// Method Definition Index: 95872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetRigidbodyRoutineU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1850B2F10BF8A8307A0AEBC50D7BD10C154E475C (U3CResetRigidbodyRoutineU3Ed__7_tD23442B8D711C17B43ACB603D6C02757C5424B21* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3016,7 +3016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetRigidbodyRoutineU3Ed__
 		return L_0;
 	}
 }
-// Method Definition Index: 95679
+// Method Definition Index: 95873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetRigidbodyRoutineU3Ed__7_System_Collections_IEnumerator_Reset_mF6A6C4B9C85C2AF254CD205BF0AEB1CFC92EC8BF (U3CResetRigidbodyRoutineU3Ed__7_tD23442B8D711C17B43ACB603D6C02757C5424B21* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3025,7 +3025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetRigidbodyRoutineU3Ed__7_System_C
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CResetRigidbodyRoutineU3Ed__7_System_Collections_IEnumerator_Reset_mF6A6C4B9C85C2AF254CD205BF0AEB1CFC92EC8BF_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 95680
+// Method Definition Index: 95874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetRigidbodyRoutineU3Ed__7_System_Collections_IEnumerator_get_Current_m2DB5C059CB4008A145432A1ECB6BBB7F38637265 (U3CResetRigidbodyRoutineU3Ed__7_tD23442B8D711C17B43ACB603D6C02757C5424B21* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3041,7 +3041,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetRigidbodyRoutineU3Ed__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95681
+// Method Definition Index: 95875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_OnEnable_mAB39E2D0F0FF5A0B6757102E41170CFF296CF59A (PokeBlendShapeAnimator_t48459CB445F2396B407770EBB860FC85B1B2F282* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3059,7 +3059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_OnEnable_mAB39E2D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:49>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:49>
 		XRPokeFilter_tC756187569A8DFE55C540B756688000609B89AC8* L_0 = __this->___m_PokeFilter;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3082,33 +3082,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_OnEnable_mAB39E2D
 
 IL_001c:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:51>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:51>
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:52>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:52>
 		return;
 	}
 
 IL_0024:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:55>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:55>
 		XRPokeFilter_tC756187569A8DFE55C540B756688000609B89AC8* L_4 = __this->___m_PokeFilter;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
 		L_5 = Component_GetComponent_TisIXRHoverInteractable_tB88E3F220034149EC6037AB0126FC607CC2CF219_mEE6B356A977A12B0BE632D42B58DD22EDF2BD125(L_4, Component_GetComponent_TisIXRHoverInteractable_tB88E3F220034149EC6037AB0126FC607CC2CF219_mEE6B356A977A12B0BE632D42B58DD22EDF2BD125_RuntimeMethod_var);
 		__this->___m_HoverInteractable = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_HoverInteractable), (void*)L_5);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:56>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:56>
 		XRPokeFilter_tC756187569A8DFE55C540B756688000609B89AC8* L_6 = __this->___m_PokeFilter;
 		NullCheck(L_6);
 		RuntimeObject* L_7;
 		L_7 = Component_GetComponent_TisIXRInteractionStrengthInteractable_t0C79B1621B5D4987893370F8AF403574853D44B7_m30F0483203CBCAD90D7F82B220056EA8E75DD550(L_6, Component_GetComponent_TisIXRInteractionStrengthInteractable_t0C79B1621B5D4987893370F8AF403574853D44B7_m30F0483203CBCAD90D7F82B220056EA8E75DD550_RuntimeMethod_var);
 		__this->___m_InteractionStrengthInteractable = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InteractionStrengthInteractable), (void*)L_7);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:58>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:59>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:60>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:61>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:62>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:58>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:59>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:60>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:61>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:62>
 		BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A* L_8 = __this->___m_BindingsGroup;
 		XRPokeFilter_tC756187569A8DFE55C540B756688000609B89AC8* L_9 = __this->___m_PokeFilter;
 		NullCheck(L_9);
@@ -3121,10 +3121,10 @@ IL_0024:
 		L_12 = InterfaceFuncInvoker1< RuntimeObject*, Action_1_t1FB720A83B3555E719F665FB0110E7C51487F3F8* >::Invoke(0, IReadOnlyBindableVariable_1_tD608177C44612AEF9CD25AEDCA15F1734DD0E073_il2cpp_TypeInfo_var, L_10, L_11);
 		NullCheck(L_8);
 		BindingsGroup_AddBinding_m18697E73861A1C67DE0674F162B43CCE9E67C89B(L_8, L_12, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:64>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:65>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:66>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:64>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:66>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:67>
 		BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A* L_13 = __this->___m_BindingsGroup;
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_14 = __this->___m_TweenableVariable;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_15 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
@@ -3134,23 +3134,23 @@ IL_0024:
 		L_16 = BindableVariableBase_1_SubscribeAndUpdate_m5B7D6AA6417F69F27C39806544D0D88892BA6AE7(L_14, L_15, BindableVariableBase_1_SubscribeAndUpdate_m5B7D6AA6417F69F27C39806544D0D88892BA6AE7_RuntimeMethod_var);
 		NullCheck(L_13);
 		BindingsGroup_AddBinding_m18697E73861A1C67DE0674F162B43CCE9E67C89B(L_13, L_16, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:68>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:68>
 		return;
 	}
 }
-// Method Definition Index: 95682
+// Method Definition Index: 95876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_OnDisable_m65AD1604A108B0A15667E0784602FA4EE3C1815A (PokeBlendShapeAnimator_t48459CB445F2396B407770EBB860FC85B1B2F282* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:75>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:75>
 		BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A* L_0 = __this->___m_BindingsGroup;
 		NullCheck(L_0);
 		BindingsGroup_Clear_m092668459F10E46245228224D1334DAB089B72E3(L_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:76>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:76>
 		return;
 	}
 }
-// Method Definition Index: 95683
+// Method Definition Index: 95877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_Update_m7CDB6D5998E10235EBCB4BF29B11184B37A67058 (PokeBlendShapeAnimator_t48459CB445F2396B407770EBB860FC85B1B2F282* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3175,13 +3175,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_Update_m7CDB6D599
 	float G_B11_0 = 0.0f;
 	FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* G_B11_1 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:83>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:83>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_0 = __this->___m_TweenableVariable;
 		float L_1;
 		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		NullCheck(L_0);
 		TweenableVariableBase_1_HandleTween_m46B71286EECBE0E3F279B742875CE8EF4D068791(L_0, ((float)il2cpp_codegen_multiply(L_1, (16.0f))), TweenableVariableBase_1_HandleTween_m46B71286EECBE0E3F279B742875CE8EF4D068791_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:84>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:84>
 		RuntimeObject* L_2 = __this->___m_HoverInteractable;
 		NullCheck(L_2);
 		List_1_tB29D4BFC3BAB9F740D409256A24C885712CA4C95* L_3;
@@ -3195,24 +3195,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_Update_m7CDB6D599
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:85>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:85>
 		return;
 	}
 
 IL_0029:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:87>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:87>
 		V_0 = (0.0f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:88>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:88>
 		V_1 = (0.0f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:89>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:89>
 		V_2 = 0;
 		goto IL_0076;
 	}
 
 IL_0039:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:91>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:91>
 		RuntimeObject* L_5 = __this->___m_HoverInteractable;
 		NullCheck(L_5);
 		List_1_tB29D4BFC3BAB9F740D409256A24C885712CA4C95* L_6;
@@ -3222,23 +3222,23 @@ IL_0039:
 		RuntimeObject* L_8;
 		L_8 = List_1_get_Item_m118881A6117DB328B006412BD9A85A5A8742CD64(L_6, L_7, List_1_get_Item_m118881A6117DB328B006412BD9A85A5A8742CD64_RuntimeMethod_var);
 		V_3 = L_8;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:92>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:92>
 		RuntimeObject* L_9 = __this->___m_InteractionStrengthInteractable;
 		RuntimeObject* L_10 = V_3;
 		NullCheck(L_9);
 		float L_11;
 		L_11 = InterfaceFuncInvoker1< float, RuntimeObject* >::Invoke(1, IXRInteractionStrengthInteractable_t0C79B1621B5D4987893370F8AF403574853D44B7_il2cpp_TypeInfo_var, L_9, L_10);
 		V_4 = L_11;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:93>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:93>
 		RuntimeObject* L_12 = V_3;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:94>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:94>
 		if (!((!(((RuntimeObject*)(RuntimeObject*)((RuntimeObject*)IsInst((RuntimeObject*)L_12, IPokeStateDataProvider_t14F2B731F2979D1138EB70A11E36F274A23DC91C_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0))
 		{
 			goto IL_0069;
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:96>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:96>
 		float L_13 = V_4;
 		V_0 = L_13;
 		goto IL_0072;
@@ -3246,7 +3246,7 @@ IL_0039:
 
 IL_0069:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:100>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:100>
 		float L_14 = V_1;
 		float L_15 = V_4;
 		float L_16;
@@ -3256,14 +3256,14 @@ IL_0069:
 
 IL_0072:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:89>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:89>
 		int32_t L_17 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_17, 1));
 	}
 
 IL_0076:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:89>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:89>
 		int32_t L_18 = V_2;
 		RuntimeObject* L_19 = __this->___m_HoverInteractable;
 		NullCheck(L_19);
@@ -3278,7 +3278,7 @@ IL_0076:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:104>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:104>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_22 = __this->___m_TweenableVariable;
 		float L_23 = V_0;
 		float L_24 = V_1;
@@ -3306,11 +3306,11 @@ IL_00a0:
 	{
 		NullCheck(G_B11_1);
 		TweenableVariableBase_1_set_target_m353B619618455D8C59D23B5D02D69EFB492AAA59(G_B11_1, G_B11_0, TweenableVariableBase_1_set_target_m353B619618455D8C59D23B5D02D69EFB492AAA59_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:105>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:105>
 		return;
 	}
 }
-// Method Definition Index: 95684
+// Method Definition Index: 95878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator__ctor_m16AC335520A1160C13AB18DCE0A8D11B85ACF50F (PokeBlendShapeAnimator_t48459CB445F2396B407770EBB860FC85B1B2F282* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3321,14 +3321,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator__ctor_m16AC335520
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:32>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:32>
 		__this->___m_BlendShapeMax = (100.0f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:34>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:34>
 		BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A* L_0 = (BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A*)il2cpp_codegen_object_new(BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A_il2cpp_TypeInfo_var);
 		BindingsGroup__ctor_m1EFD3F405050571D3A66F9B95E8FBC296866A716(L_0, NULL);
 		__this->___m_BindingsGroup = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_BindingsGroup), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:39>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:39>
 		FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48* L_1 = (FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48*)il2cpp_codegen_object_new(FloatTweenableVariable_t19D1F16FBA79A41A8234F4F6C1D7DB51EAC07D48_il2cpp_TypeInfo_var);
 		FloatTweenableVariable__ctor_mE8A1546D61397EB6D999B82E247996198FB2E776(L_1, NULL);
 		__this->___m_TweenableVariable = L_1;
@@ -3337,12 +3337,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator__ctor_m16AC335520
 		return;
 	}
 }
-// Method Definition Index: 95685
+// Method Definition Index: 95879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_U3COnEnableU3Eb__10_0_m5A846165F2893202A66A686FD422B6D006ADE48A (PokeBlendShapeAnimator_t48459CB445F2396B407770EBB860FC85B1B2F282* __this, PokeStateData_t87D34716C1C477FC04D9344710D09399FE6F5032 ___0_data, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:60>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:60>
 		float L_0 = __this->___m_BlendShapeMin;
 		float L_1 = __this->___m_BlendShapeMax;
 		float L_2;
@@ -3350,24 +3350,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_U3COnEnableU3Eb__
 		float L_3;
 		L_3 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_0, L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:61>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:61>
 		float L_4 = V_0;
 		__this->___m_TweenTarget = L_4;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:62>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:62>
 		return;
 	}
 }
-// Method Definition Index: 95686
+// Method Definition Index: 95880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_U3COnEnableU3Eb__10_1_m1E7963F2192F3A1C80A82AD16EFF8FD27D5A1AF0 (PokeBlendShapeAnimator_t48459CB445F2396B407770EBB860FC85B1B2F282* __this, float ___0_newValue, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:66>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:66>
 		SkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E* L_0 = __this->___m_SkinnedMeshRenderer;
 		int32_t L_1 = __this->___m_BlendShapeIndex;
 		float L_2 = ___0_newValue;
 		NullCheck(L_0);
 		SkinnedMeshRenderer_SetBlendShapeWeight_mD5724DB29A33F007E42F3666BF4B7ABC9C7F6F5E(L_0, L_1, L_2, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/PokeBlendShapeAnimator.cs:67>
 		return;
 	}
 }
@@ -3379,70 +3379,70 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeBlendShapeAnimator_U3COnEnableU3Eb__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95687
+// Method Definition Index: 95881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ToggleGameObject_get_activationGameObject_m1F1B6421F159376BB842ED8B1E26449A5E899600 (ToggleGameObject_tD82BA740FE7646FFB4D3A12353FB4DF6CCE4F7AD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:17>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:17>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ActivationGameObject;
 		return L_0;
 	}
 }
-// Method Definition Index: 95688
+// Method Definition Index: 95882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ToggleGameObject_set_activationGameObject_m80D56AC98F3C2732F92DEE560641F1977D2F30B6 (ToggleGameObject_tD82BA740FE7646FFB4D3A12353FB4DF6CCE4F7AD* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:18>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:18>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_ActivationGameObject = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ActivationGameObject), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 95689
+// Method Definition Index: 95883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ToggleGameObject_get_currentlyActive_mBA87E8441E4BBDD08808D1CA538640F0EDB93A38 (ToggleGameObject_tD82BA740FE7646FFB4D3A12353FB4DF6CCE4F7AD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:30>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:30>
 		bool L_0 = __this->___m_CurrentlyActive;
 		return L_0;
 	}
 }
-// Method Definition Index: 95690
+// Method Definition Index: 95884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ToggleGameObject_set_currentlyActive_mA8A72B3C48F9A5D84797062CB3EE824D5A24D0EB (ToggleGameObject_tD82BA740FE7646FFB4D3A12353FB4DF6CCE4F7AD* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:33>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:33>
 		bool L_0 = ___0_value;
 		__this->___m_CurrentlyActive = L_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:34>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:34>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
 		L_1 = ToggleGameObject_get_activationGameObject_m1F1B6421F159376BB842ED8B1E26449A5E899600_inline(__this, NULL);
 		bool L_2 = __this->___m_CurrentlyActive;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_2, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:35>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 95691
+// Method Definition Index: 95885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ToggleGameObject_ToggleActiveState_m129D4EAC372691B533A31ADD755B7C53EB4D35AF (ToggleGameObject_tD82BA740FE7646FFB4D3A12353FB4DF6CCE4F7AD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:43>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:43>
 		bool L_0 = __this->___m_CurrentlyActive;
 		__this->___m_CurrentlyActive = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:44>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:44>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
 		L_1 = ToggleGameObject_get_activationGameObject_m1F1B6421F159376BB842ED8B1E26449A5E899600_inline(__this, NULL);
 		bool L_2 = __this->___m_CurrentlyActive;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_2, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:45>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 95692
+// Method Definition Index: 95886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ToggleGameObject__ctor_mB392B39C494AB4DB4CB0725BB149568E52029BD5 (ToggleGameObject_tD82BA740FE7646FFB4D3A12353FB4DF6CCE4F7AD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3458,7 +3458,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ToggleGameObject__ctor_mB392B39C494AB4DB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95693
+// Method Definition Index: 95887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_OnValidate_m962E893D30AA1375D88CA555517794CF1FB862FB (TransformSync_tF9249B51AC95936B597FBF4BAF7DBB4B6D30BD35* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3473,7 +3473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_OnValidate_m962E893D30AA13
 	memset((&G_B4_0), 0, sizeof(G_B4_0));
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* G_B4_1 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:37>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:37>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_TargetTransform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3484,9 +3484,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_OnValidate_m962E893D30AA13
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:39>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:40>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:41>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:39>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:40>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:41>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
@@ -3540,24 +3540,24 @@ IL_004f:
 
 IL_0054:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:43>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:43>
 		return;
 	}
 }
-// Method Definition Index: 95694
+// Method Definition Index: 95888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_Awake_mA0B96B3C0BDE871DA71C0B847FC628D9E6170448 (TransformSync_tF9249B51AC95936B597FBF4BAF7DBB4B6D30BD35* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:50>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:50>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		__this->___m_ThisTransform = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ThisTransform), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:51>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:51>
 		return;
 	}
 }
-// Method Definition Index: 95695
+// Method Definition Index: 95889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_OnEnable_mC6A0414A04C45A9191991B131F726AD66AB8414F (TransformSync_tF9249B51AC95936B597FBF4BAF7DBB4B6D30BD35* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3571,7 +3571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_OnEnable_mC6A0414A04C45A91
 	}
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* V_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:58>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:58>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_TargetTransform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3582,17 +3582,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_OnEnable_mC6A0414A04C45A91
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:60>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:60>
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:61>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:61>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:63>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:63>
 		__this->___m_HasTransform = (bool)1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:65>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___m_TargetTransform;
 		NullCheck(L_2);
 		bool L_3;
@@ -3603,17 +3603,17 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:67>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_4 = V_0;
 		__this->___m_Rigidbody = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Rigidbody), (void*)L_4);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:68>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:68>
 		__this->___m_HasRigidbody = (bool)1;
 	}
 
 IL_003a:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:71>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:71>
 		Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5* L_5 = __this->___m_PositionTweenable;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___m_ThisTransform;
 		NullCheck(L_6);
@@ -3623,7 +3623,7 @@ IL_003a:
 		L_8 = float3_op_Implicit_mE1831A3AC179B7EB3236F8202EC8DD5CE05376AB(L_7, NULL);
 		NullCheck(L_5);
 		TweenableVariableAsyncBase_1_set_Value_mBE82FC9D214396EF51C5F3840321A8134DCC925B(L_5, L_8, TweenableVariableAsyncBase_1_set_Value_mBE82FC9D214396EF51C5F3840321A8134DCC925B_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:72>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:72>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_9 = __this->___m_RotationTweenable;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = __this->___m_ThisTransform;
 		NullCheck(L_10);
@@ -3631,11 +3631,11 @@ IL_003a:
 		L_11 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_10, NULL);
 		NullCheck(L_9);
 		BindableVariableBase_1_set_Value_m19676F8DE67466CD43313044F2ADBAD0B83D9F0B(L_9, L_11, BindableVariableBase_1_set_Value_m19676F8DE67466CD43313044F2ADBAD0B83D9F0B_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:73>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:73>
 		return;
 	}
 }
-// Method Definition Index: 95696
+// Method Definition Index: 95890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_Update_mB3CF6CBB79DB975B144B23DD3D9D0F73B9C583E7 (TransformSync_tF9249B51AC95936B597FBF4BAF7DBB4B6D30BD35* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3652,7 +3652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_Update_mB3CF6CBB79DB975B14
 	float V_0 = 0.0f;
 	float G_B3_0 = 0.0f;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:80>
 		Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5* L_0 = __this->___m_PositionTweenable;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___m_ThisTransform;
 		NullCheck(L_1);
@@ -3662,7 +3662,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_Update_mB3CF6CBB79DB975B14
 		L_3 = float3_op_Implicit_mE1831A3AC179B7EB3236F8202EC8DD5CE05376AB(L_2, NULL);
 		NullCheck(L_0);
 		TweenableVariableBase_1_set_target_m3127A21F0C2EF40FA4604D603803BA53DE604337(L_0, L_3, TweenableVariableBase_1_set_target_m3127A21F0C2EF40FA4604D603803BA53DE604337_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:81>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:81>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_4 = __this->___m_RotationTweenable;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = __this->___m_ThisTransform;
 		NullCheck(L_5);
@@ -3670,7 +3670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_Update_mB3CF6CBB79DB975B14
 		L_6 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_5, NULL);
 		NullCheck(L_4);
 		TweenableVariableBase_1_set_target_m3B5D4156AFDDEE2E041341605265E52A487F1657(L_4, L_6, TweenableVariableBase_1_set_target_m3B5D4156AFDDEE2E041341605265E52A487F1657_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:83>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:83>
 		float L_7 = __this->___m_SmoothFollowSpeed;
 		if ((((float)L_7) > ((float)(0.0f))))
 		{
@@ -3693,17 +3693,17 @@ IL_0045:
 IL_0051:
 	{
 		V_0 = G_B3_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:84>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:84>
 		Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5* L_10 = __this->___m_PositionTweenable;
 		float L_11 = V_0;
 		NullCheck(L_10);
 		TweenableVariableBase_1_HandleTween_m61752C0D7316DD05AB1C8E10319F47902D4CDCD9(L_10, L_11, TweenableVariableBase_1_HandleTween_m61752C0D7316DD05AB1C8E10319F47902D4CDCD9_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:85>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:85>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_12 = __this->___m_RotationTweenable;
 		float L_13 = V_0;
 		NullCheck(L_12);
 		TweenableVariableBase_1_HandleTween_m197557B3C05112A4C89C97E2200E07C1DCF2C274(L_12, L_13, TweenableVariableBase_1_HandleTween_m197557B3C05112A4C89C97E2200E07C1DCF2C274_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:87>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:87>
 		bool L_14 = __this->___m_HasRigidbody;
 		if (L_14)
 		{
@@ -3718,7 +3718,7 @@ IL_0051:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:88>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:88>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = __this->___m_TargetTransform;
 		Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5* L_17 = __this->___m_PositionTweenable;
 		NullCheck(L_17);
@@ -3736,11 +3736,11 @@ IL_0051:
 
 IL_00a0:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:89>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:89>
 		return;
 	}
 }
-// Method Definition Index: 95697
+// Method Definition Index: 95891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_FixedUpdate_m85F1774A245BF1ADB65D927A3964B76CAE9B5562 (TransformSync_tF9249B51AC95936B597FBF4BAF7DBB4B6D30BD35* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3751,7 +3751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_FixedUpdate_m85F1774A245BF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:96>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:96>
 		bool L_0 = __this->___m_HasRigidbody;
 		if (L_0)
 		{
@@ -3759,13 +3759,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync_FixedUpdate_m85F1774A245BF
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:97>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:97>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:99>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:99>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_1 = __this->___m_Rigidbody;
 		Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5* L_2 = __this->___m_PositionTweenable;
 		NullCheck(L_2);
@@ -3775,7 +3775,7 @@ IL_0009:
 		L_4 = float3_op_Implicit_m9CC301DFD67EEFAA15CA05E91913E862B22326F6(L_3, NULL);
 		NullCheck(L_1);
 		Rigidbody_MovePosition_mB2CD29ABC8F59AC338C0A3A5A6B75C38FDA92CA9(L_1, L_4, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:100>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:100>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_5 = __this->___m_Rigidbody;
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_6 = __this->___m_RotationTweenable;
 		NullCheck(L_6);
@@ -3783,11 +3783,11 @@ IL_0009:
 		L_7 = BindableVariableBase_1_get_Value_mDA92236BCE8EC7928399D7271AA97D7B62941EEC_inline(L_6, BindableVariableBase_1_get_Value_mDA92236BCE8EC7928399D7271AA97D7B62941EEC_RuntimeMethod_var);
 		NullCheck(L_5);
 		Rigidbody_MoveRotation_m85825C7206E770E39DED9EE6D792702F577A891D(L_5, L_7, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:101>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:101>
 		return;
 	}
 }
-// Method Definition Index: 95698
+// Method Definition Index: 95892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync__ctor_m3C110D314A2E40254333D38385D6C5B688E158D1 (TransformSync_tF9249B51AC95936B597FBF4BAF7DBB4B6D30BD35* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3798,14 +3798,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync__ctor_m3C110D314A2E4025433
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:18>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:18>
 		__this->___m_SmoothFollowSpeed = (8.0f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:28>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:28>
 		Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5* L_0 = (Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5*)il2cpp_codegen_object_new(Vector3TweenableVariable_t0DF651B487F89825D0D459293C4A862C62C0EBD5_il2cpp_TypeInfo_var);
 		Vector3TweenableVariable__ctor_m22723734B74E394A833F2EEA06F910E45A91F042(L_0, NULL);
 		__this->___m_PositionTweenable = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PositionTweenable), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:29>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/TransformSync.cs:29>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_1 = (QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145*)il2cpp_codegen_object_new(QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145_il2cpp_TypeInfo_var);
 		QuaternionTweenableVariable__ctor_m78DB27081DAD1BE2125659704E6B0391AA9331BD(L_1, NULL);
 		__this->___m_RotationTweenable = L_1;
@@ -3822,15 +3822,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TransformSync__ctor_m3C110D314A2E4025433
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95699
+// Method Definition Index: 95893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HandsOneEuroFilterPostProcessor_get_callbackOrder_m5D243C8AA0EF087C996ED91011F848E3AE98F390 (HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:32>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:32>
 		return 0;
 	}
 }
-// Method Definition Index: 95700
+// Method Definition Index: 95894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_OnDisable_mBD971CDB8FD1760CBF18B9B96AD58FDDB87AB636 (HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3840,7 +3840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_OnDisabl
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:50>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:50>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (!L_0)
 		{
@@ -3848,22 +3848,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_OnDisabl
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:52>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:52>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1 = __this->___m_Subsystem;
 		NullCheck(L_1);
 		XRHandSubsystem_UnregisterProcessor_TisHandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_m4D7372F140F71694A16CA0931A25DDBF9431BC0A(L_1, __this, XRHandSubsystem_UnregisterProcessor_TisHandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_m4D7372F140F71694A16CA0931A25DDBF9431BC0A_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:53>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:53>
 		__this->___m_Subsystem = (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)(XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:55>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:55>
 		return;
 	}
 }
-// Method Definition Index: 95701
+// Method Definition Index: 95895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_Update_mA58B93433811CC33488F39101D4E120C01863148 (HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3884,7 +3884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_Update_m
 	XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* G_B7_0 = NULL;
 	XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* G_B6_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:62>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:62>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (!L_0)
 		{
@@ -3902,27 +3902,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_Update_m
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:63>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:63>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:65>
 		il2cpp_codegen_runtime_class_init_inline(HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_3 = ((HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_StaticFields*)il2cpp_codegen_static_fields_for(HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
 		il2cpp_codegen_runtime_class_init_inline(SubsystemManager_t9A7261E4D0B53B996F04B8707D8E1C33AB65E824_il2cpp_TypeInfo_var);
 		SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73(L_3, SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:66>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:66>
 		V_0 = (bool)0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:67>
 		V_1 = 0;
 		goto IL_005b;
 	}
 
 IL_0026:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:69>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:69>
 		il2cpp_codegen_runtime_class_init_inline(HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_4 = ((HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_StaticFields*)il2cpp_codegen_static_fields_for(HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
 		int32_t L_5 = V_1;
@@ -3930,7 +3930,7 @@ IL_0026:
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6;
 		L_6 = List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F(L_4, L_5, List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F_RuntimeMethod_var);
 		V_2 = L_6;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:70>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:70>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_7 = V_2;
 		NullCheck(L_7);
 		bool L_8;
@@ -3941,7 +3941,7 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:72>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:72>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_9 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_10 = L_9;
 		if (L_10)
@@ -3963,26 +3963,26 @@ IL_0046:
 
 IL_004c:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:73>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:73>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_11 = V_2;
 		__this->___m_Subsystem = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)L_11);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:74>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:74>
 		V_0 = (bool)1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:75>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:75>
 		goto IL_0068;
 	}
 
 IL_0057:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:67>
 		int32_t L_12 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_12, 1));
 	}
 
 IL_005b:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:67>
 		int32_t L_13 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_14 = ((HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_StaticFields*)il2cpp_codegen_static_fields_for(HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
@@ -3997,7 +3997,7 @@ IL_005b:
 
 IL_0068:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:79>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:79>
 		bool L_16 = V_0;
 		if (L_16)
 		{
@@ -4005,25 +4005,25 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:80>
 		return;
 	}
 
 IL_006c:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:82>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:82>
 		__this->___m_WasLeftHandTrackedLastFrame = (bool)0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:83>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:83>
 		__this->___m_WasRightHandTrackedLastFrame = (bool)0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:84>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:84>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_17 = __this->___m_Subsystem;
 		NullCheck(L_17);
 		XRHandSubsystem_RegisterProcessor_TisHandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_mAE287F8EE1D94EA60206BF6CB28A0566B8884338(L_17, __this, XRHandSubsystem_RegisterProcessor_TisHandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_mAE287F8EE1D94EA60206BF6CB28A0566B8884338_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:85>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:85>
 		return;
 	}
 }
-// Method Definition Index: 95702
+// Method Definition Index: 95896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_ProcessJoints_m56BC37BB34DD89613C8911DE8618E81BBD4FD0C5 (HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE* __this, XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* ___0_subsystem, int32_t ___1_successFlags, int32_t ___2_updateType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4049,13 +4049,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_ProcessJ
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_7;
 	memset((&V_7), 0, sizeof(V_7));
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:90>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:90>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = ___0_subsystem;
 		NullCheck(L_0);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_1;
 		L_1 = XRHandSubsystem_get_leftHand_mD3B931E5129348FEE34C3965A0CF8E62A0CFFB97_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:91>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:91>
 		bool L_2;
 		L_2 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_0), NULL);
 		if (!L_2)
@@ -4064,11 +4064,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_ProcessJ
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:93>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:93>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_3;
 		L_3 = XRHand_get_rootPose_m4F34E7F55AEBFD2FF7491364ADB00B27BF86F1A5_inline((&V_0), NULL);
 		V_2 = L_3;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:94>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:94>
 		bool L_4 = __this->___m_WasLeftHandTrackedLastFrame;
 		if (L_4)
 		{
@@ -4076,7 +4076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_ProcessJ
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:96>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:96>
 		OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* L_5 = __this->___m_LeftHandFilter;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_6 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = L_6.___position;
@@ -4087,7 +4087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor_ProcessJ
 
 IL_0033:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:100>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:100>
 		OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* L_8 = __this->___m_LeftHandFilter;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_9 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = L_9.___position;
@@ -4099,16 +4099,16 @@ IL_0033:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
 		L_14 = OneEuroFilterVector3_Filter_m9A180E6E60F1BA648E5C930C1BB2B82FDA57D4EE(L_8, L_10, L_11, L_12, L_13, NULL);
 		V_3 = L_14;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:101>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:101>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_3;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_16 = V_2;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_17 = L_16.___rotation;
 		il2cpp_codegen_runtime_class_init_inline(Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971_il2cpp_TypeInfo_var);
 		Pose__ctor_m15CA45808A2BBF1956E836D22C387FAB80BED051((&V_4), L_15, L_17, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:103>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:103>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_18 = V_4;
 		XRHandProcessingUtility_SetRootPose_m116319D83FE5DC86798991011D0230A2531E35EE((&V_0), L_18, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:104>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:104>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_19 = ___0_subsystem;
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_20 = V_0;
 		XRHandProcessingUtility_SetCorrespondingHand_m7AB9505CF0D27B84D54B7AB39746D4B66EED9CD7(L_19, L_20, NULL);
@@ -4116,17 +4116,17 @@ IL_0033:
 
 IL_0074:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:108>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:108>
 		bool L_21;
 		L_21 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_0), NULL);
 		__this->___m_WasLeftHandTrackedLastFrame = L_21;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:110>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:110>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_22 = ___0_subsystem;
 		NullCheck(L_22);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_23;
 		L_23 = XRHandSubsystem_get_rightHand_mDE333FDF35460E1A06BE051AF9C2144B7053ED3C_inline(L_22, NULL);
 		V_1 = L_23;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:111>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:111>
 		bool L_24;
 		L_24 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_1), NULL);
 		if (!L_24)
@@ -4135,11 +4135,11 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:113>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:113>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_25;
 		L_25 = XRHand_get_rootPose_m4F34E7F55AEBFD2FF7491364ADB00B27BF86F1A5_inline((&V_1), NULL);
 		V_5 = L_25;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:114>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:114>
 		bool L_26 = __this->___m_WasRightHandTrackedLastFrame;
 		if (L_26)
 		{
@@ -4147,7 +4147,7 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:116>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:116>
 		OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* L_27 = __this->___m_RightHandFilter;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_28 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = L_28.___position;
@@ -4158,7 +4158,7 @@ IL_0074:
 
 IL_00b6:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:120>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:120>
 		OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* L_30 = __this->___m_RightHandFilter;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_31 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = L_31.___position;
@@ -4170,16 +4170,16 @@ IL_00b6:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36;
 		L_36 = OneEuroFilterVector3_Filter_m9A180E6E60F1BA648E5C930C1BB2B82FDA57D4EE(L_30, L_32, L_33, L_34, L_35, NULL);
 		V_6 = L_36;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:121>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:121>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37 = V_6;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_38 = V_5;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_39 = L_38.___rotation;
 		il2cpp_codegen_runtime_class_init_inline(Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971_il2cpp_TypeInfo_var);
 		Pose__ctor_m15CA45808A2BBF1956E836D22C387FAB80BED051((&V_7), L_37, L_39, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:123>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:123>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_40 = V_7;
 		XRHandProcessingUtility_SetRootPose_m116319D83FE5DC86798991011D0230A2531E35EE((&V_1), L_40, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:124>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:124>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_41 = ___0_subsystem;
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_42 = V_1;
 		XRHandProcessingUtility_SetCorrespondingHand_m7AB9505CF0D27B84D54B7AB39746D4B66EED9CD7(L_41, L_42, NULL);
@@ -4187,15 +4187,15 @@ IL_00b6:
 
 IL_00fb:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:128>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:128>
 		bool L_43;
 		L_43 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_1), NULL);
 		__this->___m_WasRightHandTrackedLastFrame = L_43;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:129>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:129>
 		return;
 	}
 }
-// Method Definition Index: 95703
+// Method Definition Index: 95897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor__ctor_m968575A7EBDD3D00B7FC8A5CB90DC8A10A74484E (HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4205,18 +4205,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor__ctor_m9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:21>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:21>
 		__this->___m_FilterMinCutoff = (0.100000001f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:27>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:27>
 		__this->___m_FilterBeta = (0.200000003f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:34>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:34>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
 		L_0 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* L_1 = (OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3*)il2cpp_codegen_object_new(OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3_il2cpp_TypeInfo_var);
 		OneEuroFilterVector3__ctor_m0A4D4430F87ED1FFB2509D3A0FEE3EF9908203B5(L_1, L_0, (0.100000001f), (0.0199999996f), NULL);
 		__this->___m_LeftHandFilter = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LeftHandFilter), (void*)L_1);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:35>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:35>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
 		L_2 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* L_3 = (OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3*)il2cpp_codegen_object_new(OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3_il2cpp_TypeInfo_var);
@@ -4227,7 +4227,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor__ctor_m9
 		return;
 	}
 }
-// Method Definition Index: 95704
+// Method Definition Index: 95898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor__cctor_m90652D1EE65223F7C87F967FA02F23BE96F94156 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4239,7 +4239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor__cctor_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:41>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HandsOneEuroFilterPostProcessor.cs:41>
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_0 = (List_1_tE4111BEC044D13259EFD4EC5907636C855887179*)il2cpp_codegen_object_new(List_1_tE4111BEC044D13259EFD4EC5907636C855887179_il2cpp_TypeInfo_var);
 		List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4(L_0, List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4_RuntimeMethod_var);
 		((HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_StaticFields*)il2cpp_codegen_static_fields_for(HandsOneEuroFilterPostProcessor_tE99F8855C6D85959C0EDF9226ED522B08DBF14AE_il2cpp_TypeInfo_var))->___s_SubsystemsReuse = L_0;
@@ -4255,7 +4255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandsOneEuroFilterPostProcessor__cctor_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95705
+// Method Definition Index: 95899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked_OnEnable_mD721B134FC7F3A25CC0F56937D43B117AE4B6378 (HideObjectWhenInteractorBlocked_tFF893F1B7C9DDC188C484B983256019D399F00E9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4267,7 +4267,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked_OnEnable
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:27>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:27>
 		XRBaseInteractor_t4AF6FC9A7611B9417B4A43E11704AFF85B4A0FB4* L_0 = __this->___m_Interactor;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4290,15 +4290,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked_OnEnable
 
 IL_001c:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:28>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:28>
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
 	}
 
 IL_0023:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:30>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:30>
 		__this->___m_HasCurveDataProvider = (bool)0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:31>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:31>
 		XRBaseInteractor_t4AF6FC9A7611B9417B4A43E11704AFF85B4A0FB4* L_4 = __this->___m_Interactor;
 		V_0 = ((RuntimeObject*)IsInst((RuntimeObject*)L_4, ICurveInteractionDataProvider_tCAD1F7E51653D0E39F0146E20903EAA6FE82FA59_il2cpp_TypeInfo_var));
 		RuntimeObject* L_5 = V_0;
@@ -4308,21 +4308,21 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:33>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:33>
 		RuntimeObject* L_6 = V_0;
 		__this->___m_CurveInteractionDataProvider = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CurveInteractionDataProvider), (void*)L_6);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:34>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:34>
 		__this->___m_HasCurveDataProvider = (bool)1;
 	}
 
 IL_0047:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:36>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 95706
+// Method Definition Index: 95900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked_Update_mEAEE1F87BFEDFF9E4E952B6FAAE5E0CC14210EFC (HideObjectWhenInteractorBlocked_tFF893F1B7C9DDC188C484B983256019D399F00E9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4336,7 +4336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked_Update_m
 	int32_t G_B5_0 = 0;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B5_1 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:43>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:43>
 		bool L_0 = __this->___m_HasCurveDataProvider;
 		if (!L_0)
 		{
@@ -4344,7 +4344,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked_Update_m
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:44>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:44>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___m_ObjectToHide;
 		RuntimeObject* L_2 = __this->___m_CurveInteractionDataProvider;
 		NullCheck(L_2);
@@ -4357,7 +4357,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked_Update_m
 
 IL_001f:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:46>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:46>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___m_ObjectToHide;
 		XRBaseInteractor_t4AF6FC9A7611B9417B4A43E11704AFF85B4A0FB4* L_5 = __this->___m_Interactor;
 		NullCheck(L_5);
@@ -4389,11 +4389,11 @@ IL_0043:
 	{
 		NullCheck(G_B5_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(G_B5_1, (bool)G_B5_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:47>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/HideObjectWhenInteractorBlocked.cs:47>
 		return;
 	}
 }
-// Method Definition Index: 95707
+// Method Definition Index: 95901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked__ctor_mB6F4F329FB9C299CFE8576538BA51EEE1B4370BE (HideObjectWhenInteractorBlocked_tFF893F1B7C9DDC188C484B983256019D399F00E9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4409,16 +4409,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HideObjectWhenInteractorBlocked__ctor_mB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95708
+// Method Definition Index: 95902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* LocalPositionOffsetAffordanceReceiver_get_transformToTranslate_m4B628BADA1191F4FF9FDEEF3D8C06A01B66EEA79 (LocalPositionOffsetAffordanceReceiver_t80AA3C7E3F8F611E956801F4CEB708BA255EFD08* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:24>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:24>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_TransformToTranslate;
 		return L_0;
 	}
 }
-// Method Definition Index: 95709
+// Method Definition Index: 95903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_set_transformToTranslate_m51039ECE106F088CB14D32B4071FE6A260E6BA7D (LocalPositionOffsetAffordanceReceiver_t80AA3C7E3F8F611E956801F4CEB708BA255EFD08* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4428,21 +4428,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_se
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:27>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:27>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_value;
 		__this->___m_TransformToTranslate = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_TransformToTranslate), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:28>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:28>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___m_TransformToTranslate;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		__this->___m_HasTransformToTranslate = L_2;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:29>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 95710
+// Method Definition Index: 95904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_OnEnable_mF1286F85D4A10F40B727B28D190C01B0D541938C (LocalPositionOffsetAffordanceReceiver_t80AA3C7E3F8F611E956801F4CEB708BA255EFD08* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4453,19 +4453,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_On
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:38>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:38>
 		BaseAffordanceStateReceiver_1_OnEnable_mB97FBD627A706DF4A4A13EF3276D3A3E8D87C4D4(__this, BaseAffordanceStateReceiver_1_OnEnable_mB97FBD627A706DF4A4A13EF3276D3A3E8D87C4D4_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:39>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:39>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_TransformToTranslate;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		__this->___m_HasTransformToTranslate = L_1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:40>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:40>
 		return;
 	}
 }
-// Method Definition Index: 95711
+// Method Definition Index: 95905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E LocalPositionOffsetAffordanceReceiver_GetCurrentValueForCapture_m934738FBEC8127ED0804F9BEBA9B28EA279018AB (LocalPositionOffsetAffordanceReceiver_t80AA3C7E3F8F611E956801F4CEB708BA255EFD08* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4475,7 +4475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC37
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:45>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:45>
 		bool L_0 = __this->___m_HasTransformToTranslate;
 		if (!L_0)
 		{
@@ -4483,7 +4483,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC37
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:47>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:47>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___m_TransformToTranslate;
 		NullCheck(L_1);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
@@ -4495,16 +4495,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC37
 
 IL_001e:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:50>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:50>
 		float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E L_4 = ((float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_StaticFields*)il2cpp_codegen_static_fields_for(float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_il2cpp_TypeInfo_var))->___zero;
 		return L_4;
 	}
 }
-// Method Definition Index: 95712
+// Method Definition Index: 95906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_OnAffordanceValueUpdated_m35118C068B9C960E7C25B17E745C79C8F73D671C (LocalPositionOffsetAffordanceReceiver_t80AA3C7E3F8F611E956801F4CEB708BA255EFD08* __this, float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E ___0_newValue, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:56>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:56>
 		bool L_0 = __this->___m_HasTransformToTranslate;
 		if (!L_0)
 		{
@@ -4512,7 +4512,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_On
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:58>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:58>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___m_TransformToTranslate;
 		float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E L_2 = __this->___m_InitialOffset;
 		float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E L_3 = ___0_newValue;
@@ -4526,14 +4526,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_On
 
 IL_0024:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:61>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:61>
 		float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E L_6 = ___0_newValue;
 		Vector3AffordanceReceiver_OnAffordanceValueUpdated_mBB5120B9FB6E709161DBD0AD58362174BC06F719(__this, L_6, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:62>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:62>
 		return;
 	}
 }
-// Method Definition Index: 95713
+// Method Definition Index: 95907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_OnValidate_m38F9459261F16EE89038DA80FFB180DD087B88CB (LocalPositionOffsetAffordanceReceiver_t80AA3C7E3F8F611E956801F4CEB708BA255EFD08* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4543,7 +4543,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_On
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:69>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:69>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_TransformToTranslate;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4554,7 +4554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_On
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:70>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:70>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		__this->___m_TransformToTranslate = L_2;
@@ -4563,11 +4563,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver_On
 
 IL_001a:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:71>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:71>
 		return;
 	}
 }
-// Method Definition Index: 95714
+// Method Definition Index: 95908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver__ctor_m323FADB127F0EF7ADDA36A7AFB1C71D5C30BC1AF (LocalPositionOffsetAffordanceReceiver_t80AA3C7E3F8F611E956801F4CEB708BA255EFD08* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4577,7 +4577,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver__c
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:33>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/LocalPositionOffsetAffordanceReceiver.cs:33>
 		float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E L_0 = ((float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_StaticFields*)il2cpp_codegen_static_fields_for(float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_il2cpp_TypeInfo_var))->___zero;
 		__this->___m_InitialOffset = L_0;
 		Vector3AffordanceReceiver__ctor_m369BD7371AF82E1E303B183EC60F057580C93588(__this, NULL);
@@ -4592,16 +4592,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalPositionOffsetAffordanceReceiver__c
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95715
+// Method Definition Index: 95909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD MetaSystemGestureDetector_get_aimFlagsAction_m2C5805AB317B9939E6277CB717063E1E589907FF (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:59>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:59>
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD L_0 = __this->___m_AimFlagsAction;
 		return L_0;
 	}
 }
-// Method Definition Index: 95716
+// Method Definition Index: 95910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_set_aimFlagsAction_m952D5A40B7C040E76B430C915A8B28ECB3F62C1B (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4611,7 +4611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_set_aimFlagsAc
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:62>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:62>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34(NULL);
@@ -4621,20 +4621,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_set_aimFlagsAc
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:63>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:63>
 		MetaSystemGestureDetector_UnbindAimFlags_m9BCE9DF16D45F777D63BBE5285E51685F2E3801C(__this, NULL);
 	}
 
 IL_000d:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:65>
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD L_1 = ___0_value;
 		__this->___m_AimFlagsAction = L_1;
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_AimFlagsAction))->___m_Action), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_AimFlagsAction))->___m_Reference), (void*)NULL);
 		#endif
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:67>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34(NULL);
@@ -4652,86 +4652,86 @@ IL_000d:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:68>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:68>
 		MetaSystemGestureDetector_BindAimFlags_mCC549E02D18E15D393769447B59914D2261B9FB6(__this, NULL);
 	}
 
 IL_0029:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:69>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:69>
 		return;
 	}
 }
-// Method Definition Index: 95717
+// Method Definition Index: 95911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* MetaSystemGestureDetector_get_systemGestureStarted_m32D8A43F2C9D2738E7A2D3F2C61D7BE624C226C8 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:83>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:83>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___m_SystemGestureStarted;
 		return L_0;
 	}
 }
-// Method Definition Index: 95718
+// Method Definition Index: 95912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_set_systemGestureStarted_m56B4A305A63317E7F54B0A4F1038886FF117FFA6 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:84>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:84>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = ___0_value;
 		__this->___m_SystemGestureStarted = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_SystemGestureStarted), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 95719
+// Method Definition Index: 95913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* MetaSystemGestureDetector_get_systemGestureEnded_mB04C5815904953F622CFC12FBA97EE30B9534586 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:102>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:102>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___m_SystemGestureEnded;
 		return L_0;
 	}
 }
-// Method Definition Index: 95720
+// Method Definition Index: 95914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_set_systemGestureEnded_mC007E016BA98BD84EC3EA88051F4EF4CEEC03EAB (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:103>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:103>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = ___0_value;
 		__this->___m_SystemGestureEnded = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_SystemGestureEnded), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 95721
+// Method Definition Index: 95915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* MetaSystemGestureDetector_get_menuPressed_m753D80451BECA3D92A4712E28578B63FFE117087 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:119>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:119>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___m_MenuPressed;
 		return L_0;
 	}
 }
-// Method Definition Index: 95722
+// Method Definition Index: 95916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_set_menuPressed_m46EEEC1A31E2ED1012F2F822594C9A6BF00D8318 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:120>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:120>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = ___0_value;
 		__this->___m_MenuPressed = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_MenuPressed), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 95723
+// Method Definition Index: 95917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MetaSystemGestureDetector_get_systemGestureState_m941EF54EBED75B6F8C7C4EA920C3A37F7471CF8A (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:129>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:129>
 		BindableEnum_1_t2DAF495BF038E3782E6ADC1CF417A3934BB6284C* L_0 = __this->___m_SystemGestureState;
 		return L_0;
 	}
 }
-// Method Definition Index: 95724
+// Method Definition Index: 95918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_OnEnable_m3B14BE9ED3EFC8AC1705E39C66A7A074652DBB90 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4742,14 +4742,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_OnEnable_m3B14
 	}
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* V_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:145>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:145>
 		MetaSystemGestureDetector_BindAimFlags_mCC549E02D18E15D393769447B59914D2261B9FB6(__this, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:149>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:149>
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD* L_0 = (InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD*)(&__this->___m_AimFlagsAction);
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_1;
 		L_1 = InputActionProperty_get_action_mABF2197D9CC6586E5DFB0481CF9C1B2586F41A47(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:150>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:150>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_2 = V_0;
 		if (!L_2)
 		{
@@ -4757,7 +4757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_OnEnable_m3B14
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:152>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:152>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_3 = V_0;
 		NullCheck(L_3);
 		int32_t L_4;
@@ -4767,21 +4767,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_OnEnable_m3B14
 
 IL_0023:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:158>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:158>
 		return;
 	}
 }
-// Method Definition Index: 95725
+// Method Definition Index: 95919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_OnDisable_m6DCC095C2E7BCB2927CFC799AEC744A6BFB4DA05 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:165>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:165>
 		MetaSystemGestureDetector_UnbindAimFlags_m9BCE9DF16D45F777D63BBE5285E51685F2E3801C(__this, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:166>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:166>
 		return;
 	}
 }
-// Method Definition Index: 95726
+// Method Definition Index: 95920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_BindAimFlags_mCC549E02D18E15D393769447B59914D2261B9FB6 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4793,7 +4793,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_BindAimFlags_m
 	}
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* V_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:170>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:170>
 		bool L_0 = __this->___m_AimFlagsBound;
 		if (!L_0)
 		{
@@ -4801,18 +4801,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_BindAimFlags_m
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:171>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:171>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:173>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:173>
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD* L_1 = (InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD*)(&__this->___m_AimFlagsAction);
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_2;
 		L_2 = InputActionProperty_get_action_mABF2197D9CC6586E5DFB0481CF9C1B2586F41A47(L_1, NULL);
 		V_0 = L_2;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:174>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:174>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_3 = V_0;
 		if (L_3)
 		{
@@ -4820,34 +4820,34 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:175>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:175>
 		return;
 	}
 
 IL_0019:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:177>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:177>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_4 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_5 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_5, __this, (intptr_t)((void*)MetaSystemGestureDetector_OnAimFlagsActionPerformedOrCanceled_mA039A6CD5B5CAAE457D7672710A4A314ACCE12BD_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		InputAction_add_performed_m0337FFA16EBEF7AE365C3B558CFDFF7BB9747B54(L_4, L_5, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:178>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:178>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_6 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_7 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_7, __this, (intptr_t)((void*)MetaSystemGestureDetector_OnAimFlagsActionPerformedOrCanceled_mA039A6CD5B5CAAE457D7672710A4A314ACCE12BD_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		InputAction_add_canceled_m69EC253E21CC314BFB350A86E294D0651F5ECA77(L_6, L_7, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:179>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:179>
 		__this->___m_AimFlagsBound = (bool)1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:181>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:181>
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD L_8 = __this->___m_AimFlagsAction;
 		InputActionPropertyExtensions_EnableDirectAction_m4F6A0B5DD5EFACC0B84BFCBD5FA15491DBE9DA26(L_8, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:182>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:182>
 		return;
 	}
 }
-// Method Definition Index: 95727
+// Method Definition Index: 95921
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_UnbindAimFlags_m9BCE9DF16D45F777D63BBE5285E51685F2E3801C (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4859,7 +4859,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_UnbindAimFlags
 	}
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* V_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:186>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:186>
 		bool L_0 = __this->___m_AimFlagsBound;
 		if (L_0)
 		{
@@ -4867,18 +4867,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_UnbindAimFlags
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:187>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:187>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:189>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:189>
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD* L_1 = (InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD*)(&__this->___m_AimFlagsAction);
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_2;
 		L_2 = InputActionProperty_get_action_mABF2197D9CC6586E5DFB0481CF9C1B2586F41A47(L_1, NULL);
 		V_0 = L_2;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:190>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:190>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_3 = V_0;
 		if (L_3)
 		{
@@ -4886,34 +4886,34 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:191>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:191>
 		return;
 	}
 
 IL_0019:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:193>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:193>
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD L_4 = __this->___m_AimFlagsAction;
 		InputActionPropertyExtensions_DisableDirectAction_m976F69C07BC1AF691C6D3A1E03BBD4EA0D265932(L_4, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:195>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:195>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_5 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_6 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_6, __this, (intptr_t)((void*)MetaSystemGestureDetector_OnAimFlagsActionPerformedOrCanceled_mA039A6CD5B5CAAE457D7672710A4A314ACCE12BD_RuntimeMethod_var), NULL);
 		NullCheck(L_5);
 		InputAction_remove_performed_m1BE84CED38F11F17C825FA782B35C92D708E6E44(L_5, L_6, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:196>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:196>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_7 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_8 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_8, __this, (intptr_t)((void*)MetaSystemGestureDetector_OnAimFlagsActionPerformedOrCanceled_mA039A6CD5B5CAAE457D7672710A4A314ACCE12BD_RuntimeMethod_var), NULL);
 		NullCheck(L_7);
 		InputAction_remove_canceled_m7CF8D377C61DB1290E153C56312A7C075544AF7F(L_7, L_8, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:197>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:197>
 		__this->___m_AimFlagsBound = (bool)0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:198>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:198>
 		return;
 	}
 }
-// Method Definition Index: 95728
+// Method Definition Index: 95922
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_SetGestureState_mA8408914616784FF6321DC18D99C6CC46B0CE0C8 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, int32_t ___0_state, bool ___1_forceInvoke, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4928,7 +4928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_SetGestureStat
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B11_0 = NULL;
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B10_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:202>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:202>
 		bool L_0 = ___1_forceInvoke;
 		if (L_0)
 		{
@@ -4947,13 +4947,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_SetGestureStat
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:203>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:203>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:205>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:205>
 		BindableEnum_1_t2DAF495BF038E3782E6ADC1CF417A3934BB6284C* L_4 = __this->___m_SystemGestureState;
 		int32_t L_5 = ___0_state;
 		NullCheck(L_4);
@@ -4977,7 +4977,7 @@ IL_0012:
 
 IL_0026:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:209>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:209>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_8 = __this->___m_SystemGestureEnded;
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_9 = L_8;
 		if (L_9)
@@ -4995,13 +4995,13 @@ IL_0031:
 	{
 		NullCheck(G_B8_0);
 		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B8_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:210>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:210>
 		return;
 	}
 
 IL_0037:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:212>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:212>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_10 = __this->___m_SystemGestureStarted;
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_11 = L_10;
 		if (L_11)
@@ -5019,11 +5019,11 @@ IL_0042:
 	{
 		NullCheck(G_B11_0);
 		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(G_B11_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:215>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:215>
 		return;
 	}
 }
-// Method Definition Index: 95729
+// Method Definition Index: 95923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_UpdateAimFlags_m951BE31692BAA2A28618E0F8354BC9E907B4F4FC (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, uint64_t ___0_value, bool ___1_forceInvoke, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5039,24 +5039,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_UpdateAimFlags
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B3_0 = NULL;
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* G_B2_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:220>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:220>
 		uint64_t L_0 = __this->___m_AimFlags;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:221>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:221>
 		uint64_t L_1 = ___0_value;
 		__this->___m_AimFlags = L_1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:222>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:222>
 		uint64_t L_2 = __this->___m_AimFlags;
 		V_0 = (bool)((!(((uint64_t)((int64_t)((int64_t)L_2&((int64_t)((int32_t)64))))) <= ((uint64_t)((int64_t)0))))? 1 : 0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:223>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:223>
 		uint64_t L_3 = __this->___m_AimFlags;
 		V_1 = (bool)((!(((uint64_t)((int64_t)((int64_t)L_3&((int64_t)((int32_t)256))))) <= ((uint64_t)((int64_t)0))))? 1 : 0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:224>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:224>
 		uint64_t L_4 = __this->___m_AimFlags;
 		V_2 = (bool)((!(((uint64_t)((int64_t)((int64_t)L_4&((int64_t)2)))) <= ((uint64_t)((int64_t)0))))? 1 : 0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:225>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:225>
 		uint64_t L_5 = __this->___m_AimFlags;
 		V_3 = (bool)((!(((uint64_t)((int64_t)((int64_t)L_5&((int64_t)4)))) <= ((uint64_t)((int64_t)0))))? 1 : 0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:227>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:227>
 		bool L_6 = V_1;
 		if (!((int32_t)(((((int32_t)((!(((uint64_t)((int64_t)((int64_t)L_0&((int64_t)((int32_t)256))))) <= ((uint64_t)((int64_t)0))))? 1 : 0)) == ((int32_t)0))? 1 : 0)&(int32_t)L_6)))
 		{
@@ -5064,7 +5064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_UpdateAimFlags
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:229>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:229>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_7 = __this->___m_MenuPressed;
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_8 = L_7;
 		if (L_8)
@@ -5086,7 +5086,7 @@ IL_0068:
 
 IL_006d:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:232>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:232>
 		bool L_9 = V_0;
 		bool L_10 = V_1;
 		if (!((int32_t)((int32_t)L_9|(int32_t)L_10)))
@@ -5095,16 +5095,16 @@ IL_006d:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:234>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:234>
 		bool L_11 = ___1_forceInvoke;
 		MetaSystemGestureDetector_SetGestureState_mA8408914616784FF6321DC18D99C6CC46B0CE0C8(__this, 1, L_11, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:235>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:235>
 		return;
 	}
 
 IL_007b:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:238>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:238>
 		bool L_12 = V_2;
 		if (!L_12)
 		{
@@ -5112,16 +5112,16 @@ IL_007b:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:240>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:240>
 		bool L_13 = ___1_forceInvoke;
 		MetaSystemGestureDetector_SetGestureState_mA8408914616784FF6321DC18D99C6CC46B0CE0C8(__this, 0, L_13, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:241>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:241>
 		return;
 	}
 
 IL_0087:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:246>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:246>
 		bool L_14 = V_3;
 		if (!L_14)
 		{
@@ -5139,23 +5139,23 @@ IL_0087:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:248>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:248>
 		bool L_17 = ___1_forceInvoke;
 		MetaSystemGestureDetector_SetGestureState_mA8408914616784FF6321DC18D99C6CC46B0CE0C8(__this, 1, L_17, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:249>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:249>
 		return;
 	}
 
 IL_00a0:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:252>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:252>
 		bool L_18 = ___1_forceInvoke;
 		MetaSystemGestureDetector_SetGestureState_mA8408914616784FF6321DC18D99C6CC46B0CE0C8(__this, 0, L_18, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:253>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:253>
 		return;
 	}
 }
-// Method Definition Index: 95730
+// Method Definition Index: 95924
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_OnAimFlagsActionPerformedOrCanceled_mA039A6CD5B5CAAE457D7672710A4A314ACCE12BD (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5165,15 +5165,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector_OnAimFlagsActi
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:259>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:259>
 		int32_t L_0;
 		L_0 = CallbackContext_ReadValue_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mE0C3127498BA0448959CFEC4333B5ABC0A9AC300((&___0_context), CallbackContext_ReadValue_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mE0C3127498BA0448959CFEC4333B5ABC0A9AC300_RuntimeMethod_var);
 		MetaSystemGestureDetector_UpdateAimFlags_m951BE31692BAA2A28618E0F8354BC9E907B4F4FC(__this, ((int64_t)L_0), (bool)0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:261>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:261>
 		return;
 	}
 }
-// Method Definition Index: 95731
+// Method Definition Index: 95925
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector__ctor_mF5508C719F65E5677F3CBA6B36FC1ADA4D6BFF88 (MetaSystemGestureDetector_t476B40FD3E3296828C5A114BD02737744AF41507* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5186,7 +5186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector__ctor_mF5508C7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:41>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:41>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_0 = (InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD*)il2cpp_codegen_object_new(InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD_il2cpp_TypeInfo_var);
 		InputAction__ctor_mD042AD3CC86AEDEB5FB1F8CD9E834FE35F9060B9(L_0, (String_t*)NULL, 0, (String_t*)NULL, (String_t*)NULL, (String_t*)NULL, _stringLiteralE566E6091771397A8847DE9F0E5AF31E5E383CA7, NULL);
 		InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD L_1;
@@ -5197,7 +5197,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector__ctor_mF5508C7
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___m_AimFlagsAction))->___m_Reference), (void*)NULL);
 		#endif
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:131>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/MetaSystemGestureDetector.cs:131>
 		BindableEnum_1_t2DAF495BF038E3782E6ADC1CF417A3934BB6284C* L_2 = (BindableEnum_1_t2DAF495BF038E3782E6ADC1CF417A3934BB6284C*)il2cpp_codegen_object_new(BindableEnum_1_t2DAF495BF038E3782E6ADC1CF417A3934BB6284C_il2cpp_TypeInfo_var);
 		BindableEnum_1__ctor_mB7A02F9C41E3A84F5A402192EC6E8BCAB800568F(L_2, 0, (bool)0, (Func_3_t592C0BEF675DF1E62EDD0225BF9AA6FDBCE90CB3*)NULL, (bool)0, BindableEnum_1__ctor_mB7A02F9C41E3A84F5A402192EC6E8BCAB800568F_RuntimeMethod_var);
 		__this->___m_SystemGestureState = L_2;
@@ -5222,47 +5222,47 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaSystemGestureDetector__ctor_mF5508C7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95732
+// Method Definition Index: 95926
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OneEuroFilterVector3__ctor_m0A4D4430F87ED1FFB2509D3A0FEE3EF9908203B5 (OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_initialRawValue, float ___1_minCutoff, float ___2_beta, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:60>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:60>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:62>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:62>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_initialRawValue;
 		__this->___m_LastRawValue = L_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:63>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:63>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___0_initialRawValue;
 		__this->___m_LastFilteredValue = L_1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:64>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:64>
 		float L_2 = ___1_minCutoff;
 		__this->___m_MinCutoff = L_2;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:65>
 		float L_3 = ___2_beta;
 		__this->___m_Beta = L_3;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:66>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:66>
 		return;
 	}
 }
-// Method Definition Index: 95733
+// Method Definition Index: 95927
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OneEuroFilterVector3_Initialize_m61A3828A7C86A0A1B51364B2C784EBCE925DA4B2 (OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_initialRawValue, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:74>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:74>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_initialRawValue;
 		__this->___m_LastRawValue = L_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:75>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:75>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___0_initialRawValue;
 		__this->___m_LastFilteredValue = L_1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:76>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:76>
 		return;
 	}
 }
-// Method Definition Index: 95734
+// Method Definition Index: 95928
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 OneEuroFilterVector3_Filter_m7FF7A90C7C87CA0CC3BBD4F510A0972C61B08C5A (OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_rawValue, float ___1_deltaTime, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:86>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:86>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_rawValue;
 		float L_1 = ___1_deltaTime;
 		float L_2 = __this->___m_MinCutoff;
@@ -5272,7 +5272,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		return L_4;
 	}
 }
-// Method Definition Index: 95735
+// Method Definition Index: 95929
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 OneEuroFilterVector3_Filter_m9A180E6E60F1BA648E5C930C1BB2B82FDA57D4EE (OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_rawValue, float ___1_deltaTime, float ___2_minCutoff, float ___3_beta, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -5292,7 +5292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_7;
 	memset((&V_7), 0, sizeof(V_7));
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:102>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:102>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_rawValue;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = __this->___m_LastRawValue;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
@@ -5301,19 +5301,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
 		L_4 = Vector3_op_Division_mCC6BB24E372AB96B8380D1678446EF6A8BAE13BB_inline(L_2, L_3, NULL);
 		V_0 = L_4;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:105>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:105>
 		float L_5 = ___2_minCutoff;
 		float L_6 = ___2_minCutoff;
 		float L_7 = ___2_minCutoff;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		memset((&L_8), 0, sizeof(L_8));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_8), L_5, L_6, L_7, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:106>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:106>
 		float L_9 = ___3_beta;
 		float L_10 = ___3_beta;
 		float L_11 = ___3_beta;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_1), L_9, L_10, L_11, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:109>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:109>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
@@ -5321,7 +5321,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_8, L_14, NULL);
 		V_2 = L_15;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:112>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:112>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
 		L_16 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		V_6 = L_16;
@@ -5332,12 +5332,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		L_19 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_17, L_18, NULL);
 		V_7 = L_19;
 		BurstMathUtility_FastSafeDivide_mA1538EAD0BC9F7445EB1AE206089CC0685C12C19((&V_6), (&V_7), (&V_3), (9.99999997E-07f), NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:114>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:114>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20 = V_3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21 = ___0_rawValue;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
 		L_22 = Vector3_Scale_m7C3CD199271902D5C00CBF35CD230DEB62B68CAE_inline(L_20, L_21, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:115>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:115>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23;
 		L_23 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = V_3;
@@ -5347,18 +5347,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
 		L_27 = Vector3_Scale_m7C3CD199271902D5C00CBF35CD230DEB62B68CAE_inline(L_25, L_26, NULL);
 		V_4 = L_27;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:118>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:118>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
 		L_29 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_22, L_28, NULL);
 		V_5 = L_29;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:120>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:120>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = ___0_rawValue;
 		__this->___m_LastRawValue = L_30;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:121>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:121>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_5;
 		__this->___m_LastFilteredValue = L_31;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:123>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs:123>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = V_5;
 		return L_32;
 	}
@@ -5371,7 +5371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95736
+// Method Definition Index: 95930
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnEnable_mA638AFC894D304EB87EA77CAC5D3EA1E8792CE2E (PinchPointFollow_tCD3FAB10E82231C7AB75912BC57946C882926007* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5388,7 +5388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnEnable_mA638AFC894D30
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:65>
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_0 = __this->___m_XRHandTrackingEvents;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5399,7 +5399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnEnable_mA638AFC894D30
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:66>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:66>
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_2 = __this->___m_XRHandTrackingEvents;
 		NullCheck(L_2);
 		HandUpdatedEvent_t74C37E98CEE73FC31A297B62298B2B48C247ED4F* L_3;
@@ -5412,7 +5412,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnEnable_mA638AFC894D30
 
 IL_002a:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:68>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:68>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
 		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_5);
@@ -5422,7 +5422,7 @@ IL_002a:
 		OneEuroFilterVector3__ctor_m0A4D4430F87ED1FFB2509D3A0FEE3EF9908203B5(L_7, L_6, (0.100000001f), (0.0199999996f), NULL);
 		__this->___m_OneEuroFilterVector3 = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OneEuroFilterVector3), (void*)L_7);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:69>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:69>
 		XRRayInteractor_tDB7FC857A50F0B25DE4CEC0EE930242BB7380649* L_8 = __this->___m_RayInteractor;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -5433,17 +5433,17 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:71>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:71>
 		XRRayInteractor_tDB7FC857A50F0B25DE4CEC0EE930242BB7380649* L_10 = __this->___m_RayInteractor;
 		__this->___m_RayProvider = L_10;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RayProvider), (void*)L_10);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:72>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:72>
 		__this->___m_HasRayProvider = (bool)1;
 	}
 
 IL_006b:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:74>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:74>
 		NearFarInteractor_t43B1C14C2D72CB717E3624B0759E265F5D215E9C* L_11 = __this->___m_NearFarInteractor;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_12;
@@ -5454,23 +5454,23 @@ IL_006b:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:76>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:76>
 		NearFarInteractor_t43B1C14C2D72CB717E3624B0759E265F5D215E9C* L_13 = __this->___m_NearFarInteractor;
 		__this->___m_RayProvider = L_13;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RayProvider), (void*)L_13);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:77>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:77>
 		__this->___m_HasRayProvider = (bool)1;
 	}
 
 IL_008c:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:79>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:79>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14 = __this->___m_TargetRotation;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_15;
 		L_15 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_14, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		__this->___m_HasTargetRotationTransform = L_15;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:80>
 		BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A* L_16 = __this->___m_BindingsGroup;
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_17 = __this->___m_QuaternionTweenableVariable;
 		Action_1_tD0624B0C9A4314C84D75B0C2A563B322540AB9AE* L_18 = (Action_1_tD0624B0C9A4314C84D75B0C2A563B322540AB9AE*)il2cpp_codegen_object_new(Action_1_tD0624B0C9A4314C84D75B0C2A563B322540AB9AE_il2cpp_TypeInfo_var);
@@ -5480,11 +5480,11 @@ IL_008c:
 		L_19 = BindableVariableBase_1_Subscribe_m8B3373ACCB95632BA3620236C7C2D3596424E729(L_17, L_18, BindableVariableBase_1_Subscribe_m8B3373ACCB95632BA3620236C7C2D3596424E729_RuntimeMethod_var);
 		NullCheck(L_16);
 		BindingsGroup_AddBinding_m18697E73861A1C67DE0674F162B43CCE9E67C89B(L_16, L_19, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:85>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:85>
 		return;
 	}
 }
-// Method Definition Index: 95737
+// Method Definition Index: 95931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnDisable_mFD8286A010C0C8D06EC88608F6DA4EB946D3DC63 (PinchPointFollow_tCD3FAB10E82231C7AB75912BC57946C882926007* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5497,11 +5497,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnDisable_mFD8286A010C0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:93>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:93>
 		BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A* L_0 = __this->___m_BindingsGroup;
 		NullCheck(L_0);
 		BindingsGroup_Clear_m092668459F10E46245228224D1334DAB089B72E3(L_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:94>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:94>
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_1 = __this->___m_XRHandTrackingEvents;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -5512,7 +5512,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnDisable_mFD8286A010C0
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:95>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:95>
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_3 = __this->___m_XRHandTrackingEvents;
 		NullCheck(L_3);
 		HandUpdatedEvent_t74C37E98CEE73FC31A297B62298B2B48C247ED4F* L_4;
@@ -5525,11 +5525,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnDisable_mFD8286A010C0
 
 IL_0035:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:97>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:97>
 		return;
 	}
 }
-// Method Definition Index: 95738
+// Method Definition Index: 95932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PinchPointFollow_TryGetPinchPosition_mF45280399D6D584F71E85CDA62C316BF4E72F5ED (XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* ___0_args, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_position, const RuntimeMethod* method) 
 {
 	XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 V_0;
@@ -5545,7 +5545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PinchPointFollow_TryGetPinchPosition_mF4
 	memset((&V_5), 0, sizeof(V_5));
 	XRCommonHandGestures_tB24C5F4CF6285CC0D00E1830EE0D3FEB331CC926* G_B6_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:103>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:103>
 		XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* L_0 = ___0_args;
 		NullCheck(L_0);
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1;
@@ -5556,11 +5556,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PinchPointFollow_TryGetPinchPosition_mF4
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:105>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:106>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:107>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:108>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:109>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:105>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:106>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:107>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:108>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:109>
 		XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* L_2 = ___0_args;
 		NullCheck(L_2);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471* L_3 = (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471*)(&L_2->___hand);
@@ -5615,7 +5615,7 @@ IL_0037:
 IL_0042:
 	{
 		V_4 = G_B6_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:110>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:110>
 		XRCommonHandGestures_tB24C5F4CF6285CC0D00E1830EE0D3FEB331CC926* L_14 = V_4;
 		if (!L_14)
 		{
@@ -5633,9 +5633,9 @@ IL_0042:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:113>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:114>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:115>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:113>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:114>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:115>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_17 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = L_17.___position;
 		float L_19 = L_18.___x;
@@ -5669,25 +5669,25 @@ IL_0042:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:117>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:117>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_29 = ___1_position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_30 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = L_30.___position;
 		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_29 = L_31;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:118>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:118>
 		return (bool)1;
 	}
 
 IL_009b:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:124>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:124>
 		XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* L_32 = ___0_args;
 		NullCheck(L_32);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471* L_33 = (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471*)(&L_32->___hand);
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_34;
 		L_34 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035(L_33, 6, NULL);
 		V_0 = L_34;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:125>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:125>
 		bool L_35;
 		L_35 = XRHandJoint_TryGetPose_m1AA1E69E7753E1CC4E64F8649751BF7D30CE113E((&V_0), (&V_1), NULL);
 		if (L_35)
@@ -5696,25 +5696,25 @@ IL_009b:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:127>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:127>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_36 = ___1_position;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
 		L_37 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_36 = L_37;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:128>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:128>
 		return (bool)0;
 	}
 
 IL_00c0:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:131>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:131>
 		XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* L_38 = ___0_args;
 		NullCheck(L_38);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471* L_39 = (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471*)(&L_38->___hand);
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_40;
 		L_40 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035(L_39, ((int32_t)11), NULL);
 		V_2 = L_40;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:132>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:132>
 		bool L_41;
 		L_41 = XRHandJoint_TryGetPose_m1AA1E69E7753E1CC4E64F8649751BF7D30CE113E((&V_2), (&V_3), NULL);
 		if (L_41)
@@ -5723,18 +5723,18 @@ IL_00c0:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:134>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:134>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_42 = ___1_position;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43;
 		L_43 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_42 = L_43;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:135>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:135>
 		return (bool)0;
 	}
 
 IL_00e6:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:138>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:138>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_44 = ___1_position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_45 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_46 = L_45.___position;
@@ -5743,11 +5743,11 @@ IL_00e6:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_49;
 		L_49 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_46, L_48, (0.5f), NULL);
 		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_44 = L_49;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:139>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:139>
 		return (bool)1;
 	}
 }
-// Method Definition Index: 95739
+// Method Definition Index: 95933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnJointsUpdated_mB80D533063E17091BC9842EBA5AC7C5ABF356823 (PinchPointFollow_tCD3FAB10E82231C7AB75912BC57946C882926007* __this, XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* ___0_args, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5774,7 +5774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnJointsUpdated_mB80D53
 	memset((&V_7), 0, sizeof(V_7));
 	float G_B13_0 = 0.0f;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:144>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:144>
 		XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* L_0 = ___0_args;
 		bool L_1;
 		L_1 = PinchPointFollow_TryGetPinchPosition_mF45280399D6D584F71E85CDA62C316BF4E72F5ED(L_0, (&V_0), NULL);
@@ -5784,13 +5784,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_OnJointsUpdated_mB80D53
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:145>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:145>
 		return;
 	}
 
 IL_000b:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:147>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:147>
 		OneEuroFilterVector3_t71848A0EF10F7FB56132C476132C61D96078B8B3* L_2 = __this->___m_OneEuroFilterVector3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = V_0;
 		float L_4;
@@ -5799,13 +5799,13 @@ IL_000b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
 		L_5 = OneEuroFilterVector3_Filter_m7FF7A90C7C87CA0CC3BBD4F510A0972C61B08C5A(L_2, L_3, L_4, NULL);
 		V_1 = L_5;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:150>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:150>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
 		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = V_1;
 		NullCheck(L_6);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_6, L_7, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:152>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:152>
 		bool L_8 = __this->___m_HasTargetRotationTransform;
 		if (!L_8)
 		{
@@ -5820,7 +5820,7 @@ IL_000b:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:156>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:156>
 		RuntimeObject* L_10 = __this->___m_RayProvider;
 		NullCheck(L_10);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
@@ -5836,7 +5836,7 @@ IL_000b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_4), NULL);
 		V_2 = L_15;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:157>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:157>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
 		L_17 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
@@ -5848,18 +5848,18 @@ IL_000b:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:163>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:163>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
 		L_19 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
 		V_5 = L_19;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:164>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:164>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
 		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_20);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
 		L_21 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_20, NULL);
 		V_6 = L_21;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:165>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:165>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22 = V_6;
 		if (!L_22)
 		{
@@ -5867,7 +5867,7 @@ IL_000b:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:166>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:166>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23 = V_6;
 		NullCheck(L_23);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
@@ -5877,13 +5877,13 @@ IL_000b:
 
 IL_0092:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:168>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:168>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26 = V_5;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_27;
 		L_27 = Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline(L_25, L_26, NULL);
 		V_7 = L_27;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:171>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:171>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_28 = __this->___m_TargetRotation;
 		NullCheck(L_28);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
@@ -5897,7 +5897,7 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:172>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:172>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_32 = __this->___m_QuaternionTweenableVariable;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_33 = V_7;
 		NullCheck(L_32);
@@ -5907,7 +5907,7 @@ IL_0092:
 
 IL_00c3:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:176>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:176>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_34 = __this->___m_QuaternionTweenableVariable;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35 = __this->___m_TargetRotation;
 		NullCheck(L_35);
@@ -5919,7 +5919,7 @@ IL_00c3:
 
 IL_00d9:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:179>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:179>
 		float L_37 = __this->___m_RotationSmoothingSpeed;
 		if ((((float)L_37) > ((float)(0.0f))))
 		{
@@ -5942,7 +5942,7 @@ IL_00ed:
 IL_00f9:
 	{
 		V_3 = G_B13_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:180>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:180>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_40 = __this->___m_QuaternionTweenableVariable;
 		float L_41 = V_3;
 		NullCheck(L_40);
@@ -5951,11 +5951,11 @@ IL_00f9:
 
 IL_0106:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:182>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:182>
 		return;
 	}
 }
-// Method Definition Index: 95740
+// Method Definition Index: 95934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow__ctor_m8C1DDBEBA98EFE2D67937E627C9BD2BC04C2E792 (PinchPointFollow_tCD3FAB10E82231C7AB75912BC57946C882926007* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5966,14 +5966,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow__ctor_m8C1DDBEBA98EFE2D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:44>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:44>
 		__this->___m_RotationSmoothingSpeed = (12.0f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:54>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:54>
 		QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145* L_0 = (QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145*)il2cpp_codegen_object_new(QuaternionTweenableVariable_t511E026E030C36326A4F6FF19A68C459B5993145_il2cpp_TypeInfo_var);
 		QuaternionTweenableVariable__ctor_m78DB27081DAD1BE2125659704E6B0391AA9331BD(L_0, NULL);
 		__this->___m_QuaternionTweenableVariable = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_QuaternionTweenableVariable), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:56>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:56>
 		BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A* L_1 = (BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A*)il2cpp_codegen_object_new(BindingsGroup_tD5EC90BB10F9D310FE467A7E3A4CAE2E32D0397A_il2cpp_TypeInfo_var);
 		BindingsGroup__ctor_m1EFD3F405050571D3A66F9B95E8FBC296866A716(L_1, NULL);
 		__this->___m_BindingsGroup = L_1;
@@ -5982,11 +5982,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow__ctor_m8C1DDBEBA98EFE2D
 		return;
 	}
 }
-// Method Definition Index: 95741
+// Method Definition Index: 95935
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_U3COnEnableU3Eb__11_0_m2134C2C368FF054C4D631499A6997FA299C1050F (PinchPointFollow_tCD3FAB10E82231C7AB75912BC57946C882926007* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_newValue, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PinchPointFollow.cs:80>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_1 = ___0_newValue;
@@ -6003,7 +6003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinchPointFollow_U3COnEnableU3Eb__11_0_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95742
+// Method Definition Index: 95936
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnEnable_m6DD27B030C68C0264DA2550664810470AB98F3D1 (PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6019,12 +6019,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnEnable_m6DD27B030C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:44>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:44>
 		il2cpp_codegen_runtime_class_init_inline(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_0 = ((PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_StaticFields*)il2cpp_codegen_static_fields_for(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var))->___s_Subsystems;
 		il2cpp_codegen_runtime_class_init_inline(SubsystemManager_t9A7261E4D0B53B996F04B8707D8E1C33AB65E824_il2cpp_TypeInfo_var);
 		SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73(L_0, SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:45>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:45>
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_1 = ((PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_StaticFields*)il2cpp_codegen_static_fields_for(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var))->___s_Subsystems;
 		NullCheck(L_1);
 		int32_t L_2;
@@ -6035,13 +6035,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnEnable_m6DD27B030C
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:46>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:46>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:48>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:48>
 		il2cpp_codegen_runtime_class_init_inline(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_3 = ((PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_StaticFields*)il2cpp_codegen_static_fields_for(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var))->___s_Subsystems;
 		NullCheck(L_3);
@@ -6049,7 +6049,7 @@ IL_0017:
 		L_4 = List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F(L_3, 0, List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F_RuntimeMethod_var);
 		__this->___m_Subsystem = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)L_4);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:49>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:49>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_5 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6 = L_5;
 		NullCheck(L_6);
@@ -6061,11 +6061,11 @@ IL_0017:
 		NullCheck(L_6);
 		L_6->___updatedHands = ((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_9, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_6->___updatedHands), (void*)((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_9, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var)));
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:53>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 95743
+// Method Definition Index: 95937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnDisable_m0CD604623E5AC457F5A211AB6DB87B8AEF5CEA9F (PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6076,7 +6076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnDisable_m0CD604623
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:61>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:61>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (L_0)
 		{
@@ -6084,13 +6084,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnDisable_m0CD604623
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:62>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:62>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:64>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:64>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_2 = L_1;
 		NullCheck(L_2);
@@ -6102,14 +6102,14 @@ IL_0009:
 		NullCheck(L_2);
 		L_2->___updatedHands = ((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_5, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_2->___updatedHands), (void*)((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_5, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var)));
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:65>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:65>
 		__this->___m_Subsystem = (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)(XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:67>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:67>
 		return;
 	}
 }
-// Method Definition Index: 95744
+// Method Definition Index: 95938
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnUpdatedHands_mAE314CD7D196CFD58C6B76C605EC9AC61A2DDD0B (PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17* __this, XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* ___0_subsystem, int32_t ___1_updateSuccessFlags, int32_t ___2_updateType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6137,10 +6137,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnUpdatedHands_mAE31
 	int32_t G_B18_0 = 0;
 	PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17* G_B18_1 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:72>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:72>
 		bool L_0 = __this->___m_IsPoking;
 		V_0 = L_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:73>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:73>
 		int32_t L_1 = __this->___m_Handedness;
 		V_3 = L_1;
 		int32_t L_2 = V_3;
@@ -6162,7 +6162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_OnUpdatedHands_mAE31
 
 IL_0018:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:76>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:76>
 		int32_t L_4 = ___1_updateSuccessFlags;
 		il2cpp_codegen_runtime_class_init_inline(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -6173,20 +6173,20 @@ IL_0018:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:77>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:77>
 		return;
 	}
 
 IL_0022:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:79>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:79>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6 = ___0_subsystem;
 		NullCheck(L_6);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_7;
 		L_7 = XRHandSubsystem_get_leftHand_mD3B931E5129348FEE34C3965A0CF8E62A0CFFB97_inline(L_6, NULL);
 		V_1 = L_7;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:80>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:81>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:81>
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_8 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -6242,13 +6242,13 @@ IL_004b:
 	{
 		NullCheck(G_B10_1);
 		G_B10_1->___m_IsPoking = (bool)G_B10_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:82>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:82>
 		goto IL_008a;
 	}
 
 IL_0052:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:84>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:84>
 		int32_t L_16 = ___1_updateSuccessFlags;
 		il2cpp_codegen_runtime_class_init_inline(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -6259,20 +6259,20 @@ IL_0052:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:85>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:85>
 		return;
 	}
 
 IL_005c:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:87>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:87>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_18 = ___0_subsystem;
 		NullCheck(L_18);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_19;
 		L_19 = XRHandSubsystem_get_rightHand_mDE333FDF35460E1A06BE051AF9C2144B7053ED3C_inline(L_18, NULL);
 		V_2 = L_19;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:88>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:89>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:88>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:89>
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_20 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -6332,7 +6332,7 @@ IL_0085:
 
 IL_008a:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:93>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:93>
 		bool L_28 = __this->___m_IsPoking;
 		if (!L_28)
 		{
@@ -6347,14 +6347,14 @@ IL_008a:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:94>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:94>
 		PokeGestureDetector_StartPokeGesture_m70ABEC1433DA03E304CC7F1C701BA59F3BA7CA7D(__this, NULL);
 		return;
 	}
 
 IL_009c:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:95>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:95>
 		bool L_30 = __this->___m_IsPoking;
 		bool L_31 = V_0;
 		if (!((int32_t)(((((int32_t)L_30) == ((int32_t)0))? 1 : 0)&(int32_t)L_31)))
@@ -6363,28 +6363,28 @@ IL_009c:
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:96>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:96>
 		PokeGestureDetector_EndPokeGesture_mE8ECDBF9E14D27A44E583607A8BADF49391C04B8(__this, NULL);
 	}
 
 IL_00af:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:97>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:97>
 		return;
 	}
 }
-// Method Definition Index: 95745
+// Method Definition Index: 95939
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_HasUpdateSuccessFlag_mBC99EAA5370D5E23ABC01C313A03ECB88EF99655 (int32_t ___0_successFlags, int32_t ___1_successFlag, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:108>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:108>
 		int32_t L_0 = ___0_successFlags;
 		int32_t L_1 = ___1_successFlag;
 		int32_t L_2 = ___1_successFlag;
 		return (bool)((((int32_t)((int32_t)((int32_t)L_0&(int32_t)L_1))) == ((int32_t)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 95746
+// Method Definition Index: 95940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsIndexExtended_mBCAEF05D801F4F24AD729FC1696EC0E8F758BA73 (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 ___0_hand, const RuntimeMethod* method) 
 {
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_0;
@@ -6400,9 +6400,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsIndexExtended_mBCA
 	XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:118>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:119>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:120>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:118>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:119>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:120>
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_0;
 		L_0 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035((&___0_hand), 1, NULL);
 		V_5 = L_0;
@@ -6438,13 +6438,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsIndexExtended_mBCA
 
 IL_0041:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:122>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:122>
 		return (bool)0;
 	}
 
 IL_0043:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:125>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:125>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_6 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = L_6.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_8 = V_0;
@@ -6452,7 +6452,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_7, L_9, NULL);
 		V_3 = L_10;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:126>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:126>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_11 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = L_11.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_13 = V_0;
@@ -6460,7 +6460,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_12, L_14, NULL);
 		V_4 = L_15;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:127>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:127>
 		float L_16;
 		L_16 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_3), NULL);
 		float L_17;
@@ -6468,7 +6468,7 @@ IL_0043:
 		return (bool)((((float)L_16) > ((float)L_17))? 1 : 0);
 	}
 }
-// Method Definition Index: 95747
+// Method Definition Index: 95941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsMiddleGrabbing_m992C297A51CC20F8133E1663916F766F3AFE75E0 (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 ___0_hand, const RuntimeMethod* method) 
 {
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_0;
@@ -6484,9 +6484,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsMiddleGrabbing_m99
 	XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:137>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:138>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:139>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:137>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:138>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:139>
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_0;
 		L_0 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035((&___0_hand), 1, NULL);
 		V_5 = L_0;
@@ -6522,13 +6522,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsMiddleGrabbing_m99
 
 IL_0041:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:141>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:141>
 		return (bool)0;
 	}
 
 IL_0043:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:144>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:144>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_6 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = L_6.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_8 = V_0;
@@ -6536,7 +6536,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_7, L_9, NULL);
 		V_3 = L_10;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:145>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:145>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_11 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = L_11.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_13 = V_0;
@@ -6544,7 +6544,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_12, L_14, NULL);
 		V_4 = L_15;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:146>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:146>
 		float L_16;
 		L_16 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_4), NULL);
 		float L_17;
@@ -6552,7 +6552,7 @@ IL_0043:
 		return (bool)((((int32_t)((!(((float)L_16) >= ((float)L_17)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 95748
+// Method Definition Index: 95942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsRingGrabbing_m50488D913D581FD7EF82AE8F4972D8220A1CAAB4 (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 ___0_hand, const RuntimeMethod* method) 
 {
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_0;
@@ -6568,9 +6568,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsRingGrabbing_m5048
 	XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:156>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:157>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:158>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:156>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:157>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:158>
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_0;
 		L_0 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035((&___0_hand), 1, NULL);
 		V_5 = L_0;
@@ -6606,13 +6606,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsRingGrabbing_m5048
 
 IL_0041:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:160>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:160>
 		return (bool)0;
 	}
 
 IL_0043:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:163>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:163>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_6 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = L_6.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_8 = V_0;
@@ -6620,7 +6620,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_7, L_9, NULL);
 		V_3 = L_10;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:164>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:164>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_11 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = L_11.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_13 = V_0;
@@ -6628,7 +6628,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_12, L_14, NULL);
 		V_4 = L_15;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:165>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:165>
 		float L_16;
 		L_16 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_4), NULL);
 		float L_17;
@@ -6636,7 +6636,7 @@ IL_0043:
 		return (bool)((((int32_t)((!(((float)L_16) >= ((float)L_17)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 95749
+// Method Definition Index: 95943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsLittleGrabbing_m43A33AD4EBC1FC7E56712E6806559F19E67666A5 (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 ___0_hand, const RuntimeMethod* method) 
 {
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_0;
@@ -6652,9 +6652,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsLittleGrabbing_m43
 	XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:175>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:176>
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:177>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:175>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:176>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:177>
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_0;
 		L_0 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035((&___0_hand), 1, NULL);
 		V_5 = L_0;
@@ -6690,13 +6690,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PokeGestureDetector_IsLittleGrabbing_m43
 
 IL_0041:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:179>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:179>
 		return (bool)0;
 	}
 
 IL_0043:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:182>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:182>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_6 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = L_6.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_8 = V_0;
@@ -6704,7 +6704,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_7, L_9, NULL);
 		V_3 = L_10;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:183>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:183>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_11 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = L_11.___position;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_13 = V_0;
@@ -6712,7 +6712,7 @@ IL_0043:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_12, L_14, NULL);
 		V_4 = L_15;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:184>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:184>
 		float L_16;
 		L_16 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_4), NULL);
 		float L_17;
@@ -6720,35 +6720,35 @@ IL_0043:
 		return (bool)((((int32_t)((!(((float)L_16) >= ((float)L_17)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 95750
+// Method Definition Index: 95944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_StartPokeGesture_m70ABEC1433DA03E304CC7F1C701BA59F3BA7CA7D (PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:189>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:189>
 		__this->___m_IsPoking = (bool)1;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:190>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:190>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___m_PokeGestureStarted;
 		NullCheck(L_0);
 		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:191>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:191>
 		return;
 	}
 }
-// Method Definition Index: 95751
+// Method Definition Index: 95945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector_EndPokeGesture_mE8ECDBF9E14D27A44E583607A8BADF49391C04B8 (PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:195>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:195>
 		__this->___m_IsPoking = (bool)0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:196>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:196>
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___m_PokeGestureEnded;
 		NullCheck(L_0);
 		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:197>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:197>
 		return;
 	}
 }
-// Method Definition Index: 95752
+// Method Definition Index: 95946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector__ctor_mA6D3EC9146A3DACF8D754DE5EB5485369BCB78C1 (PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6756,7 +6756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector__ctor_mA6D3EC9146A3D
 		return;
 	}
 }
-// Method Definition Index: 95753
+// Method Definition Index: 95947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector__cctor_mBF87F492F57E3FF6709F92E8B4D3BF04CF36196B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6768,7 +6768,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector__cctor_mBF87F492F57E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:35>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/PokeGestureDetector.cs:35>
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_0 = (List_1_tE4111BEC044D13259EFD4EC5907636C855887179*)il2cpp_codegen_object_new(List_1_tE4111BEC044D13259EFD4EC5907636C855887179_il2cpp_TypeInfo_var);
 		List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4(L_0, List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4_RuntimeMethod_var);
 		((PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_StaticFields*)il2cpp_codegen_static_fields_for(PokeGestureDetector_t94EB69FA33D2BEB523C380F2D7D9DF399AF41B17_il2cpp_TypeInfo_var))->___s_Subsystems = L_0;
@@ -6784,71 +6784,71 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PokeGestureDetector__cctor_mBF87F492F57E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95754
+// Method Definition Index: 95948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* ReleaseThresholdButtonReader_get_valueInput_m24EE7FD368A9ED9F49F9335FA36143C6332B1ECF (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:22>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:22>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_0 = __this->___m_ValueInput;
 		return L_0;
 	}
 }
-// Method Definition Index: 95755
+// Method Definition Index: 95949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader_set_valueInput_m8945D19B80516D7214A692D3ED455EEA9E8B6C43 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:23>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:23>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515** L_0 = (XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515**)(&__this->___m_ValueInput);
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_1 = ___0_value;
 		XRInputReaderUtility_SetInputProperty_m062703A18F912924471F2C79539A7B6509DEB264(L_0, L_1, __this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 95756
+// Method Definition Index: 95950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ReleaseThresholdButtonReader_get_pressThreshold_m3771542AC58EBF8DE00E2E08BF45F90ED9FA2ECC (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:39>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:39>
 		float L_0 = __this->___m_PressThreshold;
 		return L_0;
 	}
 }
-// Method Definition Index: 95757
+// Method Definition Index: 95951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader_set_pressThreshold_m048414840430082E56E28C937DFD0EF6042F6CE9 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:40>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:40>
 		float L_0 = ___0_value;
 		__this->___m_PressThreshold = L_0;
 		return;
 	}
 }
-// Method Definition Index: 95758
+// Method Definition Index: 95952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ReleaseThresholdButtonReader_get_releaseThreshold_mAE3175C9BB7B5724DEFE5290B1180FC7D26238D7 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:58>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:58>
 		float L_0 = __this->___m_ReleaseThreshold;
 		return L_0;
 	}
 }
-// Method Definition Index: 95759
+// Method Definition Index: 95953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader_set_releaseThreshold_mB2E0E3D0B11C1F56F3EB4B0B8B362B11AFC1FEE0 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:59>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:59>
 		float L_0 = ___0_value;
 		__this->___m_ReleaseThreshold = L_0;
 		return;
 	}
 }
-// Method Definition Index: 95760
+// Method Definition Index: 95954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader_OnEnable_m37FB52F2122CA24D9D9B998CB47BACAA752A49DC (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* G_B2_0 = NULL;
 	XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:71>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:71>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_0 = __this->___m_ValueInput;
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_1 = L_0;
 		if (L_1)
@@ -6866,17 +6866,17 @@ IL_000b:
 	{
 		NullCheck(G_B2_0);
 		XRInputButtonReader_EnableDirectActionIfModeUsed_mE9A109DD4852629D996091C59514A1BDB7FEB145(G_B2_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:72>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:72>
 		return;
 	}
 }
-// Method Definition Index: 95761
+// Method Definition Index: 95955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader_OnDisable_m3E8CF2D16F44D75C6EC9DE7EE9026B5FA31CB802 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* G_B2_0 = NULL;
 	XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:79>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:79>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_0 = __this->___m_ValueInput;
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_1 = L_0;
 		if (L_1)
@@ -6894,11 +6894,11 @@ IL_000b:
 	{
 		NullCheck(G_B2_0);
 		XRInputButtonReader_DisableDirectActionIfModeUsed_mD7BCE5EAB00514C6BBF2D7831929C4D5FB3DA20A(G_B2_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:80>
 		return;
 	}
 }
-// Method Definition Index: 95762
+// Method Definition Index: 95956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader_Update_m18893740DEFE0B2CA39B5E0FBF35EA4AB26B2A93 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -6916,16 +6916,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader_Update_m188
 	int32_t G_B9_0 = 0;
 	ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* G_B9_1 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:89>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:89>
 		bool L_0 = __this->___m_IsPerformed;
 		V_0 = L_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:90>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:90>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_1 = __this->___m_ValueInput;
 		NullCheck(L_1);
 		float L_2;
 		L_2 = XRInputButtonReader_ReadValue_m1165BE4BE0AA4C9A436145B2DB8DF5BA38A32F3C(L_1, NULL);
 		V_1 = L_2;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:91>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:91>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_3 = __this->___m_ValueInput;
 		NullCheck(L_3);
 		bool L_4;
@@ -6958,7 +6958,7 @@ IL_003a:
 	{
 		NullCheck(G_B3_1);
 		G_B3_1->___m_IsPerformed = (bool)G_B3_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:93>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:93>
 		bool L_10 = V_0;
 		if (L_10)
 		{
@@ -6984,7 +6984,7 @@ IL_004c:
 	{
 		NullCheck(G_B6_1);
 		G_B6_1->___m_WasPerformedThisFrame = (bool)G_B6_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:94>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:94>
 		bool L_12 = V_0;
 		if (!L_12)
 		{
@@ -7010,42 +7010,42 @@ IL_0061:
 	{
 		NullCheck(G_B9_1);
 		G_B9_1->___m_WasCompletedThisFrame = (bool)G_B9_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:95>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:95>
 		return;
 	}
 }
-// Method Definition Index: 95763
+// Method Definition Index: 95957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ReleaseThresholdButtonReader_ReadIsPerformed_m4F3760E91C6630CAA16789F3D4E7205B590CA3DB (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:100>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:100>
 		bool L_0 = __this->___m_IsPerformed;
 		return L_0;
 	}
 }
-// Method Definition Index: 95764
+// Method Definition Index: 95958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ReleaseThresholdButtonReader_ReadWasPerformedThisFrame_m8BA56CB61DBB4E9B89F459DBD04449F743B64086 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:106>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:106>
 		bool L_0 = __this->___m_WasPerformedThisFrame;
 		return L_0;
 	}
 }
-// Method Definition Index: 95765
+// Method Definition Index: 95959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ReleaseThresholdButtonReader_ReadWasCompletedThisFrame_m1379ED56188FA24A4E012CFABB03A1B8D320C475 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:112>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:112>
 		bool L_0 = __this->___m_WasCompletedThisFrame;
 		return L_0;
 	}
 }
-// Method Definition Index: 95766
+// Method Definition Index: 95960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ReleaseThresholdButtonReader_ReadValue_m2D0B59ED3949F1598832D6038208B92BFF412633 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:118>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:118>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_0 = __this->___m_ValueInput;
 		NullCheck(L_0);
 		float L_1;
@@ -7053,11 +7053,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ReleaseThresholdButtonReader_ReadValue_
 		return L_1;
 	}
 }
-// Method Definition Index: 95767
+// Method Definition Index: 95961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ReleaseThresholdButtonReader_TryReadValue_mA6ADC0B74B6AFC9C870C6865A371754AB4841F8E (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, float* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:124>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:124>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_0 = __this->___m_ValueInput;
 		float* L_1 = ___0_value;
 		NullCheck(L_0);
@@ -7066,7 +7066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ReleaseThresholdButtonReader_TryReadValu
 		return L_2;
 	}
 }
-// Method Definition Index: 95768
+// Method Definition Index: 95962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader__ctor_m525B651415AA5DEE410C9A06FF5209D062607650 (ReleaseThresholdButtonReader_t354750E78CF51CF57D2A573A2DEECE5387239697* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7077,14 +7077,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader__ctor_m525B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:15>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:15>
 		XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515* L_0 = (XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515*)il2cpp_codegen_object_new(XRInputButtonReader_t0727CFE55AD1B8ECEFCD382660D9AC0DA1639515_il2cpp_TypeInfo_var);
 		XRInputButtonReader__ctor_m7C30DDE023CB21C8D1D99D7519E452D707BDC0D9(L_0, _stringLiteral86FADB31129B6F40C720A97600D69389EA3567E3, (String_t*)NULL, (bool)0, 2, NULL);
 		__this->___m_ValueInput = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ValueInput), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:29>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:29>
 		__this->___m_PressThreshold = (1.0f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:46>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ReleaseThresholdButtonReader.cs:46>
 		__this->___m_ReleaseThreshold = (0.899999976f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -7098,16 +7098,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReleaseThresholdButtonReader__ctor_m525B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95769
+// Method Definition Index: 95963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* ValueDerivedButtonReader_get_valueInput_mDAB005BDD433B538E9D4A627F44DACADCA3C4B8F (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:21>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:21>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_0 = __this->___m_ValueInput;
 		return L_0;
 	}
 }
-// Method Definition Index: 95770
+// Method Definition Index: 95964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_set_valueInput_m7810A7156A1E5A2AEFF837283E9B3586C82C75F0 (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7117,58 +7117,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_set_valueInput_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:22>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:22>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5** L_0 = (XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5**)(&__this->___m_ValueInput);
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_1 = ___0_value;
 		XRInputReaderUtility_SetInputProperty_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m15744164C1D61E4554375F75CC67D115002FAEAE(L_0, L_1, __this, XRInputReaderUtility_SetInputProperty_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m15744164C1D61E4554375F75CC67D115002FAEAE_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 95771
+// Method Definition Index: 95965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ValueDerivedButtonReader_get_pressThreshold_m7E106A7EEA388D00DF539D9C62B0F9727B041BDF (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:35>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:35>
 		float L_0 = __this->___m_PressThreshold;
 		return L_0;
 	}
 }
-// Method Definition Index: 95772
+// Method Definition Index: 95966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_set_pressThreshold_m9A8C9B4C7D312D08B238ADF4E2E1E9F0D79E713E (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:36>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:36>
 		float L_0 = ___0_value;
 		__this->___m_PressThreshold = L_0;
 		return;
 	}
 }
-// Method Definition Index: 95773
+// Method Definition Index: 95967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ValueDerivedButtonReader_get_releaseThreshold_mDFA8DD65CAD0D20AE7910A602409A4879BBF5B84 (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:50>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:50>
 		float L_0 = __this->___m_ReleaseThreshold;
 		return L_0;
 	}
 }
-// Method Definition Index: 95774
+// Method Definition Index: 95968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_set_releaseThreshold_m6B25D26C5DC3542644D6871494756AA9917549BB (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:51>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:51>
 		float L_0 = ___0_value;
 		__this->___m_ReleaseThreshold = L_0;
 		return;
 	}
 }
-// Method Definition Index: 95775
+// Method Definition Index: 95969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_OnEnable_mD3452C97D3877C9C3D0B4B22807C427ECF9D7A3A (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* G_B2_0 = NULL;
 	XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:63>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:63>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_0 = __this->___m_ValueInput;
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_1 = L_0;
 		if (L_1)
@@ -7186,17 +7186,17 @@ IL_000b:
 	{
 		NullCheck(G_B2_0);
 		XRInputValueReader_EnableDirectActionIfModeUsed_m6194760B90FB92168D6DDCC80C20DD180169ACB2(G_B2_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:64>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:64>
 		return;
 	}
 }
-// Method Definition Index: 95776
+// Method Definition Index: 95970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_OnDisable_mED9102E3876AC5FC416E068503EC3054A056F22A (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* G_B2_0 = NULL;
 	XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* G_B1_0 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:71>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:71>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_0 = __this->___m_ValueInput;
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_1 = L_0;
 		if (L_1)
@@ -7214,11 +7214,11 @@ IL_000b:
 	{
 		NullCheck(G_B2_0);
 		XRInputValueReader_DisableDirectActionIfModeUsed_m533212E2020FD7FA589B8B9F536BD7DC6E8048BC(G_B2_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:72>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:72>
 		return;
 	}
 }
-// Method Definition Index: 95777
+// Method Definition Index: 95971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_Update_m2DCB52274DEEF0F6BB115E0E8900B3B7E8863FB0 (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7239,20 +7239,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_Update_m2DCB522
 	int32_t G_B8_0 = 0;
 	ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* G_B8_1 = NULL;
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:79>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:79>
 		bool L_0 = __this->___m_IsPerformed;
 		V_0 = L_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:80>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:80>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_1 = __this->___m_ValueInput;
 		NullCheck(L_1);
 		float L_2;
 		L_2 = XRInputValueReader_1_ReadValue_mAFA366F0FF0345B1A9F16C19F1815D10E427860D(L_1, XRInputValueReader_1_ReadValue_mAFA366F0FF0345B1A9F16C19F1815D10E427860D_RuntimeMethod_var);
 		V_1 = L_2;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:82>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:82>
 		float L_3 = V_1;
 		float L_4 = __this->___m_PressThreshold;
 		V_2 = (bool)((((int32_t)((!(((float)L_3) >= ((float)L_4)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:83>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:83>
 		bool L_5 = V_2;
 		bool L_6 = V_0;
 		if (!((int32_t)(((((int32_t)L_5) == ((int32_t)0))? 1 : 0)&(int32_t)L_6)))
@@ -7261,7 +7261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_Update_m2DCB522
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:84>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:84>
 		float L_7 = V_1;
 		float L_8 = __this->___m_ReleaseThreshold;
 		V_2 = (bool)((((float)L_7) > ((float)L_8))? 1 : 0);
@@ -7269,10 +7269,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader_Update_m2DCB522
 
 IL_0032:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:86>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:86>
 		bool L_9 = V_2;
 		__this->___m_IsPerformed = L_9;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:87>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:87>
 		bool L_10 = V_0;
 		if (L_10)
 		{
@@ -7298,7 +7298,7 @@ IL_0046:
 	{
 		NullCheck(G_B5_1);
 		G_B5_1->___m_WasPerformedThisFrame = (bool)G_B5_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:88>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:88>
 		bool L_12 = V_0;
 		if (!L_12)
 		{
@@ -7324,38 +7324,38 @@ IL_005b:
 	{
 		NullCheck(G_B8_1);
 		G_B8_1->___m_WasCompletedThisFrame = (bool)G_B8_0;
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:89>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:89>
 		return;
 	}
 }
-// Method Definition Index: 95778
+// Method Definition Index: 95972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueDerivedButtonReader_ReadIsPerformed_m7ACBD12CEA1CA4EBFC69A4169D0DC5381A730548 (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:94>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:94>
 		bool L_0 = __this->___m_IsPerformed;
 		return L_0;
 	}
 }
-// Method Definition Index: 95779
+// Method Definition Index: 95973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueDerivedButtonReader_ReadWasPerformedThisFrame_m240E8AFE5F7E61E14E0B904CFFD13D8C1EA5A7BF (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:100>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:100>
 		bool L_0 = __this->___m_WasPerformedThisFrame;
 		return L_0;
 	}
 }
-// Method Definition Index: 95780
+// Method Definition Index: 95974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueDerivedButtonReader_ReadWasCompletedThisFrame_m812A21612452A50B00DA596034F7C39C5963F30E (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:106>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:106>
 		bool L_0 = __this->___m_WasCompletedThisFrame;
 		return L_0;
 	}
 }
-// Method Definition Index: 95781
+// Method Definition Index: 95975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ValueDerivedButtonReader_ReadValue_mAF5AEF7DEC524C92467FCA0F302202E7F58826A2 (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7365,7 +7365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ValueDerivedButtonReader_ReadValue_mAF5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:112>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:112>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_0 = __this->___m_ValueInput;
 		NullCheck(L_0);
 		float L_1;
@@ -7373,7 +7373,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ValueDerivedButtonReader_ReadValue_mAF5
 		return L_1;
 	}
 }
-// Method Definition Index: 95782
+// Method Definition Index: 95976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueDerivedButtonReader_TryReadValue_mEA073EFFD2F1A8C750955EADD9E738F6B83FDE2D (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, float* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7383,7 +7383,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueDerivedButtonReader_TryReadValue_mE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:118>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:118>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_0 = __this->___m_ValueInput;
 		float* L_1 = ___0_value;
 		NullCheck(L_0);
@@ -7392,7 +7392,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueDerivedButtonReader_TryReadValue_mE
 		return L_2;
 	}
 }
-// Method Definition Index: 95783
+// Method Definition Index: 95977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader__ctor_m031C952CF148AE4B23A908A87C1263FD702134E9 (ValueDerivedButtonReader_t90C31BF7CB0D765150CB94E904FAA63E80315C9D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7404,14 +7404,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader__ctor_m031C952C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:14>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:14>
 		XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5* L_0 = (XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5*)il2cpp_codegen_object_new(XRInputValueReader_1_t7482F990F323B5D373DF221174629A7C3EB97BC5_il2cpp_TypeInfo_var);
 		XRInputValueReader_1__ctor_m2D198A41FE129CDD40C6FDBF537BC35E3C4B6CFB(L_0, _stringLiteral86FADB31129B6F40C720A97600D69389EA3567E3, 2, XRInputValueReader_1__ctor_m2D198A41FE129CDD40C6FDBF537BC35E3C4B6CFB_RuntimeMethod_var);
 		__this->___m_ValueInput = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ValueInput), (void*)L_0);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:28>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:28>
 		__this->___m_PressThreshold = (0.800000012f);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:42>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/ValueDerivedButtonReader.cs:42>
 		__this->___m_ReleaseThreshold = (0.25f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -7425,7 +7425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueDerivedButtonReader__ctor_m031C952C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95784
+// Method Definition Index: 95978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3ScaleAffordanceReceiver_OnEnable_m1AED5622A1B5216D3965AF3EFEC13C49069C15C3 (Vector3ScaleAffordanceReceiver_tC5E30AA269B3C026CE28F6C0735CBA1C9B2FD52E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7436,9 +7436,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3ScaleAffordanceReceiver_OnEnable_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:21>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:21>
 		BaseAffordanceStateReceiver_1_OnEnable_mB97FBD627A706DF4A4A13EF3276D3A3E8D87C4D4(__this, BaseAffordanceStateReceiver_1_OnEnable_mB97FBD627A706DF4A4A13EF3276D3A3E8D87C4D4_RuntimeMethod_var);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:22>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:22>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___m_TargetTransform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7449,7 +7449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3ScaleAffordanceReceiver_OnEnable_
 		}
 	}
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:23>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:23>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		__this->___m_TargetTransform = L_2;
@@ -7458,29 +7458,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3ScaleAffordanceReceiver_OnEnable_
 
 IL_0020:
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:24>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:24>
 		return;
 	}
 }
-// Method Definition Index: 95785
+// Method Definition Index: 95979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3ScaleAffordanceReceiver_OnAffordanceValueUpdated_m73456EE221F4541A07AB10735F7C63A074FD8574 (Vector3ScaleAffordanceReceiver_tC5E30AA269B3C026CE28F6C0735CBA1C9B2FD52E* __this, float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E ___0_newValue, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:29>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:29>
 		float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E L_0 = ___0_newValue;
 		Vector3AffordanceReceiver_OnAffordanceValueUpdated_mBB5120B9FB6E709161DBD0AD58362174BC06F719(__this, L_0, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:30>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:30>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___m_TargetTransform;
 		float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E L_2 = ___0_newValue;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = float3_op_Implicit_m9CC301DFD67EEFAA15CA05E91913E862B22326F6(L_2, NULL);
 		NullCheck(L_1);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_1, L_3, NULL);
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:31>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/Scripts/Vector3ScaleAffordanceReceiver.cs:31>
 		return;
 	}
 }
-// Method Definition Index: 95786
+// Method Definition Index: 95980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3ScaleAffordanceReceiver__ctor_m3D1CDD639CFD3EFB41BA48CA04B1460736661B55 (Vector3ScaleAffordanceReceiver_tC5E30AA269B3C026CE28F6C0735CBA1C9B2FD52E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7515,7 +7515,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector3ScaleAffordanceReceiver__ctor_m3D
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 50963
+// Method Definition Index: 50979
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -7552,7 +7552,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 27297
+// Method Definition Index: 27312
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float PokeStateData_get_interactionStrength_mCDA09DA4CD62F5A7C4CC68D9B89040643595F852_inline (PokeStateData_t87D34716C1C477FC04D9344710D09399FE6F5032* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7561,7 +7561,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float PokeStateData_get_interacti
 		return L_0;
 	}
 }
-// Method Definition Index: 50981
+// Method Definition Index: 50997
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -7582,16 +7582,16 @@ IL_0010:
 		return L_5;
 	}
 }
-// Method Definition Index: 95687
+// Method Definition Index: 95881
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ToggleGameObject_get_activationGameObject_m1F1B6421F159376BB842ED8B1E26449A5E899600_inline (ToggleGameObject_tD82BA740FE7646FFB4D3A12353FB4DF6CCE4F7AD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/morit/Desktop/ReVerso/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:17>
+		//<source_info:C:/Users/morit/Desktop/ReVerso/Reverso_Patient/Assets/Samples/XR Interaction Toolkit/3.3.0/Hands Interaction Demo/HandsDemoSceneAssets/Scripts/ToggleGameObject.cs:17>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_ActivationGameObject;
 		return L_0;
 	}
 }
-// Method Definition Index: 96045
+// Method Definition Index: 96239
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SubsystemWithProvider_get_running_m6BF31FC3BDA38C56C0F60FEA37767A4151B22C44_inline (SubsystemWithProvider_tC72E35EE2D413A4B0635B058154BABF265F31242* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7599,7 +7599,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SubsystemWithProvider_get_ru
 		return L_0;
 	}
 }
-// Method Definition Index: 87723
+// Method Definition Index: 87837
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 XRHandSubsystem_get_leftHand_mD3B931E5129348FEE34C3965A0CF8E62A0CFFB97_inline (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7608,7 +7608,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRHand_t42370E2B19E7613E9C8FFA4A4
 		return L_0;
 	}
 }
-// Method Definition Index: 87574
+// Method Definition Index: 87688
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7617,7 +7617,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRHand_get_isTracked_mDFC9D4
 		return L_0;
 	}
 }
-// Method Definition Index: 87572
+// Method Definition Index: 87686
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 XRHand_get_rootPose_m4F34E7F55AEBFD2FF7491364ADB00B27BF86F1A5_inline (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7626,7 +7626,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87
 		return L_0;
 	}
 }
-// Method Definition Index: 87725
+// Method Definition Index: 87839
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 XRHandSubsystem_get_rightHand_mDE333FDF35460E1A06BE051AF9C2144B7053ED3C_inline (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7635,7 +7635,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRHand_t42370E2B19E7613E9C8FFA4A4
 		return L_0;
 	}
 }
-// Method Definition Index: 50868
+// Method Definition Index: 50884
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7649,7 +7649,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 61785
+// Method Definition Index: 61801
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E float3_op_Addition_mFFCF4F7457594F5EFB0678C0DE90AAD3D3F6947B_inline (float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E ___0_lhs, float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -7672,7 +7672,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float3_t4AB5D88249ADB24F69FFD0793
 		return L_12;
 	}
 }
-// Method Definition Index: 50877
+// Method Definition Index: 50893
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -7698,7 +7698,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 50881
+// Method Definition Index: 50897
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Division_mCC6BB24E372AB96B8380D1678446EF6A8BAE13BB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -7721,7 +7721,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 50838
+// Method Definition Index: 50853
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -7734,7 +7734,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 50840
+// Method Definition Index: 50855
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Scale_m7C3CD199271902D5C00CBF35CD230DEB62B68CAE_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -7760,7 +7760,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 50876
+// Method Definition Index: 50892
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -7786,7 +7786,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 50869
+// Method Definition Index: 50885
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7800,7 +7800,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 87789
+// Method Definition Index: 87903
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR HandUpdatedEvent_t74C37E98CEE73FC31A297B62298B2B48C247ED4F* XRHandTrackingEvents_get_jointsUpdated_m6C6EE24CBAB5FC3EB60054CF339D6A188EF5427D_inline (XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7809,7 +7809,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR HandUpdatedEvent_t74C37E98CEE73FC
 		return L_0;
 	}
 }
-// Method Definition Index: 87649
+// Method Definition Index: 87763
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* XRHandJointsUpdatedEventArgs_get_subsystem_m51DF184364282BEFE4D25FA886A5FAB30B8ABD1D_inline (XRHandJointsUpdatedEventArgs_t23369A3B3D49D837CF21B765B7F0E248F362E31F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7818,7 +7818,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRHandSubsystem_t0EB20D332ADF52A3
 		return L_0;
 	}
 }
-// Method Definition Index: 87573
+// Method Definition Index: 87687
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t XRHand_get_handedness_m87563F81CAF693404C49463EAC73DA29D517F752_inline (XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7827,7 +7827,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t XRHand_get_handedness_m87
 		return L_0;
 	}
 }
-// Method Definition Index: 87735
+// Method Definition Index: 87849
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRCommonHandGestures_tB24C5F4CF6285CC0D00E1830EE0D3FEB331CC926* XRHandSubsystem_get_rightHandCommonGestures_m2AAEC0F78069E25F51F2D198DCE571C7610A4F58_inline (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7836,7 +7836,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRCommonHandGestures_tB24C5F4CF62
 		return L_0;
 	}
 }
-// Method Definition Index: 87734
+// Method Definition Index: 87848
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRCommonHandGestures_tB24C5F4CF6285CC0D00E1830EE0D3FEB331CC926* XRHandSubsystem_get_leftHandCommonGestures_mB8EF93A3DDF74E588EF9627C6D8D321C4437A6C2_inline (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7845,7 +7845,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRCommonHandGestures_tB24C5F4CF62
 		return L_0;
 	}
 }
-// Method Definition Index: 2001
+// Method Definition Index: 2006
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Single_IsNaN_mFE637F6ECA9F7697CE8EFF56427858F4C5EDF75D_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	{
@@ -7855,7 +7855,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Single_IsNaN_mFE637F6ECA9F76
 		return (bool)((((int32_t)((int32_t)(L_1&((int32_t)2147483647LL)))) > ((int32_t)((int32_t)2139095040)))? 1 : 0);
 	}
 }
-// Method Definition Index: 50831
+// Method Definition Index: 50846
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -7902,7 +7902,7 @@ IL_0064:
 		return L_24;
 	}
 }
-// Method Definition Index: 50851
+// Method Definition Index: 50867
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7911,7 +7911,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 50883
+// Method Definition Index: 50899
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -7922,7 +7922,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 50872
+// Method Definition Index: 50888
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7936,7 +7936,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 50905
+// Method Definition Index: 50921
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_forward, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_upwards, const RuntimeMethod* method) 
 {
 	{
@@ -7945,7 +7945,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_0;
 	}
 }
-// Method Definition Index: 50852
+// Method Definition Index: 50868
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -7964,7 +7964,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A3
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11))));
 	}
 }
-// Method Definition Index: 50863
+// Method Definition Index: 50879
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7977,7 +7977,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_sqrMagnitude_m4
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3)))), ((float)il2cpp_codegen_multiply(L_4, L_5))));
 	}
 }
-// Method Definition Index: 9511
+// Method Definition Index: 9518
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7985,7 +7985,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 9462
+// Method Definition Index: 9469
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m1AB3815922EAB4210EC4D8F2053BEE86A700CE89_gshared_inline (List_1_t785970ECD3400B166B17F92860A0ABA24BBD51B2* __this, Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___0_item, const RuntimeMethod* method) 
 {
 	PoseU5BU5D_tFC818445A5F54FE4CD8B53D645FF0AD0E2A133EB* V_0 = NULL;
@@ -8023,7 +8023,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 9452
+// Method Definition Index: 9459
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8031,7 +8031,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 92387
+// Method Definition Index: 92897
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 BindableVariableBase_1_get_Value_mDA92236BCE8EC7928399D7271AA97D7B62941EEC_gshared_inline (BindableVariableBase_1_t0B8C3C183E9A64B760FC611EA6858D9BD639E610* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8040,7 +8040,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_0;
 	}
 }
-// Method Definition Index: 92387
+// Method Definition Index: 92897
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BindableVariableBase_1_get_Value_mC412EC0392D6CDA386D4E83A0615067AB99929F0_gshared_inline (BindableVariableBase_1_t9E98D971B506CF9B28B829E832171C4DE7175A46* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8049,7 +8049,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BindableVariableBase_1_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 50980
+// Method Definition Index: 50996
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -8097,7 +8097,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 61756
+// Method Definition Index: 61772
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void float3__ctor_mC61002CD0EC13D7C37D846D021A78C028FB80DB9_inline (float3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -8114,7 +8114,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void float3__ctor_mC61002CD0EC13D
 		return;
 	}
 }
-// Method Definition Index: 743
+// Method Definition Index: 744
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BitConverter_SingleToInt32Bits_mC760C7CFC89725E3CF68DC45BE3A9A42A7E7DA73_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -8122,7 +8122,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BitConverter_SingleToInt3
 		return L_0;
 	}
 }
-// Method Definition Index: 50849
+// Method Definition Index: 50865
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_m1DE89849FE2019B6AA0031306896F3B800849399_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8186,7 +8186,7 @@ IL_0050:
 		return L_14;
 	}
 }
-// Method Definition Index: 50882
+// Method Definition Index: 50898
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -8228,7 +8228,7 @@ IL_0043:
 		return L_19;
 	}
 }
-// Method Definition Index: 50861
+// Method Definition Index: 50877
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

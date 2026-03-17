@@ -18,6 +18,12 @@ public class SoignantUIManager : MonoBehaviour
     [Tooltip("Le panneau Connexion Casque")]
     [SerializeField] private GameObject connexionCasquePanel;
 
+    [Tooltip("Le panneau Vue Casque + Paramètres Séance (HeadsetViewPanel)")]
+    [SerializeField] private GameObject sessionPanel;
+
+    [Tooltip("Le panneau Thérapie Miroir")]
+    [SerializeField] private GameObject mirrorTherapyPanel;
+
     [Header("Boutons Navigation")]
     [Tooltip("Bouton pour afficher le statut du casque")]
     [SerializeField] private Button btnStatutCasque;
@@ -37,6 +43,12 @@ public class SoignantUIManager : MonoBehaviour
     
     [Tooltip("Texte du bouton pause VR (pour changer le libellé)")]
     [SerializeField] private TMPro.TextMeshProUGUI btnPauseVRText;
+
+    [Tooltip("Bouton pour ouvrir la vue casque + paramètres de séance")]
+    [SerializeField] private Button btnSession;
+
+    [Tooltip("Bouton pour ouvrir la thérapie miroir")]
+    [SerializeField] private Button btnMirrorTherapy;
 
     [Header("Réseau")]
     [Tooltip("Référence au client réseau")]
@@ -76,6 +88,18 @@ public class SoignantUIManager : MonoBehaviour
             btnPauseVR.interactable = false; // Désactivé tant que pas connecté
         }
 
+        if (btnSession != null)
+        {
+            btnSession.onClick.AddListener(ShowMirrorTherapyPanel);
+            btnSession.interactable = false;
+        }
+
+        if (btnMirrorTherapy != null)
+        {
+            btnMirrorTherapy.onClick.AddListener(ShowMirrorTherapyPanel);
+            btnMirrorTherapy.interactable = false;
+        }
+
         ShowMainMenu();
         UpdatePauseVRButtonText();
         UpdateStatutCasqueButtonText();
@@ -94,6 +118,12 @@ public class SoignantUIManager : MonoBehaviour
         
         if (btnPauseVR != null)
             btnPauseVR.onClick.RemoveListener(TogglePauseVR);
+
+        if (btnSession != null)
+            btnSession.onClick.RemoveListener(ShowMirrorTherapyPanel);
+
+        if (btnMirrorTherapy != null)
+            btnMirrorTherapy.onClick.RemoveListener(ShowMirrorTherapyPanel);
         
         if (soignantClient != null)
         {
@@ -108,6 +138,10 @@ public class SoignantUIManager : MonoBehaviour
     {
         if (btnPauseVR != null)
             btnPauseVR.interactable = true;
+        if (btnSession != null)
+            btnSession.interactable = true;
+        if (btnMirrorTherapy != null)
+            btnMirrorTherapy.interactable = true;
 
         UpdateStatutCasqueButtonText();
         Debug.Log("[SoignantUIManager] Casque connecté — commandes activées");
@@ -117,6 +151,10 @@ public class SoignantUIManager : MonoBehaviour
     {
         if (btnPauseVR != null)
             btnPauseVR.interactable = false;
+        if (btnSession != null)
+            btnSession.interactable = false;
+        if (btnMirrorTherapy != null)
+            btnMirrorTherapy.interactable = false;
 
         isPassthroughActive = false;
         UpdatePauseVRButtonText();
@@ -141,6 +179,22 @@ public class SoignantUIManager : MonoBehaviour
             SetActivePanel(connexionCasquePanel);
     }
 
+    public void ShowSessionPanel()
+    {
+        if (soignantClient != null && soignantClient.IsConnected)
+            SetActivePanel(sessionPanel);
+        else
+            SetActivePanel(connexionCasquePanel);
+    }
+
+    public void ShowMirrorTherapyPanel()
+    {
+        if (soignantClient != null && soignantClient.IsConnected)
+            SetActivePanel(mirrorTherapyPanel);
+        else
+            SetActivePanel(connexionCasquePanel);
+    }
+
     private void SetActivePanel(GameObject panelToShow)
     {
         if (mainMenuPanel != null)
@@ -151,6 +205,12 @@ public class SoignantUIManager : MonoBehaviour
 
         if (connexionCasquePanel != null)
             connexionCasquePanel.SetActive(panelToShow == connexionCasquePanel);
+
+        if (sessionPanel != null)
+            sessionPanel.SetActive(panelToShow == sessionPanel);
+
+        if (mirrorTherapyPanel != null)
+            mirrorTherapyPanel.SetActive(panelToShow == mirrorTherapyPanel);
     }
 
     #endregion

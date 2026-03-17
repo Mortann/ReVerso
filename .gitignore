@@ -5,6 +5,8 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
+[Bb]uild_Patiant/
+[Bb]uild_Soigant/
 
 # Visual Studio / Rider
 .vs/
@@ -17,3 +19,6 @@
 
 # Unity cache
 PackageCache/
+D:\Travail\2eme_annee\ReVerso\ReVerso\Reverso_Patient\Assets\RD\Scripts\Session\README.md
+\Reverso_Patient\Assets\RD\Scripts\Session\README.md
+Assets\RD\Scripts\Session\README.md

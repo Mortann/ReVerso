@@ -13,7 +13,7 @@ namespace ReVerso.Data
     /// UTILISATION:
     /// - Accessible depuis n'importe quel script via PatientDataManager.Instance
     /// - Sauvegarde automatique après chaque modification
-    /// - Les données sont stockées dans StreamingAssets/ReVerso/patients_data.json
+    /// - Les données sont stockées dans PersistentData/ReVerso/patients_data.json
     /// </summary>
     public class PatientDataManager : MonoBehaviour
     {
@@ -46,7 +46,7 @@ namespace ReVerso.Data
         [Tooltip("Sauvegarder automatiquement après chaque modification")]
         [SerializeField] private bool autoSave = true;
         
-        [Tooltip("Dossier de sauvegarde relatif à Application.streamingAssetsPath")]
+        [Tooltip("Dossier de sauvegarde relatif à Application.persistentDataPath")]
         [SerializeField] private string saveFolderName = "ReVerso";
         
         [Tooltip("Nom du fichier de base de données")]
@@ -107,17 +107,27 @@ namespace ReVerso.Data
         #region Initialization
 
         /// <summary>
-        /// Initialise le chemin de sauvegarde
+        /// Initialise le chemin de sauvegarde.
+        /// Sur Android (Quest), streamingAssetsPath est en lecture seule (dans l'APK).
+        /// On utilise persistentDataPath qui est accessible en écriture.
         /// </summary>
         private void InitializeSavePath()
         {
-            string folder = Path.Combine(Application.streamingAssetsPath, saveFolderName);
+            // persistentDataPath est writable sur toutes les plateformes (Android, PC, etc.)
+            string basePath = Application.persistentDataPath;
+            string folder = Path.Combine(basePath, saveFolderName);
             
-            // Créer le dossier s'il n'existe pas
-            if (!Directory.Exists(folder))
+            try
             {
-                Directory.CreateDirectory(folder);
-                Debug.Log($"[PatientDataManager] Dossier créé: {folder}");
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                    Debug.Log($"[PatientDataManager] Dossier créé: {folder}");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"[PatientDataManager] Erreur création dossier: {e.Message}");
             }
 
             savePath = Path.Combine(folder, databaseFileName);

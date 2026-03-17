@@ -28,6 +28,10 @@ public class PassthroughController : MonoBehaviour
     [Tooltip("GameObjects à désactiver quand le passthrough est actif (environnement VR, skybox, etc.)")]
     [SerializeField] private GameObject[] objectsToHideDuringPassthrough;
 
+    [Header("Contrôle manette")]
+    [Tooltip("Permettre au patient de basculer le passthrough avec le bouton A de la manette droite")]
+    [SerializeField] private bool enableControllerToggle = true;
+
     [Header("État")]
     [SerializeField] private bool isPassthroughActive = false;
 
@@ -56,6 +60,16 @@ public class PassthroughController : MonoBehaviour
         if (IsPassthroughAvailable)
         {
             SetPassthroughActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        // Bouton A de la manette droite pour basculer passthrough / monde virtuel
+        if (enableControllerToggle 
+            && OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch))
+        {
+            TogglePassthrough();
         }
     }
 
@@ -144,13 +158,13 @@ public class PassthroughController : MonoBehaviour
             }
         }
 
-        // Cacher/Afficher les objets VR
+        // Cacher/Afficher les rendus des objets VR sans désactiver les GameObjects
+        // (SetActive(false) supprimerait les colliders, ce qui ferait tomber le sol)
         foreach (var obj in objectsToHideDuringPassthrough)
         {
-            if (obj != null)
-            {
-                obj.SetActive(!active);
-            }
+            if (obj == null) continue;
+            foreach (var rend in obj.GetComponentsInChildren<Renderer>(true))
+                rend.enabled = !active;
         }
 
         Debug.Log($"[PassthroughController] Passthrough {(active ? "ACTIVÉ - Vue IRL" : "DÉSACTIVÉ - Retour VR")}");

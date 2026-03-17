@@ -103,7 +103,6 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -120,7 +119,6 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -180,7 +178,6 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -203,7 +200,6 @@
           {
             "name": "Cubemap",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -224,7 +220,6 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 1,
@@ -239,7 +234,6 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -272,7 +266,6 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 1,
@@ -307,7 +300,6 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -330,7 +322,6 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -363,7 +354,6 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -378,7 +368,6 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 1,
@@ -387,7 +376,6 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 1,
@@ -426,7 +414,6 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -441,7 +428,6 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -476,7 +462,6 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -513,7 +498,6 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -1522,7 +1506,6 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -1566,7 +1549,6 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,
@@ -1583,7 +1565,6 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/RD/PC_Soignant.unity",
               "Assets/RD/Quest_Patient.unity"
             ],
             "dependencyType": 0,

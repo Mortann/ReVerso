@@ -48,6 +48,9 @@ public class SoignantConnectionMenu : MonoBehaviour
     [SerializeField] private Toggle toggleAutoConnect;
     [SerializeField] private bool autoConnectOnDiscover = false;
 
+    [Header("Debug")]
+    [SerializeField] private bool showNetworkDebugOverlay = true;
+
     private const string AutoConnectPrefKey = "Soignant.AutoConnectOnDiscover";
     private bool autoConnectInProgress = false;
 
@@ -354,5 +357,36 @@ public class SoignantConnectionMenu : MonoBehaviour
         if (btnDisconnect != null) btnDisconnect.interactable = connected;
         if (btnRequestStatus != null) btnRequestStatus.interactable = connected;
         if (btnRefresh != null) btnRefresh.interactable = !connected;
+    }
+
+    // ─────────────────────────── DEBUG OVERLAY ───────────────────────────
+
+    private void OnGUI()
+    {
+        if (!showNetworkDebugOverlay) return;
+
+        var logs = SoignantClient.DebugLog;
+        if (logs == null || logs.Count == 0) return;
+
+        GUIStyle boxStyle = new GUIStyle(GUI.skin.box) { fontSize = 14 };
+        GUIStyle logStyle = new GUIStyle(GUI.skin.label)
+        {
+            fontSize = 12,
+            normal = { textColor = Color.cyan },
+            wordWrap = true
+        };
+
+        float width = 500;
+        float lineHeight = 18;
+        float height = 30 + logs.Count * lineHeight;
+        float x = Screen.width - width - 10;
+        float y = 10;
+
+        GUI.Box(new Rect(x, y, width, height), "Network Debug Log", boxStyle);
+        for (int i = 0; i < logs.Count; i++)
+        {
+            GUI.Label(new Rect(x + 8, y + 22 + i * lineHeight, width - 16, lineHeight),
+                logs[i], logStyle);
+        }
     }
 }

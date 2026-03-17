@@ -40,9 +40,16 @@ public static class NetworkConfig
 /// <summary>
 /// Types de messages échangés entre PC et Quest
 /// </summary>
+/// //=> fonction de managing pour la session
 public enum NetworkMessageType
 {
-    // PC → Quest
+    // PC → Quest - Session Control
+    StartSession,           // Démarrer une séance avec config
+    StopSession,            // Arrêter la séance (killSwitch)
+    PauseSession,           // Mettre en pause
+    ResumeSession,          // Reprendre
+    
+    // PC → Quest - Legacy
     StartExercise,
     StopExercise,
     LoadMovement,
@@ -56,7 +63,14 @@ public enum NetworkMessageType
     ActivateMirrorTherapy,
     DeactivateMirrorTherapy,
     
-    // Quest → PC
+    // Quest → PC - Session Updates
+    SessionStateChanged,    // Changement de phase
+    SessionProgress,        // Progression dans une phase
+    SessionCompleted,       // Séance terminée avec résultats
+    CaptureInitialeComplete,// Capture initiale terminée
+    CaptureFinaleComplete,  // Capture finale terminée
+    
+    // Quest → PC - Legacy
     StatusUpdate,
     HandTrackingData,
     ExerciseCompleted,

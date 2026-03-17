@@ -1,179 +1,137 @@
 using System;
-using UnityEngine;
-using ReVerso.Data;
 
 /// <summary>
-/// États possibles d'une séance de thérapie.
-/// Représente les différentes phases du workflow.
+/// États possibles d'une séance de thérapie miroir.
+/// Chaque état représente une phase du workflow.
 /// </summary>
 public enum SessionState
 {
-    /// <summary>Aucune séance active</summary>
+    /// <summary>
+    /// Aucune séance en cours
+    /// </summary>
     Idle,
     
-    /// <summary>En attente de la sélection du patient par le soignant</summary>
+    /// <summary>
+    /// Attente de la sélection du patient (côté soignant)
+    /// </summary>
     WaitingForPatientSelection,
     
-    /// <summary>Préparation de la séance (chargement, configuration)</summary>
+    /// <summary>
+    /// Préparation de la séance (chargement préférences, setup environnement)
+    /// </summary>
     Preparing,
     
-    /// <summary>Capture initiale des amplitudes (10-20s)</summary>
+    /// <summary>
+    /// Capture initiale : patient bouge les deux mains (10-20s)
+    /// </summary>
     CaptureInitiale,
     
-    /// <summary>Exercices de pré-exo (respiration guidée)</summary>
+    /// <summary>
+    /// Phase de pré-exercice : respiration guidée (si activé)
+    /// </summary>
     PreExercice,
     
-    /// <summary>Phase de thérapie miroir</summary>
+    /// <summary>
+    /// Thérapie miroir active : exercice principal
+    /// </summary>
     TherapieMiroir,
     
-    /// <summary>Capture finale des amplitudes (10-20s)</summary>
+    /// <summary>
+    /// Capture finale : patient rebouge les mains pour comparer
+    /// </summary>
     CaptureFinale,
     
-    /// <summary>Affichage et calcul des résultats</summary>
+    /// <summary>
+    /// Calcul et affichage des résultats
+    /// </summary>
     Resultats,
     
-    /// <summary>Séance terminée avec succès</summary>
+    /// <summary>
+    /// Séance terminée avec succès
+    /// </summary>
     Completed,
     
-    /// <summary>Séance interrompue (killSwitch ou erreur)</summary>
+    /// <summary>
+    /// Séance interrompue (killSwitch ou erreur)
+    /// </summary>
     Interrupted,
     
-    /// <summary>Erreur bloquante</summary>
+    /// <summary>
+    /// Erreur pendant la séance
+    /// </summary>
     Error
 }
 
 /// <summary>
-/// Données de configuration pour une séance sur le Quest.
-/// Ces données sont envoyées par le PC au début de la séance.
-/// </summary>
-[Serializable]
-public class SessionConfig
-{
-    // Identification patient
-    public string num_dossier;
-    public string nom_complet;
-    
-    // Paramètres médicaux
-    public CoteAffecte cote_affecte;
-    
-    // Préférences
-    public Environnement environnement_favori;
-    public ApparenceGuide apparence_guide_favori;
-    
-    // Timing des phases (en secondes)
-    public float duree_capture_initiale = 15f;
-    public float duree_pre_exercice = 60f;
-    public float duree_therapie_miroir = 300f; // 5 minutes
-    public float duree_capture_finale = 15f;
-    
-    // Options
-    public bool activer_pre_exercice = true;
-    public bool afficher_guide_virtuel = true;
-
-    /// <summary>
-    /// Constructeur par défaut
-    /// </summary>
-    public SessionConfig() { }
-
-    /// <summary>
-    /// Constructeur depuis un profil patient
-    /// </summary>
-    public SessionConfig(PatientProfile patient)
-    {
-        if (patient == null)
-            throw new ArgumentNullException(nameof(patient));
-
-        num_dossier = patient.num_dossier;
-        nom_complet = patient.infos_personnelles.NomComplet;
-        cote_affecte = patient.profil_medical.cote_affecte;
-        environnement_favori = patient.preferences.environnement_favori;
-        apparence_guide_favori = patient.preferences.apparence_guide_favori;
-        
-        // Utiliser les valeurs par défaut pour les durées
-    }
-}
-
-/// <summary>
-/// Données d'une phase de séance en cours
+/// Données d'une phase de séance
 /// </summary>
 [Serializable]
 public class SessionPhaseData
 {
-    public SessionState state;
-    public float progression; // 0.0 à 1.0
-    public float temps_ecoule; // en secondes
-    public string message_joueur;
+    public SessionState phase;
+    public float duration; // Durée de la phase en secondes
+    public float progress; // Progression 0.0 à 1.0
+    public string message; // Message à afficher
+    
+    public SessionPhaseData(SessionState phase, float duration = 0f, string message = "")
+    {
+        this.phase = phase;
+        this.duration = duration;
+        this.progress = 0f;
+        this.message = message;
+    }
 }
 
 /// <summary>
-/// Résultats d'une séance terminée.
-/// Ces données sont renvoyées au PC pour sauvegarde.
+/// Configuration d'une séance
+/// </summary>
+[Serializable]
+public class SessionConfig
+{
+    // Patient concerné
+    public string num_dossier;
+    public ReVerso.Data.CoteAffecte cote_affecte;
+    
+    // Durées des phases (en secondes)
+    public float duree_capture_initiale = 15f;
+    public float duree_capture_finale = 15f;
+    public float duree_therapie_miroir = 600f; // 10 minutes par défaut
+    
+    // Préférences
+    public bool active_pre_exercice = true;
+    public ReVerso.Data.Environnement environnement;
+    public ReVerso.Data.ApparenceGuide apparence_guide;
+    
+    // Métadonnées
+    public string date_debut;
+    
+    public SessionConfig(ReVerso.Data.PatientProfile patient)
+    {
+        num_dossier = patient.num_dossier;
+        cote_affecte = patient.profil_medical.cote_affecte;
+        active_pre_exercice = patient.preferences.active_phase_relaxation;
+        environnement = patient.preferences.environnement_favori;
+        apparence_guide = patient.preferences.apparence_guide;
+        date_debut = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+    }
+}
+
+/// <summary>
+/// Résultats d'une séance complète
 /// </summary>
 [Serializable]
 public class SessionResults
 {
-    // Identification
     public string num_dossier;
-    public string date_session; // Format DateTime
-    
-    // Métriques principales
     public float amplitude_initiale;
     public float amplitude_finale;
-    
-    // Statistiques calculées
     public float progression_pourcent;
     public bool amelioration_detectee;
-    
-    // Durées
-    public float duree_capture_initiale;
-    public float duree_pre_exercice;
-    public float duree_therapie_miroir;
-    public float duree_capture_finale;
     public float duree_totale_secondes;
+    public string date_session;
     
-    // Conditions
-    public CoteAffecte cote_affecte;
-    public Environnement environnement_utilise;
-    public ApparenceGuide guide_utilise;
-    
-    // Métadonnées
-    public bool session_complete; // false si interrompue
-    public string raison_interruption; // Si session_complete = false
-
-    /// <summary>
-    /// Constructeur par défaut
-    /// </summary>
-    public SessionResults() { }
-
-    /// <summary>
-    /// Constructeur avec données de base
-    /// </summary>
-    public SessionResults(string numDossier, float ampInit, float ampFinal)
+    public SessionResults()
     {
-        num_dossier = numDossier;
-        date_session = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-        amplitude_initiale = ampInit;
-        amplitude_finale = ampFinal;
-        
-        // Calculer la progression
-        CalculateProgression();
-    }
-
-    /// <summary>
-    /// Calcule le pourcentage de progression
-    /// </summary>
-    public void CalculateProgression()
-    {
-        if (amplitude_initiale > 0)
-        {
-            float delta = amplitude_finale - amplitude_initiale;
-            progression_pourcent = (delta / amplitude_initiale) * 100f;
-            amelioration_detectee = delta > 0.01f; // Amélioration si > 1cm
-        }
-        else
-        {
-            progression_pourcent = 0f;
-            amelioration_detectee = false;
-        }
+        date_session = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
     }
 }

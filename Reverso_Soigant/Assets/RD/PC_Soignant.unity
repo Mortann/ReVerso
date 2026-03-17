@@ -2682,6 +2682,8 @@ MonoBehaviour:
   btnToggleMirror: {fileID: 409734461}
   txtToggleMirrorLabel: {fileID: 2121767830}
   txtMirrorStatus: {fileID: 1709764234}
+  videoDisplay: {fileID: 14277168}
+  txtNoVideo: {fileID: 1237696569}
   btnBack: {fileID: 2039655379}
 --- !u!224 &453131346
 RectTransform:

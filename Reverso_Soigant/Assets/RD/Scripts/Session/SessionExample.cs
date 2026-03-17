@@ -134,7 +134,7 @@ public class SessionExample : MonoBehaviour
         patientInfoText.text = $"<b>{selectedPatient.infos_personnelles.NomComplet}</b>\n" +
                               $"Dossier : {selectedPatient.num_dossier}\n" +
                               $"Côté affecté : {selectedPatient.profil_medical.cote_affecte}\n" +
-                              $"Séances : {selectedPatient.historique_seances.Count}";
+                              $"Séances : {selectedPatient.data.Count}";
 
         Debug.Log($"[SessionExample] Patient sélectionné : {selectedPatient.infos_personnelles.NomComplet}");
 
@@ -317,9 +317,9 @@ public class SessionExample : MonoBehaviour
 
         Debug.Log($"--- Historique de {selectedPatient.infos_personnelles.NomComplet} ---");
         
-        foreach (var session in selectedPatient.historique_seances)
+        foreach (var session in selectedPatient.data)
         {
-            Debug.Log($"Séance {session.id_seance} - {session.date}\n" +
+            Debug.Log($"Séance {session.id_seance} - {session.date_seance}\n" +
                      $"  Amplitude initiale : {session.metriques.moy_amplitude_initiale:F3}\n" +
                      $"  Amplitude finale : {session.metriques.moy_amplitude_finale:F3}");
         }
@@ -331,14 +331,14 @@ public class SessionExample : MonoBehaviour
     public void CreateTestPatient()
     {
         var testPatient = PatientDataManager.Instance.CreatePatient(
+            "TEST001",
             "Doe",
             "John",
-            "1980-01-15",
-            CoteAffecte.Droit
+            "1980-01-15"
         );
 
         testPatient.preferences.environnement_favori = Environnement.Foret;
-        testPatient.preferences.apparence_guide_favori = ApparenceGuide.Humain;
+        testPatient.preferences.apparence_guide = ApparenceGuide.Masculin;
 
         PatientDataManager.Instance.SaveToFile();
 

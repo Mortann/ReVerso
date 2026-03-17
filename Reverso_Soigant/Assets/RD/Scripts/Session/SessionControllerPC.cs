@@ -44,8 +44,8 @@ public class SessionControllerPC : MonoBehaviour
     #region Inspector Fields
 
     [Header("Références")]
-    [Tooltip("Serveur réseau pour communiquer avec le Quest")]
-    [SerializeField] private NetworkServer networkServer;
+    [Tooltip("Client réseau pour communiquer avec le Quest")]
+    [SerializeField] private SoignantClient soignantClient;
 
     [Header("État de la Séance Distante")]
     [SerializeField] private SessionState currentRemoteState = SessionState.Idle;
@@ -109,28 +109,28 @@ public class SessionControllerPC : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(gameObject);
 
-        // Trouver le serveur réseau automatiquement
-        if (networkServer == null)
-            networkServer = FindFirstObjectByType<NetworkServer>();
+        // Trouver le client réseau automatiquement
+        if (soignantClient == null)
+            soignantClient = FindFirstObjectByType<SoignantClient>();
 
-        if (networkServer == null)
-            Debug.LogError("[SessionControllerPC] NetworkServer non trouvé !");
+        if (soignantClient == null)
+            Debug.LogError("[SessionControllerPC] SoignantClient non trouvé !");
     }
 
     private void OnEnable()
     {
         // S'abonner aux messages réseau du Quest
-        if (networkServer != null)
+        if (soignantClient != null)
         {
-            networkServer.OnMessageReceived += OnNetworkMessageReceived;
+            soignantClient.OnMessageReceived += OnNetworkMessageReceived;
         }
     }
 
     private void OnDisable()
     {
-        if (networkServer != null)
+        if (soignantClient != null)
         {
-            networkServer.OnMessageReceived -= OnNetworkMessageReceived;
+            soignantClient.OnMessageReceived -= OnNetworkMessageReceived;
         }
     }
 
@@ -166,7 +166,7 @@ public class SessionControllerPC : MonoBehaviour
             return;
         }
 
-        if (networkServer == null || !networkServer.HasConnectedClient)
+        if (soignantClient == null || !soignantClient.IsConnected)
         {
             Debug.LogError("[SessionControllerPC] Aucun casque connecté !");
             return;
@@ -294,14 +294,14 @@ public class SessionControllerPC : MonoBehaviour
     /// </summary>
     private void SendNetworkMessage(NetworkMessageType type, string data = "")
     {
-        if (networkServer == null)
+        if (soignantClient == null)
         {
-            Debug.LogError("[SessionControllerPC] NetworkServer non trouvé !");
+            Debug.LogError("[SessionControllerPC] SoignantClient non trouvé !");
             return;
         }
 
         NetworkMessage message = new NetworkMessage(type, data);
-        networkServer.SendToAllClients(message);
+        soignantClient.SendMessage(message);
     }
 
     #endregion
@@ -412,7 +412,7 @@ public class SessionControllerPC : MonoBehaviour
     /// </summary>
     public bool IsHeadsetConnected()
     {
-        return networkServer != null && networkServer.HasConnectedClient;
+        return soignantClient != null && soignantClient.IsConnected;
     }
 
     /// <summary>

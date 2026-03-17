@@ -57,18 +57,21 @@ public class SessionConfig
     public CoteAffecte cote_affecte;
     
     // Préférences
-    public Environnement environnement_favori;
-    public ApparenceGuide apparence_guide_favori;
-    
+    public Environnement environnement;
+    public ApparenceGuide apparence_guide;
+
     // Timing des phases (en secondes)
     public float duree_capture_initiale = 15f;
     public float duree_pre_exercice = 60f;
     public float duree_therapie_miroir = 300f; // 5 minutes
     public float duree_capture_finale = 15f;
-    
+
     // Options
-    public bool activer_pre_exercice = true;
+    public bool active_pre_exercice = true;
     public bool afficher_guide_virtuel = true;
+
+    // Métadonnées
+    public string date_debut;
 
     /// <summary>
     /// Constructeur par défaut
@@ -86,8 +89,10 @@ public class SessionConfig
         num_dossier = patient.num_dossier;
         nom_complet = patient.infos_personnelles.NomComplet;
         cote_affecte = patient.profil_medical.cote_affecte;
-        environnement_favori = patient.preferences.environnement_favori;
-        apparence_guide_favori = patient.preferences.apparence_guide_favori;
+        environnement = patient.preferences.environnement_favori;
+        apparence_guide = patient.preferences.apparence_guide;
+        active_pre_exercice = patient.preferences.active_phase_relaxation;
+        date_debut = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
         
         // Utiliser les valeurs par défaut pour les durées
     }
@@ -99,10 +104,18 @@ public class SessionConfig
 [Serializable]
 public class SessionPhaseData
 {
-    public SessionState state;
-    public float progression; // 0.0 à 1.0
-    public float temps_ecoule; // en secondes
-    public string message_joueur;
+    public SessionState phase;
+    public float duration;
+    public float progress; // 0.0 à 1.0
+    public string message;
+
+    public SessionPhaseData(SessionState phase, float duration = 0f, string message = "")
+    {
+        this.phase = phase;
+        this.duration = duration;
+        this.progress = 0f;
+        this.message = message;
+    }
 }
 
 /// <summary>

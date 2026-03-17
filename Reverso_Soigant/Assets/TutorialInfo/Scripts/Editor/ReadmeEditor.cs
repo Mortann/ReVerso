@@ -53,10 +53,10 @@ public class ReadmeEditor : Editor
 
     static void SelectReadmeAutomatically()
     {
-        if (!SessionState.GetBool(s_ShowedReadmeSessionStateName, false))
+        if (!UnityEditor.SessionState.GetBool(s_ShowedReadmeSessionStateName, false))
         {
             var readme = SelectReadme();
-            SessionState.SetBool(s_ShowedReadmeSessionStateName, true);
+            UnityEditor.SessionState.SetBool(s_ShowedReadmeSessionStateName, true);
 
             if (readme && !readme.loadedLayout)
             {

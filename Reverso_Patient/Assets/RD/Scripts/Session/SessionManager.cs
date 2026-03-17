@@ -42,8 +42,8 @@ public class SessionManager : MonoBehaviour
     [Tooltip("Collecteur de métriques pour mesurer l'amplitude")]
     [SerializeField] private SessionMetricsCollector metricsCollector;
     
-    [Tooltip("Client réseau pour communiquer avec le PC")]
-    [SerializeField] private NetworkClient networkClient;
+    [Tooltip("Serveur réseau pour communiquer avec le PC")]
+    [SerializeField] private HeadsetServer headsetServer;
     
     [Tooltip("Handler pour lire les données de tracking")]
     [SerializeField] private HandTrackingDebugger handTracker;
@@ -119,35 +119,35 @@ public class SessionManager : MonoBehaviour
         if (metricsCollector == null)
             metricsCollector = FindFirstObjectByType<SessionMetricsCollector>();
         
-        if (networkClient == null)
-            networkClient = FindFirstObjectByType<NetworkClient>();
-        
+        if (headsetServer == null)
+            headsetServer = FindFirstObjectByType<HeadsetServer>();
+
         if (handTracker == null)
             handTracker = FindFirstObjectByType<HandTrackingDebugger>();
 
         // Vérifications
         if (metricsCollector == null)
             Debug.LogError("[SessionManager] SessionMetricsCollector non trouvé !");
-        
-        if (networkClient == null)
-            Debug.LogWarning("[SessionManager] NetworkClient non trouvé - mode standalone");
+
+        if (headsetServer == null)
+            Debug.LogWarning("[SessionManager] HeadsetServer non trouvé - mode standalone");
     }
 
     private void OnEnable()
     {
         // S'abonner aux messages réseau
-        if (networkClient != null)
+        if (headsetServer != null)
         {
-            networkClient.OnMessageReceived += OnNetworkMessageReceived;
+            headsetServer.OnMessageReceived += OnNetworkMessageReceived;
         }
     }
 
     private void OnDisable()
     {
         // Se désabonner
-        if (networkClient != null)
+        if (headsetServer != null)
         {
-            networkClient.OnMessageReceived -= OnNetworkMessageReceived;
+            headsetServer.OnMessageReceived -= OnNetworkMessageReceived;
         }
     }
 
@@ -516,14 +516,14 @@ public class SessionManager : MonoBehaviour
     /// </summary>
     private void SendNetworkMessage(NetworkMessageType type, string data = "")
     {
-        if (networkClient == null || !networkClient.IsConnected)
+        if (headsetServer == null || !headsetServer.HasConnectedClient)
         {
             Debug.LogWarning("[SessionManager] Impossible d'envoyer le message - Pas de connexion réseau");
             return;
         }
 
         NetworkMessage message = new NetworkMessage(type, data);
-        networkClient.SendMessage(message);
+        headsetServer.SendToAllClients(message);
     }
 
     #endregion

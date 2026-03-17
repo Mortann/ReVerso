@@ -448,19 +448,19 @@ public class SoignantClient : MonoBehaviour
 
     private void ProcessMessage(string json)
     {
-        try
+        RunOnMainThread(() =>
         {
-            NetworkMessage message = NetworkMessage.FromJson(json);
-            RunOnMainThread(() =>
+            try
             {
+                NetworkMessage message = NetworkMessage.FromJson(json);
                 OnMessageReceived?.Invoke(message);
                 Debug.Log($"[SoignantClient] 📥 Reçu: {message.type}");
-            });
-        }
-        catch (Exception e)
-        {
-            Debug.LogWarning($"[SoignantClient] Message invalide: {e.Message}");
-        }
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning($"[SoignantClient] Message invalide: {e.Message}");
+            }
+        });
     }
 
     // ─────────────────────────── HELPERS ───────────────────────────

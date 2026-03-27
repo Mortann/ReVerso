@@ -100,6 +100,12 @@ public class MirrorTherapySessionPanel : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (soignantClient != null && soignantClient.IsConnected && streamActive)
+        {
+            soignantClient.SendCommand(NetworkMessageType.StopStreaming);
+            streamActive = false;
+        }
+
         if (soignantClient != null)
         {
             soignantClient.OnConnected       -= HandleConnected;

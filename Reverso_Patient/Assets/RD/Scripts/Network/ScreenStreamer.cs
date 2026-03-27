@@ -29,6 +29,9 @@ public class ScreenStreamer : MonoBehaviour
     [Range(1, 20)]
     [SerializeField] private int targetFPS = 6;
 
+    [Tooltip("Taille max d'une image JPEG avant envoi (octets). Réduit les pertes réseau.")]
+    [SerializeField] private int maxFrameBytes = 45000;
+
     [Header("État")]
     [SerializeField] private bool isStreaming = false;
 
@@ -160,7 +163,7 @@ public class ScreenStreamer : MonoBehaviour
             readbackTexture.Apply();
             RenderTexture.active = previousActive;
 
-            byte[] jpegData = ImageConversion.EncodeToJPG(readbackTexture, jpegQuality);
+            byte[] jpegData = EncodeFrameWithBudget(readbackTexture);
             if (jpegData == null || jpegData.Length == 0)
                 return;
 
@@ -171,5 +174,30 @@ public class ScreenStreamer : MonoBehaviour
         {
             Debug.LogWarning($"[ScreenStreamer] Erreur capture: {e.Message}");
         }
+    }
+
+    private byte[] EncodeFrameWithBudget(Texture2D source)
+    {
+        int quality = Mathf.Clamp(jpegQuality, 1, 100);
+        byte[] data = ImageConversion.EncodeToJPG(source, quality);
+
+        if (data == null || data.Length == 0)
+            return data;
+
+        if (data.Length <= maxFrameBytes)
+            return data;
+
+        // Fallback progressif: on réduit la qualité pour rester dans un budget réseau stable.
+        int[] fallbackQualities = { 20, 15, 10, 7, 5 };
+        for (int i = 0; i < fallbackQualities.Length; i++)
+        {
+            int q = Mathf.Min(quality, fallbackQualities[i]);
+            data = ImageConversion.EncodeToJPG(source, q);
+            if (data != null && data.Length > 0 && data.Length <= maxFrameBytes)
+                return data;
+        }
+
+        // Si on dépasse encore, on envoie la meilleure tentative (évitons un black screen).
+        return data;
     }
 }

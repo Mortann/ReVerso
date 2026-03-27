@@ -287,7 +287,9 @@
           },
           {
             "name": "LightProbes",
-            "scenes": [],
+            "scenes": [
+              "Assets/RD/Quest_Patient.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -421,7 +423,9 @@
           },
           {
             "name": "ReflectionProbe",
-            "scenes": [],
+            "scenes": [
+              "Assets/RD/Quest_Patient.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

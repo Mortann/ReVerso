@@ -53,6 +53,7 @@ public class HeadsetServer : MonoBehaviour
     private TcpListener tcpListener;
     private UdpClient udpBeacon;
     private List<TcpClient> connectedClients = new List<TcpClient>();
+    private readonly object connectedClientsLock = new object();
     private Thread listenerThread;
     private Thread beaconThread;
     private bool shouldStop = false;
@@ -115,7 +116,10 @@ public class HeadsetServer : MonoBehaviour
                 mainThreadActions.Dequeue()?.Invoke();
         }
 
-        connectedClientsCount = connectedClients.Count;
+        lock (connectedClientsLock)
+        {
+            connectedClientsCount = connectedClients.Count;
+        }
         UpdateStatus();
     }
 
@@ -191,11 +195,14 @@ public class HeadsetServer : MonoBehaviour
         shouldStop = true;
         isRunning = false;
 
-        foreach (var client in connectedClients)
+        lock (connectedClientsLock)
         {
-            try { client.Close(); } catch { }
+            foreach (var client in connectedClients)
+            {
+                try { client.Close(); } catch { }
+            }
+            connectedClients.Clear();
         }
-        connectedClients.Clear();
 
         try { tcpListener?.Stop(); } catch { }
         try { udpBeacon?.Close(); } catch { }
@@ -214,20 +221,23 @@ public class HeadsetServer : MonoBehaviour
 
         List<TcpClient> disconnected = new List<TcpClient>();
 
-        foreach (var client in connectedClients)
+        lock (connectedClientsLock)
         {
-            try
+            foreach (var client in connectedClients)
             {
-                if (client.Connected)
-                    client.GetStream().Write(data, 0, data.Length);
-                else
-                    disconnected.Add(client);
+                try
+                {
+                    if (client.Connected)
+                        client.GetStream().Write(data, 0, data.Length);
+                    else
+                        disconnected.Add(client);
+                }
+                catch { disconnected.Add(client); }
             }
-            catch { disconnected.Add(client); }
-        }
 
-        foreach (var client in disconnected)
-            connectedClients.Remove(client);
+            foreach (var client in disconnected)
+                connectedClients.Remove(client);
+        }
     }
 
     /// <summary>
@@ -337,7 +347,10 @@ public class HeadsetServer : MonoBehaviour
                     TcpClient client = tcpListener.AcceptTcpClient();
                     string clientIP = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
 
-                    connectedClients.Add(client);
+                    lock (connectedClientsLock)
+                    {
+                        connectedClients.Add(client);
+                    }
 
                     Thread clientThread = new Thread(() => HandleClient(client, clientIP))
                     { IsBackground = true };
@@ -396,7 +409,10 @@ public class HeadsetServer : MonoBehaviour
             catch { break; }
         }
 
-        connectedClients.Remove(client);
+        lock (connectedClientsLock)
+        {
+            connectedClients.Remove(client);
+        }
         RunOnMainThread(() =>
         {
             if (connectedClientIP == clientIP)
